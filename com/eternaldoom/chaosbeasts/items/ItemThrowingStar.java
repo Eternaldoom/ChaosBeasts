@@ -20,7 +20,7 @@ public class ItemThrowingStar extends Item
     public ItemThrowingStar()
     {
         this.maxStackSize = 64;
-        this.setCreativeTab(ChaosTabs.tabDoomCombat);
+        this.setCreativeTab(ChaosTabs.tabChaosCombat);
         this.setTextureName("doomsmod:throwing_star");
         this.setUnlocalizedName("throwingStar");
         //GameRegistry.registerItem(this, "throwing_star");

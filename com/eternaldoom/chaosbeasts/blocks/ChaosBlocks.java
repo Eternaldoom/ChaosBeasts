@@ -51,7 +51,7 @@ public class ChaosBlocks
     	doomFire = new DoomFire().setBlockName("blockDoomFire").setBlockTextureName("doomsmod:doom_fire");
     	blockDoomedStone = new BlockDoomedStone().setBlockName("blockDoomedStone").setHardness(5.0F).setResistance(50.0F).setBlockTextureName("doomsmod:doomed_stone");
     	blockDoomedCobblestone = new BlockCustom().setBlockName("blockDoomedCobblestone").setHardness(5.0F).setResistance(50.0F).setBlockTextureName("doomsmod:doomed_cobblestone");
-    	blockDoomedDirt = new BlockDoomedDirt().setBlockName("blockDoomedDirt").setHardness(10.0F).setResistance(0.01F).setBlockTextureName("doomsmod:doomed_dirt").setCreativeTab(ChaosTabs.tabDoomBlocks);
+    	blockDoomedDirt = new BlockDoomedDirt().setBlockName("blockDoomedDirt").setHardness(10.0F).setResistance(0.01F).setBlockTextureName("doomsmod:doomed_dirt").setCreativeTab(ChaosTabs.tabChaosBlocks);
     	blockDoomedGrass = new BlockDoomGrass(0).setBlockName("blockDoomedGrass").setHardness(10.0F).setResistance(0.01F).setBlockTextureName("doomsmod:doomgrass");
     	DoomedWood = new BlockDoomLog().setBlockName("blockDoomedWood").setBlockTextureName("doomsmod:doomed_wood");
     	DoomedLeaves = new DoomedLeaves().setBlockName("blockDoomedLeaves");

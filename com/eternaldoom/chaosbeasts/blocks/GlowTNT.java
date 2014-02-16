@@ -2,6 +2,8 @@ package com.eternaldoom.chaosbeasts.blocks;
 
 import java.util.Random;
 
+import com.eternaldoom.chaosbeasts.generic.ChaosTabs;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -25,7 +27,7 @@ public class GlowTNT extends Block {
 	{
 		super(Material.glass);
 		this.setBlockName("glowtnt");
-		this.setCreativeTab(CreativeTabs.tabRedstone);
+		this.setCreativeTab(ChaosTabs.tabChaosBlocks);
 		this.setStepSound(soundTypeSand);
 		this.setHardness(0.9F);
 		this.setResistance(0.9F);

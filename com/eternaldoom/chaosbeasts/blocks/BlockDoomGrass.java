@@ -30,7 +30,7 @@ public BlockDoomGrass(int par1)
 {
 super(Material.grass);
 this.setTickRandomly(true);
-this.setCreativeTab(ChaosTabs.tabDoomBlocks);
+this.setCreativeTab(ChaosTabs.tabChaosBlocks);
 }
 
 @SideOnly(Side.CLIENT)

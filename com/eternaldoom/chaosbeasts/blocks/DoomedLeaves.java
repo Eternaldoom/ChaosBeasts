@@ -24,7 +24,7 @@ public class DoomedLeaves extends BlockLeavesBase implements IShearable
 public DoomedLeaves()
 {
 super(Material.leaves, false);
-this.setCreativeTab(ChaosTabs.tabDoomBlocks);
+this.setCreativeTab(ChaosTabs.tabChaosBlocks);
 this.setStepSound(soundTypeGrass);
 this.setHardness(0.2F);
 this.setBlockTextureName("doomsmod:doomed_leaves");

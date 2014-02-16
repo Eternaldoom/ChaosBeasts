@@ -20,7 +20,7 @@ public class LiquidDoomBlock extends BlockFluidClassic
 public LiquidDoomBlock()
 {
 super(ChaosBlocks.LiquidDoomFluid, Material.water);
-this.setCreativeTab(ChaosTabs.tabDoomBlocks);
+this.setCreativeTab(ChaosTabs.tabChaosBlocks);
 }
 
 // Use Register Icon as usual to get the block's icon.

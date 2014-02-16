@@ -98,23 +98,23 @@ public class ChaosItems
 	toolEnder = EnumHelper.addToolMaterial("ENDER", 3, -1, 10.0F, 8.0F, 0);
 	
 	//Fluid and bucket stuff
-	DoomBucket = new ItemDoomBucket(ChaosBlocks.LiquidDoomBlock).setUnlocalizedName("doomBucket").setCreativeTab(ChaosTabs.tabDoomMaterials).setTextureName("doomsmod:liquiddoom_bucket");
+	DoomBucket = new ItemDoomBucket(ChaosBlocks.LiquidDoomBlock).setUnlocalizedName("doomBucket").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("doomsmod:liquiddoom_bucket");
 	
 	//normal items
-	ItemRuby = new Item().setUnlocalizedName("ruby").setCreativeTab(ChaosTabs.tabDoomMaterials).setTextureName("ruby");
-	lumpRainbow = new Item().setUnlocalizedName("lumpRainbow").setCreativeTab(ChaosTabs.tabDoomMaterials).setTextureName("doomsmod:rainbow_lump");
-	ItemSapphire = new ItemSimpleFoiled().setUnlocalizedName("sapphire").setCreativeTab(ChaosTabs.tabDoomMaterials).setTextureName("doomsmod:sapphire");
-	rodSapphire = new Item().setUnlocalizedName("rodSapphire").setCreativeTab(ChaosTabs.tabDoomMaterials).setTextureName("doomsmod:sapphire_rod");
-	rodRuby = new Item().setUnlocalizedName("rodRuby").setCreativeTab(ChaosTabs.tabDoomMaterials).setTextureName("doomsmod:ruby_rod");
-	rodEmerald = new Item().setUnlocalizedName("rodEmerald").setCreativeTab(ChaosTabs.tabDoomMaterials).setTextureName("doomsmod:emerald_rod");
-	ItemExoskeleton = new Item().setUnlocalizedName("exoSkeleton").setCreativeTab(ChaosTabs.tabDoomMaterials).setTextureName("doomsmod:exoskeleton");
+	ItemRuby = new Item().setUnlocalizedName("ruby").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("ruby");
+	lumpRainbow = new Item().setUnlocalizedName("lumpRainbow").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("doomsmod:rainbow_lump");
+	ItemSapphire = new ItemSimpleFoiled().setUnlocalizedName("sapphire").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("doomsmod:sapphire");
+	rodSapphire = new Item().setUnlocalizedName("rodSapphire").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("doomsmod:sapphire_rod");
+	rodRuby = new Item().setUnlocalizedName("rodRuby").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("doomsmod:ruby_rod");
+	rodEmerald = new Item().setUnlocalizedName("rodEmerald").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("doomsmod:emerald_rod");
+	ItemExoskeleton = new Item().setUnlocalizedName("exoSkeleton").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("doomsmod:exoskeleton");
 	ItemThrowingStar = new ItemThrowingStar();
-	ItemDemonicShard = new Item().setCreativeTab(ChaosTabs.tabDoomMaterials).setUnlocalizedName("shardDemonic").setTextureName("doomsmod:demonic_shard");
-	ItemAngelicShard = new Item().setCreativeTab(ChaosTabs.tabDoomMaterials).setUnlocalizedName("shardAngelic").setTextureName("doomsmod:angelic_shard");
-	ItemBullet = new Item().setCreativeTab(ChaosTabs.tabDoomCombat).setUnlocalizedName("bullet").setTextureName("doomsmod:bullet");
+	ItemDemonicShard = new Item().setCreativeTab(ChaosTabs.tabChaosMaterials).setUnlocalizedName("shardDemonic").setTextureName("doomsmod:demonic_shard");
+	ItemAngelicShard = new Item().setCreativeTab(ChaosTabs.tabChaosMaterials).setUnlocalizedName("shardAngelic").setTextureName("doomsmod:angelic_shard");
+	ItemBullet = new Item().setCreativeTab(ChaosTabs.tabChaosCombat).setUnlocalizedName("bullet").setTextureName("doomsmod:bullet");
 	ItemHandgun = new ItemHandgun();
-	ingotCopper = new Item().setUnlocalizedName("ingotCopper").setCreativeTab(ChaosTabs.tabDoomMaterials).setTextureName("doomsmod:copper_ingot");
-	ingotLead = new Item().setUnlocalizedName("ingotLead").setCreativeTab(ChaosTabs.tabDoomMaterials).setTextureName("doomsmod:lead_ingot");
+	ingotCopper = new Item().setUnlocalizedName("ingotCopper").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("doomsmod:copper_ingot");
+	ingotLead = new Item().setUnlocalizedName("ingotLead").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("doomsmod:lead_ingot");
 
 	//food
 	crispyExoskeleton = new ChaosFood(4, 0.3F, true).setUnlocalizedName("crispyExoSkeleton").setTextureName("doomsmod:crispy_exoskeleton");

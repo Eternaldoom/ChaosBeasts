@@ -21,7 +21,7 @@ public class BlockSapphireOre extends Block
     public BlockSapphireOre()
     {
         super(Material.rock);
-        this.setCreativeTab(ChaosTabs.tabDoomBlocks);
+        this.setCreativeTab(ChaosTabs.tabChaosBlocks);
     }
     public int func_149745_a(Random p_149745_1_)
     {

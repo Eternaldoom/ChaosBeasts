@@ -11,7 +11,7 @@ public class ChaosTabs
 	public ChaosTabs()
 	{
 	}
-	    public static final CreativeTabs tabDoomMaterials = new CreativeTabs(CreativeTabs.getNextID(), "tabDoomMaterials")
+	    public static final CreativeTabs tabChaosMaterials = new CreativeTabs(CreativeTabs.getNextID(), "tabChaosMaterials")
 	    {
 			public Item getTabIconItem()
 			{
@@ -19,7 +19,7 @@ public class ChaosTabs
 			}
 	    };
 	    
-	    public static final CreativeTabs tabDoomCombat = new CreativeTabs(CreativeTabs.getNextID(), "tabDoomCombat")
+	    public static final CreativeTabs tabChaosCombat = new CreativeTabs(CreativeTabs.getNextID(), "tabChaosCombat")
 	    {
 			public Item getTabIconItem()
 			{
@@ -27,7 +27,7 @@ public class ChaosTabs
 			}
 	    };
 	    
-	    public static final CreativeTabs tabDoomTools = new CreativeTabs(CreativeTabs.getNextID(), "tabDoomTools")
+	    public static final CreativeTabs tabChaosTools = new CreativeTabs(CreativeTabs.getNextID(), "tabChaosTools")
 	    {
 			public Item getTabIconItem()
 			{
@@ -35,11 +35,11 @@ public class ChaosTabs
 			}
 	    };
 	    
-	    public static final CreativeTabs tabDoomBlocks = new CreativeTabs(CreativeTabs.getNextID(), "tabDoomBlocks")
+	    public static final CreativeTabs tabChaosBlocks = new CreativeTabs(CreativeTabs.getNextID(), "tabChaosBlocks")
 	    {
 			public Item getTabIconItem()
 			{
-				return Item.getItemFromBlock(ChaosBlocks.blockSapphire);
+				return Item.getItemFromBlock(ChaosBlocks.blockGlowTNT);
 			}
 	    };
 }

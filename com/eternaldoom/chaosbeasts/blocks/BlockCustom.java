@@ -19,6 +19,6 @@ public class BlockCustom extends Block
     public BlockCustom()
     {
         super(Material.rock);
-        this.setCreativeTab(ChaosTabs.tabDoomBlocks);
+        this.setCreativeTab(ChaosTabs.tabChaosBlocks);
     }
 }

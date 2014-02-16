@@ -43,7 +43,7 @@ public class DoomFire extends BlockFire {
     public DoomFire()
     {
         this.setTickRandomly(true);
-        this.setCreativeTab(ChaosTabs.tabDoomBlocks);
+        this.setCreativeTab(ChaosTabs.tabChaosBlocks);
     }
 
     public static void func_149843_e() {

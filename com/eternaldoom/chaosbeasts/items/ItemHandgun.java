@@ -20,7 +20,7 @@ public class ItemHandgun extends Item
     {
         this.maxStackSize = 1;
         this.setMaxDamage(125);
-        this.setCreativeTab(ChaosTabs.tabDoomCombat);
+        this.setCreativeTab(ChaosTabs.tabChaosCombat);
         this.setTextureName("doomsmod:handgun");
         this.setUnlocalizedName("handgun");
     }

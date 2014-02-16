@@ -21,7 +21,7 @@ public class ChaosShinyArmor extends ItemArmor
 		 super(mat, 1, slot);
 		 this.itemTexture = icon;
 		 this.armorTexture = model;
-		 this.setCreativeTab(ChaosTabs.tabDoomCombat);
+		 this.setCreativeTab(ChaosTabs.tabChaosCombat);
 	}
 	
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String layer)

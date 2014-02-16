@@ -28,7 +28,7 @@ public BlockDoomLog()
 {
 super(Material.wood);
 this.setTickRandomly(true);
-this.setCreativeTab(ChaosTabs.tabDoomBlocks);
+this.setCreativeTab(ChaosTabs.tabChaosBlocks);
 this.setStepSound(soundTypeWood);
 }
 
