@@ -1,0 +1,14 @@
+[
+{
+  "modid": "doomsmod",
+  "name": "Dooms Mod",
+  "description": "A mod for minecraft offering a wide array of new features",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "credits": "Doomturd - Author",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
