@@ -1,6 +1,6 @@
 package com.doomturd.doomsmod.blocks;
 
-import com.doomturd.doomsmod.generic.DoomTabs;
+import com.doomturd.doomsmod.generic.ChaosTabs;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
@@ -19,8 +19,8 @@ public class LiquidDoomBlock extends BlockFluidClassic
 {
 public LiquidDoomBlock()
 {
-super(DoomBlocks.LiquidDoomFluid, Material.water);
-this.setCreativeTab(DoomTabs.tabDoomBlocks);
+super(ChaosBlocks.LiquidDoomFluid, Material.water);
+this.setCreativeTab(ChaosTabs.tabDoomBlocks);
 }
 
 // Use Register Icon as usual to get the block's icon.

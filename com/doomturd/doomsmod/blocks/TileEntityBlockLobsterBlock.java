@@ -1,6 +1,6 @@
 package com.doomturd.doomsmod.blocks;
 
-import com.doomturd.doomsmod.generic.DoomTabs;
+import com.doomturd.doomsmod.generic.ChaosTabs;
 
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -13,7 +13,7 @@ public class TileEntityBlockLobsterBlock extends BlockContainer
 	public TileEntityBlockLobsterBlock()
 	{
                 super(Material.rock);
-                this.setCreativeTab(DoomTabs.tabDoomBlocks);
+                this.setCreativeTab(ChaosTabs.tabDoomBlocks);
                 this.setBlockBounds(-2.0F, 0.0F, 0.0F, 3.5F, 1.5F, 1.0F);
         }
 

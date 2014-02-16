@@ -2,7 +2,7 @@ package com.doomturd.doomsmod.worldgen;
 
 import java.util.Random;
 
-import com.doomturd.doomsmod.blocks.DoomBlocks;
+import com.doomturd.doomsmod.blocks.ChaosBlocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -19,7 +19,7 @@ public abstract class WorldGenModTrees extends WorldGenerator
 
     protected boolean func_150523_a(Block p_150523_1_)
     {
-        return p_150523_1_.getMaterial() == Material.air || p_150523_1_.getMaterial() == Material.leaves || p_150523_1_ == DoomBlocks.blockDoomedGrass || p_150523_1_ == DoomBlocks.blockDoomedDirt || p_150523_1_ == DoomBlocks.DoomedWood || p_150523_1_ == DoomBlocks.DoomedSapling || p_150523_1_ == Blocks.vine;
+        return p_150523_1_.getMaterial() == Material.air || p_150523_1_.getMaterial() == Material.leaves || p_150523_1_ == ChaosBlocks.blockDoomedGrass || p_150523_1_ == ChaosBlocks.blockDoomedDirt || p_150523_1_ == ChaosBlocks.DoomedWood || p_150523_1_ == ChaosBlocks.DoomedSapling || p_150523_1_ == Blocks.vine;
     }
 
     public void func_150524_b(World p_150524_1_, Random p_150524_2_, int p_150524_3_, int p_150524_4_, int p_150524_5_) {}

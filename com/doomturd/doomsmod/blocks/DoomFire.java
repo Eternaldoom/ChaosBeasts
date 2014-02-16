@@ -22,7 +22,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
-import com.doomturd.doomsmod.generic.DoomTabs;
+import com.doomturd.doomsmod.generic.ChaosTabs;
 import com.google.common.collect.Maps;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -43,7 +43,7 @@ public class DoomFire extends BlockFire {
     public DoomFire()
     {
         this.setTickRandomly(true);
-        this.setCreativeTab(DoomTabs.tabDoomBlocks);
+        this.setCreativeTab(ChaosTabs.tabDoomBlocks);
     }
 
     public static void func_149843_e() {

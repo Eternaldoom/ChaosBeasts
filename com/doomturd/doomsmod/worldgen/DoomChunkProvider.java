@@ -14,7 +14,7 @@ import static net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.Ev
 import java.util.List;
 import java.util.Random;
 
-import com.doomturd.doomsmod.blocks.DoomBlocks;
+import com.doomturd.doomsmod.blocks.ChaosBlocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFalling;
@@ -198,11 +198,11 @@ public class DoomChunkProvider implements IChunkProvider
                             {
                                 if ((d15 += d16) > 0.0D)
                                 {
-                                    p_147424_3_[j3 += short1] = DoomBlocks.blockDoomedStone;
+                                    p_147424_3_[j3 += short1] = ChaosBlocks.blockDoomedStone;
                                 }
                                 else if (k2 * 8 + l2 < b0)
                                 {
-                                    p_147424_3_[j3 += short1] = DoomBlocks.LiquidDoomBlock;
+                                    p_147424_3_[j3 += short1] = ChaosBlocks.LiquidDoomBlock;
                                 }
                                 else
                                 {

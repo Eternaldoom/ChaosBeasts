@@ -3,7 +3,7 @@ package com.doomturd.doomsmod.blocks;
 import java.util.List;
 import java.util.Random;
 
-import com.doomturd.doomsmod.generic.DoomTabs;
+import com.doomturd.doomsmod.generic.ChaosTabs;
 import com.doomturd.doomsmod.worldgen.WorldGenDoomedTree;
 
 import net.minecraft.block.Block;
@@ -37,7 +37,7 @@ public class DoomedSapling extends DoomBushBase implements IGrowable
     {
         float f = 0.4F;
         this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, f * 2.0F, 0.5F + f);
-        this.setCreativeTab(DoomTabs.tabDoomMaterials);
+        this.setCreativeTab(ChaosTabs.tabDoomMaterials);
     }
 
     /**

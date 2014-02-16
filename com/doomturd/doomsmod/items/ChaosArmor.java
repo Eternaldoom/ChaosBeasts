@@ -1,6 +1,6 @@
 package com.doomturd.doomsmod.items;
 
-import com.doomturd.doomsmod.generic.DoomTabs;
+import com.doomturd.doomsmod.generic.ChaosTabs;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -11,17 +11,17 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 
-public class DoomArmor extends ItemArmor
+public class ChaosArmor extends ItemArmor
 {
 	public String itemTexture;
 	public String armorTexture;
 	
-	public DoomArmor(ItemArmor.ArmorMaterial mat, int slot, String icon, String model)
+	public ChaosArmor(ItemArmor.ArmorMaterial mat, int slot, String icon, String model)
 	{
 		 super(mat, 1, slot);
 		 this.itemTexture = icon;
 		 this.armorTexture = model;
-		 this.setCreativeTab(DoomTabs.tabDoomCombat);
+		 this.setCreativeTab(ChaosTabs.tabDoomCombat);
 	}
 	
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String layer)

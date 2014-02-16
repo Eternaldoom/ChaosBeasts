@@ -2,8 +2,8 @@ package com.doomturd.doomsmod.blocks;
 
 import java.util.Random;
 
-import com.doomturd.doomsmod.generic.DoomTabs;
-import com.doomturd.doomsmod.items.DoomItems;
+import com.doomturd.doomsmod.generic.ChaosTabs;
+import com.doomturd.doomsmod.items.ChaosItems;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -23,7 +23,7 @@ public class BlockRubyOre extends Block
     public BlockRubyOre()
     {
         super(Material.rock);
-        this.setCreativeTab(DoomTabs.tabDoomBlocks);
+        this.setCreativeTab(ChaosTabs.tabDoomBlocks);
     }
     public int func_149745_a(Random p_149745_1_)
     {
@@ -32,6 +32,6 @@ public class BlockRubyOre extends Block
 
     public Item func_149650_a(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
     {
-        return DoomItems.ItemRuby;
+        return ChaosItems.ItemRuby;
     }
 }

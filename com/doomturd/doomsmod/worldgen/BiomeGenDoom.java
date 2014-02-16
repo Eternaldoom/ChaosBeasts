@@ -2,7 +2,7 @@ package com.doomturd.doomsmod.worldgen;
 
 import java.util.Random;
 
-import com.doomturd.doomsmod.blocks.DoomBlocks;
+import com.doomturd.doomsmod.blocks.ChaosBlocks;
 import com.doomturd.doomsmod.entity.monster.EntityLobster;
 
 import net.minecraft.block.Block;
@@ -29,8 +29,8 @@ public class BiomeGenDoom extends BiomeGenBase
         super(par1);
         this.spawnableCreatureList.clear();
         this.spawnableWaterCreatureList.clear();
-        this.topBlock = DoomBlocks.blockDoomedGrass;
-        this.fillerBlock = DoomBlocks.blockDoomedDirt;
+        this.topBlock = ChaosBlocks.blockDoomedGrass;
+        this.fillerBlock = ChaosBlocks.blockDoomedDirt;
         this.theBiomeDecorator.treesPerChunk = 5;
         this.theBiomeDecorator.deadBushPerChunk = 2;
         this.theBiomeDecorator.reedsPerChunk = 50;
@@ -116,7 +116,7 @@ public class BiomeGenDoom extends BiomeGenBase
 
                 if (block2 != null && block2.getMaterial() != Material.air)
                 {
-                    if (block2 == DoomBlocks.blockDoomedStone)
+                    if (block2 == ChaosBlocks.blockDoomedStone)
                     {
                         if (k == -1)
                         {
@@ -124,7 +124,7 @@ public class BiomeGenDoom extends BiomeGenBase
                             {
                                 block = null;
                                 b0 = 0;
-                                block1 = DoomBlocks.blockDoomedStone;
+                                block1 = ChaosBlocks.blockDoomedStone;
                             }
                             else if (l1 >= 59 && l1 <= 64)
                             {
@@ -157,7 +157,7 @@ public class BiomeGenDoom extends BiomeGenBase
                             else if (l1 < 56 - l)
                             {
                                 block = null;
-                                block1 = DoomBlocks.blockDoomedStone;
+                                block1 = ChaosBlocks.blockDoomedStone;
                                 p_150560_3_[i2] = Blocks.gravel;
                             }
                             else

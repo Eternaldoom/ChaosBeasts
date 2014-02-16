@@ -3,7 +3,7 @@ package com.doomturd.doomsmod.items;
 import java.util.List;
 
 import com.doomturd.doomsmod.entity.projectile.EntityThrowingStar;
-import com.doomturd.doomsmod.generic.DoomTabs;
+import com.doomturd.doomsmod.generic.ChaosTabs;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -20,7 +20,7 @@ public class ItemThrowingStar extends Item
     public ItemThrowingStar()
     {
         this.maxStackSize = 64;
-        this.setCreativeTab(DoomTabs.tabDoomCombat);
+        this.setCreativeTab(ChaosTabs.tabDoomCombat);
         this.setTextureName("doomsmod:throwing_star");
         this.setUnlocalizedName("throwingStar");
         //GameRegistry.registerItem(this, "throwing_star");

@@ -3,7 +3,7 @@ package com.doomturd.doomsmod.items;
 import java.util.List;
 
 import com.doomturd.doomsmod.entity.projectile.EntityHandgunBullet;
-import com.doomturd.doomsmod.generic.DoomTabs;
+import com.doomturd.doomsmod.generic.ChaosTabs;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
@@ -20,7 +20,7 @@ public class ItemHandgun extends Item
     {
         this.maxStackSize = 1;
         this.setMaxDamage(125);
-        this.setCreativeTab(DoomTabs.tabDoomCombat);
+        this.setCreativeTab(ChaosTabs.tabDoomCombat);
         this.setTextureName("doomsmod:handgun");
         this.setUnlocalizedName("handgun");
     }
@@ -37,7 +37,7 @@ public class ItemHandgun extends Item
     	}
     	else
     	{
-      if(par3EntityPlayer.capabilities.isCreativeMode || par3EntityPlayer.inventory.consumeInventoryItem(DoomItems.ItemBullet))
+      if(par3EntityPlayer.capabilities.isCreativeMode || par3EntityPlayer.inventory.consumeInventoryItem(ChaosItems.ItemBullet))
       {
         par2World.playSoundAtEntity(par3EntityPlayer, "random.bow", 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
         if (!par2World.isRemote)

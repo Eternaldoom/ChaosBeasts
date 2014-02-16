@@ -1,7 +1,7 @@
 package com.doomturd.doomsmod.event;
 
-import com.doomturd.doomsmod.blocks.DoomBlocks;
-import com.doomturd.doomsmod.items.DoomItems;
+import com.doomturd.doomsmod.blocks.ChaosBlocks;
+import com.doomturd.doomsmod.items.ChaosItems;
 
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
@@ -29,11 +29,11 @@ public class DoomBucketEvent {
 	public ItemStack fillCustomBucket(World world, MovingObjectPosition pos) {
 		Block blockID = world.getBlock(pos.blockX, pos.blockY, pos.blockZ);
 
-		if ((blockID == DoomBlocks.LiquidDoomBlock)
+		if ((blockID == ChaosBlocks.LiquidDoomBlock)
 				&& world.getBlockMetadata(pos.blockX, pos.blockY, pos.blockZ) == 0)
 		{
 			world.setBlockToAir(pos.blockX, pos.blockY, pos.blockZ);
-			return new ItemStack(DoomItems.DoomBucket);
+			return new ItemStack(ChaosItems.DoomBucket);
 		} else
 			return null;
 	}

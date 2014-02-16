@@ -1,21 +1,21 @@
 package com.doomturd.doomsmod.generic;
 
-import com.doomturd.doomsmod.blocks.DoomBlocks;
-import com.doomturd.doomsmod.items.DoomItems;
+import com.doomturd.doomsmod.blocks.ChaosBlocks;
+import com.doomturd.doomsmod.items.ChaosItems;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-public class DoomTabs
+public class ChaosTabs
 {
-	public DoomTabs()
+	public ChaosTabs()
 	{
 	}
 	    public static final CreativeTabs tabDoomMaterials = new CreativeTabs(CreativeTabs.getNextID(), "tabDoomMaterials")
 	    {
 			public Item getTabIconItem()
 			{
-				return DoomItems.ItemSapphire;
+				return ChaosItems.ItemSapphire;
 			}
 	    };
 	    
@@ -23,7 +23,7 @@ public class DoomTabs
 	    {
 			public Item getTabIconItem()
 			{
-				return DoomItems.swordRainbow;
+				return ChaosItems.swordRainbow;
 			}
 	    };
 	    
@@ -31,7 +31,7 @@ public class DoomTabs
 	    {
 			public Item getTabIconItem()
 			{
-				return DoomItems.pickaxeRuby;
+				return ChaosItems.pickaxeRuby;
 			}
 	    };
 	    
@@ -39,7 +39,7 @@ public class DoomTabs
 	    {
 			public Item getTabIconItem()
 			{
-				return Item.getItemFromBlock(DoomBlocks.blockSapphire);
+				return Item.getItemFromBlock(ChaosBlocks.blockSapphire);
 			}
 	    };
 }

@@ -3,7 +3,7 @@ package com.doomturd.doomsmod.blocks;
 import java.util.ArrayList;
 import java.util.Random;
 
-import com.doomturd.doomsmod.generic.DoomTabs;
+import com.doomturd.doomsmod.generic.ChaosTabs;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockGrass;
@@ -24,7 +24,7 @@ public class DoomedLeaves extends BlockLeavesBase implements IShearable
 public DoomedLeaves()
 {
 super(Material.leaves, false);
-this.setCreativeTab(DoomTabs.tabDoomBlocks);
+this.setCreativeTab(ChaosTabs.tabDoomBlocks);
 this.setStepSound(soundTypeGrass);
 this.setHardness(0.2F);
 this.setBlockTextureName("doomsmod:doomed_leaves");
@@ -51,7 +51,7 @@ public boolean isShearable(ItemStack item, IBlockAccess world, int x, int y, int
 */
 public Item getItemDropped(int par1, Random par2Random, int par3)
 {
-return Item.getItemFromBlock(DoomBlocks.DoomedSapling);
+return Item.getItemFromBlock(ChaosBlocks.DoomedSapling);
 }
 /**
 * Returns the quantity of items to drop on block destruction.

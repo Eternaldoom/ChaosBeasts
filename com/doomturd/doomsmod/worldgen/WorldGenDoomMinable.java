@@ -2,7 +2,7 @@ package com.doomturd.doomsmod.worldgen;
 
 import java.util.Random;
 
-import com.doomturd.doomsmod.blocks.DoomBlocks;
+import com.doomturd.doomsmod.blocks.ChaosBlocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
@@ -22,7 +22,7 @@ public class WorldGenDoomMinable extends WorldGenerator
 
     public WorldGenDoomMinable(Block p_i45459_1_, int p_i45459_2_)
     {
-        this(p_i45459_1_, p_i45459_2_, DoomBlocks.blockDoomedStone);
+        this(p_i45459_1_, p_i45459_2_, ChaosBlocks.blockDoomedStone);
     }
 
     public WorldGenDoomMinable(Block p_i45460_1_, int p_i45460_2_, Block p_i45460_3_)

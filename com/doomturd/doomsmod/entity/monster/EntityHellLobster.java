@@ -37,7 +37,7 @@ import net.minecraft.world.World;
 
 import org.apache.commons.lang3.tuple.ImmutablePair;
 
-import com.doomturd.doomsmod.items.DoomItems;
+import com.doomturd.doomsmod.items.ChaosItems;
 
 public class EntityHellLobster extends EntityMob
 {
@@ -119,7 +119,7 @@ public class EntityHellLobster extends EntityMob
         int j = this.rand.nextInt(2 + par2);
         int k = 0;
         {
-            this.dropItem(DoomItems.ItemExoskeleton, 2);
+            this.dropItem(ChaosItems.ItemExoskeleton, 2);
             this.dropItem(Items.magma_cream, 6);
         }
     }

@@ -2,7 +2,7 @@ package com.doomturd.doomsmod.worldgen;
 
 import java.util.Random;
 
-import com.doomturd.doomsmod.blocks.DoomBlocks;
+import com.doomturd.doomsmod.blocks.ChaosBlocks;
 import com.doomturd.doomsmod.blocks.DoomedSapling;
 
 import net.minecraft.block.Block;
@@ -73,7 +73,7 @@ public class WorldGenDoomedTree extends WorldGenModTrees
             {
                 Block block2 = par1World.getBlock(par3, par4 - 1, par5);
 
-                boolean isSoil = block2.canSustainPlant(par1World, par3, par4 - 1, par5, ForgeDirection.UP, (DoomedSapling)DoomBlocks.DoomedSapling);
+                boolean isSoil = block2.canSustainPlant(par1World, par3, par4 - 1, par5, ForgeDirection.UP, (DoomedSapling)ChaosBlocks.DoomedSapling);
                 if (isSoil && par4 < 256 - l - 1)
                 {
                     onPlantGrow(par1World, par3,     par4 - 1, par5,     par3, par4, par5);
@@ -104,9 +104,9 @@ public class WorldGenDoomedTree extends WorldGenModTrees
 
                         if (block1.isAir(par1World, k3, k2, l1) || block1.isLeaves(par1World, k3, k2, l1))
                         {
-                            this.setBlockAndNotifyAdequately(par1World, k3, k2, l1, DoomBlocks.DoomedWood, 1);
-                            this.setBlockAndNotifyAdequately(par1World, k3, k2, l1, DoomBlocks.DoomedWood, 1);
-                            this.setBlockAndNotifyAdequately(par1World, k3 + 2, k2, l1 + 2, DoomBlocks.DoomedWood, 1);
+                            this.setBlockAndNotifyAdequately(par1World, k3, k2, l1, ChaosBlocks.DoomedWood, 1);
+                            this.setBlockAndNotifyAdequately(par1World, k3, k2, l1, ChaosBlocks.DoomedWood, 1);
+                            this.setBlockAndNotifyAdequately(par1World, k3 + 2, k2, l1 + 2, ChaosBlocks.DoomedWood, 1);
                             i2 = k2;
                         }
                     }
@@ -162,7 +162,7 @@ public class WorldGenDoomedTree extends WorldGenModTrees
 
                                 for (l2 = 0; l2 < l3; ++l2)
                                 {
-                                    this.setBlockAndNotifyAdequately(par1World, par3 + j2, i2 - l2 - 1, par5 + k2, DoomBlocks.DoomedWood, 1);
+                                    this.setBlockAndNotifyAdequately(par1World, par3 + j2, i2 - l2 - 1, par5 + k2, ChaosBlocks.DoomedWood, 1);
                                 }
 
                                 int i3;
@@ -209,7 +209,7 @@ public class WorldGenDoomedTree extends WorldGenModTrees
 
         if (block.isAir(p_150526_1_, p_150526_2_, p_150526_3_, p_150526_4_))
         {
-            this.setBlockAndNotifyAdequately(p_150526_1_, p_150526_2_, p_150526_3_, p_150526_4_, DoomBlocks.DoomedLeaves, 1);
+            this.setBlockAndNotifyAdequately(p_150526_1_, p_150526_2_, p_150526_3_, p_150526_4_, ChaosBlocks.DoomedLeaves, 1);
         }
     }
 

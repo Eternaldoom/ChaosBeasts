@@ -17,7 +17,7 @@ import com.doomturd.doomsmod.entity.monster.EntityLobster;
 import com.doomturd.doomsmod.entity.other.EntityDoomTNT;
 import com.doomturd.doomsmod.entity.projectile.EntityHandgunBullet;
 import com.doomturd.doomsmod.entity.projectile.EntityThrowingStar;
-import com.doomturd.doomsmod.items.DoomItems;
+import com.doomturd.doomsmod.items.ChaosItems;
 
 import net.minecraft.client.model.ModelZombie;
 import net.minecraft.client.renderer.entity.RenderSnowball;
@@ -34,8 +34,8 @@ public class AddRendering
 		RenderingRegistry.registerEntityRenderingHandler(EntityLobster.class, new RenderLobster());
 		RenderingRegistry.registerEntityRenderingHandler(EntityHellLobster.class, new RenderHellLobster());
 		RenderingRegistry.registerEntityRenderingHandler(EntityDemon.class, new RenderDemon());
-		RenderingRegistry.registerEntityRenderingHandler(EntityThrowingStar.class, new RenderThrowingStar(DoomItems.ItemThrowingStar));
-		RenderingRegistry.registerEntityRenderingHandler(EntityHandgunBullet.class, new RenderSnowball(DoomItems.ItemBullet));
+		RenderingRegistry.registerEntityRenderingHandler(EntityThrowingStar.class, new RenderThrowingStar(ChaosItems.ItemThrowingStar));
+		RenderingRegistry.registerEntityRenderingHandler(EntityHandgunBullet.class, new RenderSnowball(ChaosItems.ItemBullet));
 
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBlockLobsterEntity.class, new TileEntityBlockLobsterRenderer());
 	}

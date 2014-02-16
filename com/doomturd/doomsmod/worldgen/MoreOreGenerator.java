@@ -8,8 +8,8 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import cpw.mods.fml.common.IWorldGenerator;
 
-import com.doomturd.doomsmod.DoomsMod;
-import com.doomturd.doomsmod.blocks.DoomBlocks;
+import com.doomturd.doomsmod.ChaosBeasts;
+import com.doomturd.doomsmod.blocks.ChaosBlocks;
 
 public class MoreOreGenerator implements IWorldGenerator
 {
@@ -37,7 +37,7 @@ public void generateSurface(World world, Random random, int chunkX, int chunkZ)
 		int randPosX=chunkX + random.nextInt(16);
 		int randPosY=random.nextInt(64);
 		int randPosZ=chunkZ + random.nextInt(16);
-		(new WorldGenMinable(DoomBlocks.blockRubyOre, 7)).generate(world, random, randPosX, randPosY, randPosZ);
+		(new WorldGenMinable(ChaosBlocks.blockRubyOre, 7)).generate(world, random, randPosX, randPosY, randPosZ);
 		(new WorldGenMinable(Blocks.emerald_ore, 7)).generate(world, random, randPosX, randPosY, randPosZ);
 	}
 	
@@ -46,7 +46,7 @@ public void generateSurface(World world, Random random, int chunkX, int chunkZ)
 		int randPosX=chunkX + random.nextInt(16);
 		int randPosY=random.nextInt(16);
 		int randPosZ=chunkZ + random.nextInt(16);
-		(new WorldGenMinable(DoomBlocks.blockSapphireOre, 11)).generate(world, random, randPosX, randPosY, randPosZ);
+		(new WorldGenMinable(ChaosBlocks.blockSapphireOre, 11)).generate(world, random, randPosX, randPosY, randPosZ);
 	}
 	
 	for(int food = 0; food < 6; food++) 
@@ -54,7 +54,7 @@ public void generateSurface(World world, Random random, int chunkX, int chunkZ)
 		int randPosX=chunkX + random.nextInt(16);
 		int randPosY=random.nextInt(8);
 		int randPosZ=chunkZ + random.nextInt(16);
-		(new WorldGenMinable(DoomBlocks.blockLeadOre, 5)).generate(world, random, randPosX, randPosY, randPosZ);
+		(new WorldGenMinable(ChaosBlocks.blockLeadOre, 5)).generate(world, random, randPosX, randPosY, randPosZ);
 	}
 	
 	for(int lasagna = 0; lasagna < 2; lasagna++) 
@@ -62,7 +62,7 @@ public void generateSurface(World world, Random random, int chunkX, int chunkZ)
 		int randPosX=chunkX + random.nextInt(16);
 		int randPosY=random.nextInt(32);
 		int randPosZ=chunkZ + random.nextInt(16);
-		(new WorldGenMinable(DoomBlocks.blockCopperOre, 3)).generate(world, random, randPosX, randPosY, randPosZ);
+		(new WorldGenMinable(ChaosBlocks.blockCopperOre, 3)).generate(world, random, randPosX, randPosY, randPosZ);
 	}
 }
 }

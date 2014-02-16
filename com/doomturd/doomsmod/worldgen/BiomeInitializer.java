@@ -1,6 +1,6 @@
 package com.doomturd.doomsmod.worldgen;
 
-import com.doomturd.doomsmod.DoomsMod;
+import com.doomturd.doomsmod.ChaosBeasts;
 
 import net.minecraftforge.event.terraingen.WorldTypeEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
@@ -14,7 +14,7 @@ public class BiomeInitializer
 
 	@SubscribeEvent
 	public void initBiomes(WorldTypeEvent.InitBiomeGens event) {
-		if (DoomsMod.reddesert != null) {
+		if (ChaosBeasts.reddesert != null) {
 			event.newBiomeGens[0] = new LayerAddRedDesert(event.seed, 1500L, event.newBiomeGens[0]);
 			event.newBiomeGens[1] = new LayerAddRedDesert(event.seed, 1500L, event.newBiomeGens[1]);
 			event.newBiomeGens[2] = new LayerAddRedDesert(event.seed, 1500L, event.newBiomeGens[2]);

@@ -2,7 +2,7 @@ package com.doomturd.doomsmod.blocks;
 
 import java.util.Random;
 
-import com.doomturd.doomsmod.DoomsMod;
+import com.doomturd.doomsmod.ChaosBeasts;
 import com.doomturd.doomsmod.entity.fx.DoomPortalFX;
 import com.doomturd.doomsmod.worldgen.DoomTeleporter;
 
@@ -72,10 +72,10 @@ public class DoomPortal extends BlockBreakable
             {
                 thePlayer.timeUntilPortal = 10;
             }
-            else if (thePlayer.dimension != DoomsMod.dimensionId)
+            else if (thePlayer.dimension != ChaosBeasts.DoomDimensionId)
             {
                 thePlayer.timeUntilPortal = 10;
-                thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, DoomsMod.dimensionId, new DoomTeleporter(thePlayer.mcServer.worldServerForDimension(DoomsMod.dimensionId)));
+                thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, ChaosBeasts.DoomDimensionId, new DoomTeleporter(thePlayer.mcServer.worldServerForDimension(ChaosBeasts.DoomDimensionId)));
             }
             else {
                 thePlayer.timeUntilPortal = 10;
@@ -357,14 +357,14 @@ public class DoomPortal extends BlockBreakable
 
 				Block block1 = this.field_150867_a.getBlock(p_150853_1_ + j1 * i1, p_150853_2_ - 1, p_150853_3_ + k1 * i1);
 
-				if (block1 != DoomBlocks.blockRainbow)
+				if (block1 != ChaosBlocks.blockRainbow)
 				{
 					break;
 				}
 			}
 
 			block = this.field_150867_a.getBlock(p_150853_1_ + j1 * i1, p_150853_2_, p_150853_3_ + k1 * i1);
-			return block == DoomBlocks.blockRainbow ? i1 : 0;
+			return block == ChaosBlocks.blockRainbow ? i1 : 0;
 		}
 
 		protected int func_150858_a()
@@ -390,7 +390,7 @@ public class DoomPortal extends BlockBreakable
 							break label56;
 						}
 
-						if (block == DoomBlocks.blockDoomPortal)
+						if (block == ChaosBlocks.blockDoomPortal)
 						{
 							++this.field_150864_e;
 						}
@@ -399,7 +399,7 @@ public class DoomPortal extends BlockBreakable
 						{
 							block = this.field_150867_a.getBlock(k + Direction.offsetX[DoomPortal.field_150001_a[this.field_150865_b][0]], i, l + Direction.offsetZ[DoomPortal.field_150001_a[this.field_150865_b][0]]);
 
-							if (block != DoomBlocks.blockRainbow)
+							if (block != ChaosBlocks.blockRainbow)
 							{
 								break label56;
 							}
@@ -408,7 +408,7 @@ public class DoomPortal extends BlockBreakable
 						{
 							block = this.field_150867_a.getBlock(k + Direction.offsetX[DoomPortal.field_150001_a[this.field_150865_b][1]], i, l + Direction.offsetZ[DoomPortal.field_150001_a[this.field_150865_b][1]]);
 
-							if (block != DoomBlocks.blockRainbow)
+							if (block != ChaosBlocks.blockRainbow)
 							{
 								break label56;
 							}
@@ -422,7 +422,7 @@ public class DoomPortal extends BlockBreakable
 				k = this.field_150861_f.posY + this.field_150862_g;
 				l = this.field_150861_f.posZ + i * Direction.offsetZ[DoomPortal.field_150001_a[this.field_150865_b][1]];
 
-				if (this.field_150867_a.getBlock(j, k, l) != DoomBlocks.blockRainbow)
+				if (this.field_150867_a.getBlock(j, k, l) != ChaosBlocks.blockRainbow)
 				{
 					this.field_150862_g = 0;
 					break;
@@ -444,7 +444,7 @@ public class DoomPortal extends BlockBreakable
 
 		protected boolean func_150857_a(Block block)
 		{
-			return block.getMaterial() == Material.air || block == DoomBlocks.doomFire || block == DoomBlocks.blockDoomPortal;
+			return block.getMaterial() == Material.air || block == ChaosBlocks.doomFire || block == ChaosBlocks.blockDoomPortal;
 		}
 
 		public boolean func_150860_b()
@@ -462,7 +462,7 @@ public class DoomPortal extends BlockBreakable
 				for (int l = 0; l < this.field_150862_g; ++l)
 				{
 					int i1 = this.field_150861_f.posY + l;
-					this.field_150867_a.setBlock(j, i1, k, DoomBlocks.blockDoomPortal, this.field_150865_b, 2);
+					this.field_150867_a.setBlock(j, i1, k, ChaosBlocks.blockDoomPortal, this.field_150865_b, 2);
 				}
 			}
 		}

@@ -2,7 +2,7 @@ package com.doomturd.doomsmod.blocks;
 
 import java.util.Random;
 
-import com.doomturd.doomsmod.generic.DoomTabs;
+import com.doomturd.doomsmod.generic.ChaosTabs;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -28,7 +28,7 @@ public BlockDoomLog()
 {
 super(Material.wood);
 this.setTickRandomly(true);
-this.setCreativeTab(DoomTabs.tabDoomBlocks);
+this.setCreativeTab(ChaosTabs.tabDoomBlocks);
 this.setStepSound(soundTypeWood);
 }
 

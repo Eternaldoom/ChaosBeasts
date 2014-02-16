@@ -2,7 +2,7 @@ package com.doomturd.doomsmod.blocks;
 
 import java.util.Random;
 
-import com.doomturd.doomsmod.generic.DoomTabs;
+import com.doomturd.doomsmod.generic.ChaosTabs;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -30,13 +30,13 @@ public BlockDoomGrass(int par1)
 {
 super(Material.grass);
 this.setTickRandomly(true);
-this.setCreativeTab(DoomTabs.tabDoomBlocks);
+this.setCreativeTab(ChaosTabs.tabDoomBlocks);
 }
 
 @SideOnly(Side.CLIENT)
 public IIcon getIcon(int p_149691_1_, int p_149691_2_)
 {
-    return p_149691_1_ == 1 ? this.field_149991_b : (p_149691_1_ == 0 ? DoomBlocks.blockDoomedDirt.getBlockTextureFromSide(p_149691_1_) : this.blockIcon);
+    return p_149691_1_ == 1 ? this.field_149991_b : (p_149691_1_ == 0 ? ChaosBlocks.blockDoomedDirt.getBlockTextureFromSide(p_149691_1_) : this.blockIcon);
 }
 
 /**
@@ -48,7 +48,7 @@ public void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int 
     {
         if (p_149674_1_.getBlockLightValue(p_149674_2_, p_149674_3_ + 1, p_149674_4_) < 4 && p_149674_1_.getBlockLightOpacity(p_149674_2_, p_149674_3_ + 1, p_149674_4_) > 2)
         {
-            p_149674_1_.setBlock(p_149674_2_, p_149674_3_, p_149674_4_, DoomBlocks.blockDoomedDirt);
+            p_149674_1_.setBlock(p_149674_2_, p_149674_3_, p_149674_4_, ChaosBlocks.blockDoomedDirt);
         }
         else if (p_149674_1_.getBlockLightValue(p_149674_2_, p_149674_3_ + 1, p_149674_4_) >= 9)
         {
@@ -59,9 +59,9 @@ public void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int 
                 int k1 = p_149674_4_ + p_149674_5_.nextInt(3) - 1;
                 Block block = p_149674_1_.getBlock(i1, j1 + 1, k1);
 
-                if (p_149674_1_.getBlock(i1, j1, k1) == DoomBlocks.blockDoomedDirt && p_149674_1_.getBlockMetadata(i1, j1, k1) == 0 && p_149674_1_.getBlockLightValue(i1, j1 + 1, k1) >= 4 && p_149674_1_.getBlockLightOpacity(i1, j1 + 1, k1) <= 2)
+                if (p_149674_1_.getBlock(i1, j1, k1) == ChaosBlocks.blockDoomedDirt && p_149674_1_.getBlockMetadata(i1, j1, k1) == 0 && p_149674_1_.getBlockLightValue(i1, j1 + 1, k1) >= 4 && p_149674_1_.getBlockLightOpacity(i1, j1 + 1, k1) <= 2)
                 {
-                    p_149674_1_.setBlock(i1, j1, k1, DoomBlocks.blockDoomedGrass);
+                    p_149674_1_.setBlock(i1, j1, k1, ChaosBlocks.blockDoomedGrass);
                 }
             }
         }
@@ -77,7 +77,7 @@ public IIcon getIcon(IBlockAccess p_149673_1_, int p_149673_2_, int p_149673_3_,
     }
     else if (p_149673_5_ == 0)
     {
-        return DoomBlocks.blockDoomedDirt.getBlockTextureFromSide(p_149673_5_);
+        return ChaosBlocks.blockDoomedDirt.getBlockTextureFromSide(p_149673_5_);
     }
     else
     {
@@ -100,6 +100,6 @@ public void registerBlockIcons(IIconRegister p_149651_1_)
 */
 public Item getItemDropped(int par1, Random par2Random, int par3)
 {
-return DoomBlocks.blockDoomedDirt.getItemDropped(0, par2Random, par3);
+return ChaosBlocks.blockDoomedDirt.getItemDropped(0, par2Random, par3);
 }
 }

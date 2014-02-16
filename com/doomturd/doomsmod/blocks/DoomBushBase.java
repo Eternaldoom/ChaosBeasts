@@ -48,7 +48,7 @@ public class DoomBushBase extends Block implements IPlantable
      */
     protected boolean canPlaceBlockOn(Block p_149854_1_)
     {
-        return p_149854_1_ == DoomBlocks.blockDoomedGrass || p_149854_1_ == DoomBlocks.blockDoomedDirt;
+        return p_149854_1_ == ChaosBlocks.blockDoomedGrass || p_149854_1_ == ChaosBlocks.blockDoomedDirt;
     }
 
     /**

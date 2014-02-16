@@ -2,7 +2,7 @@ package com.doomturd.doomsmod.blocks;
 
 import java.util.Random;
 
-import com.doomturd.doomsmod.generic.DoomTabs;
+import com.doomturd.doomsmod.generic.ChaosTabs;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStone;
@@ -16,11 +16,11 @@ public class BlockDoomedStone extends BlockStone
     public BlockDoomedStone()
     {
         super();
-        this.setCreativeTab(DoomTabs.tabDoomBlocks);
+        this.setCreativeTab(ChaosTabs.tabDoomBlocks);
     }
 
     public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
     {
-        return Item.getItemFromBlock(DoomBlocks.blockDoomedCobblestone);
+        return Item.getItemFromBlock(ChaosBlocks.blockDoomedCobblestone);
     }
 }

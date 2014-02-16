@@ -4,7 +4,7 @@ import java.util.Random;
 
 import com.doomturd.doomsmod.entity.other.EntityDoomTNT;
 import com.doomturd.doomsmod.entity.projectile.EntityHandgunBullet;
-import com.doomturd.doomsmod.generic.DoomTabs;
+import com.doomturd.doomsmod.generic.ChaosTabs;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -24,7 +24,7 @@ public class BlockDoomTNT extends Block {
 	public BlockDoomTNT ()
 	{
 		super(Material.glass);
-		this.setCreativeTab(DoomTabs.tabDoomBlocks);
+		this.setCreativeTab(ChaosTabs.tabDoomBlocks);
 		this.setStepSound(soundTypeSnow);
 		this.setBlockUnbreakable();
 		this.setLightLevel(1.0F);

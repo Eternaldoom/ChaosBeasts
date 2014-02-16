@@ -4,7 +4,7 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.MinecraftForge;
 
-import com.doomturd.doomsmod.blocks.DoomBlocks;
+import com.doomturd.doomsmod.blocks.ChaosBlocks;
 import com.doomturd.doomsmod.client.renderer.AddRendering;
 import com.doomturd.doomsmod.entity.AddEntities;
 import com.doomturd.doomsmod.entity.other.EntityDoomTNT;
@@ -12,9 +12,9 @@ import com.doomturd.doomsmod.entity.projectile.EntityHandgunBullet;
 import com.doomturd.doomsmod.entity.projectile.EntityThrowingStar;
 import com.doomturd.doomsmod.event.DoomBucketEvent;
 import com.doomturd.doomsmod.event.DoomEventClass;
-import com.doomturd.doomsmod.generic.DoomCrafting;
-import com.doomturd.doomsmod.generic.DoomOreDict;
-import com.doomturd.doomsmod.items.DoomItems;
+import com.doomturd.doomsmod.generic.ChaosCrafting;
+import com.doomturd.doomsmod.generic.ChaosOreDict;
+import com.doomturd.doomsmod.items.ChaosItems;
 import com.doomturd.doomsmod.worldgen.BiomeGenDoom;
 import com.doomturd.doomsmod.worldgen.BiomeGenRedDesert;
 import com.doomturd.doomsmod.worldgen.BiomeInitializer;
@@ -30,10 +30,10 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = DoomsMod.MODID, version = DoomsMod.VERSION)
-public class DoomsMod
+@Mod(modid = ChaosBeasts.MODID, version = ChaosBeasts.VERSION)
+public class ChaosBeasts
 {
-    public static final String MODID = "doomsmod";
+    public static final String MODID = "chaosbeasts";
     public static final String VERSION = "Alpha 1.0";
   
     public static int DoomDimensionId = 3;
@@ -45,12 +45,12 @@ public class DoomsMod
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-    	DoomBlocks.addBlocks();
+    	ChaosBlocks.addBlocks();
     	
     	reddesert = BiomeGenRedDesert.makeBiome(100);
     	
-    	DimensionManager.registerProviderType(DoomsMod.DoomDimensionId, DoomWorldProvider.class, true);
-    	DimensionManager.registerDimension(DoomsMod.DoomDimensionId, DoomsMod.DoomDimensionId);
+    	DimensionManager.registerProviderType(ChaosBeasts.DoomDimensionId, DoomWorldProvider.class, true);
+    	DimensionManager.registerDimension(ChaosBeasts.DoomDimensionId, ChaosBeasts.DoomDimensionId);
 
     	//Projectiles
         EntityRegistry.registerModEntity(EntityHandgunBullet.class, "HandgunBullet", 550, this, 64, 1, true);
@@ -67,9 +67,9 @@ public class DoomsMod
         
     	GameRegistry.registerWorldGenerator(new MoreOreGenerator(), 1);
     	
-    	DoomItems.addItems();
-    	DoomOreDict.addOreDictNames();
-    	new DoomCrafting();
+    	ChaosItems.addItems();
+    	ChaosOreDict.addOreDictNames();
+    	new ChaosCrafting();
     }
     
     @EventHandler

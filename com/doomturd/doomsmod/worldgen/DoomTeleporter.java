@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
-import com.doomturd.doomsmod.blocks.DoomBlocks;
+import com.doomturd.doomsmod.blocks.ChaosBlocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
@@ -60,7 +60,7 @@ public class DoomTeleporter extends Teleporter
                         int l1 = j + j1;
                         int i2 = k + i1 * b1 - l * b0;
                         boolean flag = j1 < 0;
-                        this.worldServerInstance.setBlock(k1, l1, i2, flag ? DoomBlocks.blockRainbow : Blocks.air);
+                        this.worldServerInstance.setBlock(k1, l1, i2, flag ? ChaosBlocks.blockRainbow : Blocks.air);
                     }
                 }
             }
@@ -106,9 +106,9 @@ public class DoomTeleporter extends Teleporter
 
                     for (int i2 = this.worldServerInstance.getActualHeight() - 1; i2 >= 0; --i2)
                     {
-                        if (this.worldServerInstance.getBlock(l3, i2, l1) == DoomBlocks.blockDoomPortal)
+                        if (this.worldServerInstance.getBlock(l3, i2, l1) == ChaosBlocks.blockDoomPortal)
                         {
-                            while (this.worldServerInstance.getBlock(l3, i2 - 1, l1) == DoomBlocks.blockDoomPortal)
+                            while (this.worldServerInstance.getBlock(l3, i2 - 1, l1) == ChaosBlocks.blockDoomPortal)
                             {
                                 --i2;
                             }
@@ -142,22 +142,22 @@ public class DoomTeleporter extends Teleporter
             d7 = (double)k + 0.5D;
             int i4 = -1;
 
-            if (this.worldServerInstance.getBlock(i - 1, j, k) == DoomBlocks.blockDoomPortal)
+            if (this.worldServerInstance.getBlock(i - 1, j, k) == ChaosBlocks.blockDoomPortal)
             {
                 i4 = 2;
             }
 
-            if (this.worldServerInstance.getBlock(i + 1, j, k) == DoomBlocks.blockDoomPortal)
+            if (this.worldServerInstance.getBlock(i + 1, j, k) == ChaosBlocks.blockDoomPortal)
             {
                 i4 = 0;
             }
 
-            if (this.worldServerInstance.getBlock(i, j, k - 1) == DoomBlocks.blockDoomPortal)
+            if (this.worldServerInstance.getBlock(i, j, k - 1) == ChaosBlocks.blockDoomPortal)
             {
                 i4 = 3;
             }
 
-            if (this.worldServerInstance.getBlock(i, j, k + 1) == DoomBlocks.blockDoomPortal)
+            if (this.worldServerInstance.getBlock(i, j, k + 1) == ChaosBlocks.blockDoomPortal)
             {
                 i4 = 1;
             }
@@ -442,7 +442,7 @@ public class DoomTeleporter extends Teleporter
                         i4 = j2 + k3;
                         j4 = k2 + (j3 - 1) * l2 - i3 * l5;
                         flag = k3 < 0;
-                        this.worldServerInstance.setBlock(l3, i4, j4, flag ? DoomBlocks.blockRainbow : Blocks.air);
+                        this.worldServerInstance.setBlock(l3, i4, j4, flag ? ChaosBlocks.blockRainbow : Blocks.air);
                     }
                 }
             }
@@ -458,7 +458,7 @@ public class DoomTeleporter extends Teleporter
                     i4 = j2 + k3;
                     j4 = k2 + (j3 - 1) * l2;
                     flag = j3 == 0 || j3 == 3 || k3 == -1 || k3 == 3;
-                    this.worldServerInstance.setBlock(l3, i4, j4, (Block)(flag ? DoomBlocks.blockRainbow : DoomBlocks.blockDoomPortal), 0, 2);
+                    this.worldServerInstance.setBlock(l3, i4, j4, (Block)(flag ? ChaosBlocks.blockRainbow : ChaosBlocks.blockDoomPortal), 0, 2);
                 }
             }
 

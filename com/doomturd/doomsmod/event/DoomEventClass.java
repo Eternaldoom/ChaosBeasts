@@ -1,6 +1,6 @@
 package com.doomturd.doomsmod.event;
 
-import com.doomturd.doomsmod.blocks.DoomBlocks;
+import com.doomturd.doomsmod.blocks.ChaosBlocks;
 import com.doomturd.doomsmod.blocks.DoomedSapling;
 
 import net.minecraft.client.main.Main;
@@ -13,9 +13,9 @@ private int BlockID;
 
 public void bonemealUsed(BonemealEvent event)
 {
-if(event.world.getBlock(event.x, event.y, event.z) == DoomBlocks.DoomedSapling)
+if(event.world.getBlock(event.x, event.y, event.z) == ChaosBlocks.DoomedSapling)
 {
-((DoomedSapling)DoomBlocks.DoomedSapling).func_149878_d(event.world, event.x, event.y, event.z, event.world.rand);
+((DoomedSapling)ChaosBlocks.DoomedSapling).func_149878_d(event.world, event.x, event.y, event.z, event.world.rand);
 }
 }
 }

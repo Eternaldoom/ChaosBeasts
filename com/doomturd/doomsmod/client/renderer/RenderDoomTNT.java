@@ -10,7 +10,7 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
-import com.doomturd.doomsmod.blocks.DoomBlocks;
+import com.doomturd.doomsmod.blocks.ChaosBlocks;
 import com.doomturd.doomsmod.entity.other.EntityDoomTNT;
 
 import cpw.mods.fml.relauncher.Side;

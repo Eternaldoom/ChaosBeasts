@@ -1,6 +1,6 @@
 package com.doomturd.doomsmod.worldgen;
 
-import com.doomturd.doomsmod.DoomsMod;
+import com.doomturd.doomsmod.ChaosBeasts;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -25,7 +25,7 @@ public void registerWorldChunkManager()
 {
     doomedland = (new BiomeGenDoom(50));
 this.worldChunkMgr = new WorldChunkManagerHell(this.doomedland, this.dimensionId);
-this.dimensionId = DoomsMod.dimensionId;
+this.dimensionId = ChaosBeasts.DoomDimensionId;
 this.hasNoSky = true;
 }
 public IChunkProvider createChunkGenerator()
