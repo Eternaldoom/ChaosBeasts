@@ -41,6 +41,6 @@ public class TileEntityBlockLobsterBlock extends BlockContainer
         
         //This is the icon to use for showing the block in your hand.
         public void registerIcons(IIconRegister icon) {
-                this.blockIcon = icon.registerIcon("doomsmod:lobster_block_icon");
+                this.blockIcon = icon.registerIcon("chaosbeasts:lobster_block_icon");
         }
 }

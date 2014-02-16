@@ -15,7 +15,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class RenderDemon extends RenderLiving
 {
-    private static final ResourceLocation demonTextures = new ResourceLocation("doomsmod:textures/entity/demon.png");
+    private static final ResourceLocation demonTextures = new ResourceLocation("chaosbeasts:textures/entity/demon.png");
 
     public RenderDemon()
     {

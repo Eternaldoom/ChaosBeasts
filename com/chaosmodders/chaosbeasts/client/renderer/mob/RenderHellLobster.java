@@ -15,7 +15,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class RenderHellLobster extends RenderLiving
 {
-    private static final ResourceLocation lobsterTextures = new ResourceLocation("doomsmod:textures/entity/hell_lobster.png");
+    private static final ResourceLocation lobsterTextures = new ResourceLocation("chaosbeasts:textures/entity/hell_lobster.png");
     private static final String __OBFID = "CL_00001022";
 
     public RenderHellLobster()

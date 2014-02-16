@@ -16,7 +16,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class RenderGiantPigZombie extends RenderLiving
 {
-    private static final ResourceLocation pigzombie = new ResourceLocation("doomsmod:textures/entity/pigzombie.png");
+    private static final ResourceLocation pigzombie = new ResourceLocation("chaosbeasts:textures/entity/pigzombie.png");
     /**
      * Scale of the model to use
      */

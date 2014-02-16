@@ -32,7 +32,7 @@ public class GlowTNT extends Block {
 		this.setHardness(0.9F);
 		this.setResistance(0.9F);
 		this.setLightLevel(0.8F);
-		this.setBlockTextureName("doomsmod:glowtnt");
+		this.setBlockTextureName("chaosbeasts:glowtnt");
 	}
 	
 

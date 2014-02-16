@@ -24,7 +24,7 @@ super(Material.leaves, false);
 this.setCreativeTab(ChaosTabs.tabChaosBlocks);
 this.setStepSound(soundTypeGrass);
 this.setHardness(0.2F);
-this.setBlockTextureName("doomsmod:doomed_leaves");
+this.setBlockTextureName("chaosbeasts:doomed_leaves");
 }
 
 public boolean isOpaqueCube()

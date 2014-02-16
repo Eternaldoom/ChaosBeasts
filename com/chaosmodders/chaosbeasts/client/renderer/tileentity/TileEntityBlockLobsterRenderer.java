@@ -39,7 +39,7 @@ public class TileEntityBlockLobsterRenderer extends TileEntitySpecialRenderer {
         //This is the texture of your block. It's pathed to be the same place as your other blocks here.
                 //Outdated bindTextureByName("/mods/roads/textures/blocks/TrafficLightPoleRed.png");
        //Use in 1.6.2  this
-                ResourceLocation textures = (new ResourceLocation("doomsmod:textures/entity/demon.png")); 
+                ResourceLocation textures = (new ResourceLocation("chaosbeasts:textures/entity/demon.png")); 
         //the ':' is very important
         //binding the textures
                 Minecraft.getMinecraft().renderEngine.bindTexture(textures);

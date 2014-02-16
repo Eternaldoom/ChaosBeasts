@@ -529,7 +529,7 @@ public class DoomFire extends BlockFire {
     }
 
     public String getTextureName() {
-        return "doomsmod" + name;
+        return "chaosbeasts" + name;
     }
 
     public void register() {

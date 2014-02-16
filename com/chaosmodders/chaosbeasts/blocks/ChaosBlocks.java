@@ -39,30 +39,30 @@ public class ChaosBlocks
 	{
 		LiquidDoomFluid = new LiquidDoomFluid();
 		
-		blockRainbow = new BlockCustom().setBlockName("blockRainbow").setHardness(0.2F).setResistance(1000000.0F).setBlockTextureName("doomsmod:rainbow_block");
-    	blockRubyOre = new BlockRubyOre().setBlockName("blockRubyOre").setHardness(3.0F).setResistance(5.0F).setBlockTextureName("doomsmod:ruby_ore");
-    	blockRuby = new BlockCustom().setBlockName("blockRuby").setHardness(5.0F).setResistance(10.0F).setBlockTextureName("doomsmod:ruby_block");
-    	blockSapphireOre = new BlockSapphireOre().setBlockName("blockSapphireOre").setHardness(3.0F).setResistance(5.0F).setBlockTextureName("doomsmod:sapphire_ore");
-    	blockSapphire = new BlockCustom().setBlockName("blockSapphire").setHardness(5.0F).setResistance(10.0F).setBlockTextureName("doomsmod:sapphire_block");
-    	blockDoomPortal = new DoomPortal().setBlockName("blockDoomPortal").setBlockTextureName("doomsmod:doom_portal");
-    	blockBoneBlock = new BlockCustom().setBlockName("blockBoneBlock").setHardness(5.0F).setResistance(10.0F).setBlockTextureName("doomsmod:bone_block");
-    	blockBlazeRod = new BlockCustom().setBlockName("blockBlazeRod").setHardness(5.0F).setResistance(10.0F).setBlockTextureName("doomsmod:blaze_rod_block");
-    	blockLobster = new TileEntityBlockLobsterBlock().setBlockName("blockLobster").setHardness(0.5F).setResistance(1000000.0F).setBlockTextureName("doomsmod:lobster_block_icon");
-    	doomFire = new DoomFire().setBlockName("blockDoomFire").setBlockTextureName("doomsmod:doom_fire");
-    	blockDoomedStone = new BlockDoomedStone().setBlockName("blockDoomedStone").setHardness(5.0F).setResistance(50.0F).setBlockTextureName("doomsmod:doomed_stone");
-    	blockDoomedCobblestone = new BlockCustom().setBlockName("blockDoomedCobblestone").setHardness(5.0F).setResistance(50.0F).setBlockTextureName("doomsmod:doomed_cobblestone");
-    	blockDoomedDirt = new BlockDoomedDirt().setBlockName("blockDoomedDirt").setHardness(10.0F).setResistance(0.01F).setBlockTextureName("doomsmod:doomed_dirt").setCreativeTab(ChaosTabs.tabChaosBlocks);
-    	blockDoomedGrass = new BlockDoomGrass(0).setBlockName("blockDoomedGrass").setHardness(10.0F).setResistance(0.01F).setBlockTextureName("doomsmod:doomgrass");
-    	DoomedWood = new BlockDoomLog().setBlockName("blockDoomedWood").setBlockTextureName("doomsmod:doomed_wood");
+		blockRainbow = new BlockCustom().setBlockName("blockRainbow").setHardness(0.2F).setResistance(1000000.0F).setBlockTextureName("chaosbeasts:rainbow_block");
+    	blockRubyOre = new BlockRubyOre().setBlockName("blockRubyOre").setHardness(3.0F).setResistance(5.0F).setBlockTextureName("chaosbeasts:ruby_ore");
+    	blockRuby = new BlockCustom().setBlockName("blockRuby").setHardness(5.0F).setResistance(10.0F).setBlockTextureName("chaosbeasts:ruby_block");
+    	blockSapphireOre = new BlockSapphireOre().setBlockName("blockSapphireOre").setHardness(3.0F).setResistance(5.0F).setBlockTextureName("chaosbeasts:sapphire_ore");
+    	blockSapphire = new BlockCustom().setBlockName("blockSapphire").setHardness(5.0F).setResistance(10.0F).setBlockTextureName("chaosbeasts:sapphire_block");
+    	blockDoomPortal = new DoomPortal().setBlockName("blockDoomPortal").setBlockTextureName("chaosbeasts:doom_portal");
+    	blockBoneBlock = new BlockCustom().setBlockName("blockBoneBlock").setHardness(5.0F).setResistance(10.0F).setBlockTextureName("chaosbeasts:bone_block");
+    	blockBlazeRod = new BlockCustom().setBlockName("blockBlazeRod").setHardness(5.0F).setResistance(10.0F).setBlockTextureName("chaosbeasts:blaze_rod_block");
+    	blockLobster = new TileEntityBlockLobsterBlock().setBlockName("blockLobster").setHardness(0.5F).setResistance(1000000.0F).setBlockTextureName("chaosbeasts:lobster_block_icon");
+    	doomFire = new DoomFire().setBlockName("blockDoomFire").setBlockTextureName("chaosbeasts:doom_fire");
+    	blockDoomedStone = new BlockDoomedStone().setBlockName("blockDoomedStone").setHardness(5.0F).setResistance(50.0F).setBlockTextureName("chaosbeasts:doomed_stone");
+    	blockDoomedCobblestone = new BlockCustom().setBlockName("blockDoomedCobblestone").setHardness(5.0F).setResistance(50.0F).setBlockTextureName("chaosbeasts:doomed_cobblestone");
+    	blockDoomedDirt = new BlockDoomedDirt().setBlockName("blockDoomedDirt").setHardness(10.0F).setResistance(0.01F).setBlockTextureName("chaosbeasts:doomed_dirt").setCreativeTab(ChaosTabs.tabChaosBlocks);
+    	blockDoomedGrass = new BlockDoomGrass(0).setBlockName("blockDoomedGrass").setHardness(10.0F).setResistance(0.01F).setBlockTextureName("chaosbeasts:doomgrass");
+    	DoomedWood = new BlockDoomLog().setBlockName("blockDoomedWood").setBlockTextureName("chaosbeasts:doomed_wood");
     	DoomedLeaves = new DoomedLeaves().setBlockName("blockDoomedLeaves");
-    	DoomedSapling = new DoomedSapling().setBlockName("blockDoomedSapling").setBlockTextureName("doomsmod:doomed_sapling");
-    	blockDemonicOre = new BlockDemonicOre().setBlockName("oreDemonic").setBlockTextureName("doomsmod:demonic_ore");
-    	blockDemonic = new BlockCustom().setBlockName("blockDemonic").setBlockTextureName("doomsmod:demonic_block");
-    	blockLeadOre = new BlockCustom().setBlockName("blockLeadOre").setHardness(3.0F).setResistance(5.0F).setBlockTextureName("doomsmod:lead_ore");
-    	blockCopperOre = new BlockCustom().setBlockName("oreCopper").setHardness(5.0F).setResistance(5.0F).setBlockTextureName("doomsmod:copper_ore");
+    	DoomedSapling = new DoomedSapling().setBlockName("blockDoomedSapling").setBlockTextureName("chaosbeasts:doomed_sapling");
+    	blockDemonicOre = new BlockDemonicOre().setBlockName("oreDemonic").setBlockTextureName("chaosbeasts:demonic_ore");
+    	blockDemonic = new BlockCustom().setBlockName("blockDemonic").setBlockTextureName("chaosbeasts:demonic_block");
+    	blockLeadOre = new BlockCustom().setBlockName("blockLeadOre").setHardness(3.0F).setResistance(5.0F).setBlockTextureName("chaosbeasts:lead_ore");
+    	blockCopperOre = new BlockCustom().setBlockName("oreCopper").setHardness(5.0F).setResistance(5.0F).setBlockTextureName("chaosbeasts:copper_ore");
     	blockGlowTNT = new GlowTNT();
 
-    	LiquidDoomBlock = new LiquidDoomBlock().setBlockName("blockLiquidDoom").setBlockTextureName("doomsmod:liquiddoom_still");
+    	LiquidDoomBlock = new LiquidDoomBlock().setBlockName("blockLiquidDoom").setBlockTextureName("chaosbeasts:liquiddoom_still");
     	
     	GameRegistry.registerBlock(blockRainbow, "rainbow_block");
     	GameRegistry.registerBlock(blockRubyOre, "ruby_ore");

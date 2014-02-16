@@ -25,10 +25,10 @@ public class ChaosShinyArmor extends ItemArmor
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String layer)
 	  {
 	    if (slot == 2) {
-	      return "doomsmod:textures/armor/" + this.armorTexture + "_2.png";
+	      return "chaosbeasts:textures/armor/" + this.armorTexture + "_2.png";
 	    }
 
-	    return "doomsmod:textures/armor/" + this.armorTexture + "_1.png";
+	    return "chaosbeasts:textures/armor/" + this.armorTexture + "_1.png";
 	  }
 	
 	@SideOnly(Side.CLIENT)

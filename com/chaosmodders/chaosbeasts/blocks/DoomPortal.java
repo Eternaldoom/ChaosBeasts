@@ -30,7 +30,7 @@ public class DoomPortal extends BlockBreakable
 
 	public DoomPortal()
 	{
-		super("doomsmod:liquiddoom_still", Material.portal, false);
+		super("chaosbeasts:liquiddoom_still", Material.portal, false);
 		this.setTickRandomly(true);
 		this.setBlockUnbreakable();
 	}
