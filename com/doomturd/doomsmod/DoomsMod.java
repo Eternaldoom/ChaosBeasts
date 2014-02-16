@@ -36,7 +36,7 @@ public class DoomsMod
     public static final String MODID = "doomsmod";
     public static final String VERSION = "Alpha 1.0";
   
-    public static int dimensionId = 3;
+    public static int DoomDimensionId = 3;
     
     public static BiomeGenBase reddesert;
     
@@ -49,8 +49,8 @@ public class DoomsMod
     	
     	reddesert = BiomeGenRedDesert.makeBiome(100);
     	
-    	DimensionManager.registerProviderType(DoomsMod.dimensionId, DoomWorldProvider.class, true);
-    	DimensionManager.registerDimension(DoomsMod.dimensionId, DoomsMod.dimensionId);
+    	DimensionManager.registerProviderType(DoomsMod.DoomDimensionId, DoomWorldProvider.class, true);
+    	DimensionManager.registerDimension(DoomsMod.DoomDimensionId, DoomsMod.DoomDimensionId);
 
     	//Projectiles
         EntityRegistry.registerModEntity(EntityHandgunBullet.class, "HandgunBullet", 550, this, 64, 1, true);
