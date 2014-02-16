@@ -26,7 +26,7 @@ public class ChaosBlocks
     public static Block DoomedWood;
     public static Block DoomedLeaves;
     public static Block DoomedSapling;
-    public static Block blockDoomTNT;
+    public static Block blockGlowTNT;
     public static Block blockDemonicOre;
     public static Block blockDemonic;
     public static Block blockLeadOre;
@@ -60,6 +60,7 @@ public class ChaosBlocks
     	blockDemonic = new BlockCustom().setBlockName("blockDemonic").setBlockTextureName("doomsmod:demonic_block");
     	blockLeadOre = new BlockCustom().setBlockName("blockLeadOre").setHardness(3.0F).setResistance(5.0F).setBlockTextureName("doomsmod:lead_ore");
     	blockCopperOre = new BlockCustom().setBlockName("oreCopper").setHardness(5.0F).setResistance(5.0F).setBlockTextureName("doomsmod:copper_ore");
+    	blockGlowTNT = new GlowTNT();
 
     	LiquidDoomBlock = new LiquidDoomBlock().setBlockName("blockLiquidDoom").setBlockTextureName("doomsmod:liquiddoom_still");
     	
@@ -81,7 +82,7 @@ public class ChaosBlocks
     	GameRegistry.registerBlock(DoomedLeaves, "doomed_leaves");
     	GameRegistry.registerBlock(DoomedSapling, "doomed_sapling");
     	GameRegistry.registerBlock(LiquidDoomBlock, "liquid_doom");
-    	GameRegistry.registerBlock(blockDoomTNT, "doom_tnt");
+    	GameRegistry.registerBlock(blockGlowTNT, "glow_tnt");
     	GameRegistry.registerBlock(blockDemonic, "demonic_block");
     	GameRegistry.registerBlock(blockLeadOre, "lead_ore");
     	GameRegistry.registerBlock(blockCopperOre, "copper_ore");

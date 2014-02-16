@@ -1,4 +1,4 @@
-package com.xv.xvmod.blocks;
+package com.eternaldoom.chaosbeasts.blocks;
 
 import java.util.Random;
 
@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.item.EntityTNTPrimed;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.init.Items;
@@ -15,9 +16,6 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-
-import com.xv.xvmod.entities.GlowTNTEntity;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -32,7 +30,7 @@ public class GlowTNT extends Block {
 		this.setHardness(0.9F);
 		this.setResistance(0.9F);
 		this.setLightLevel(0.8F);
-		this.setBlockTextureName("xvmod:glowtnt");
+		this.setBlockTextureName("doomsmod:glowtnt");
 	}
 	
 
@@ -115,9 +113,9 @@ public class GlowTNT extends Block {
     {
         if (!p_149723_1_.isRemote)
         {
-            GlowTNTEntity GlowTNTEntity = new GlowTNTEntity(p_149723_1_, (double)((float)p_149723_2_ + 0.5F), (double)((float)p_149723_3_ + 0.5F), (double)((float)p_149723_4_ + 0.5F), p_149723_5_.getExplosivePlacedBy());
-            GlowTNTEntity.fuse = p_149723_1_.rand.nextInt(GlowTNTEntity.fuse / 4) + GlowTNTEntity.fuse / 8;
-            p_149723_1_.spawnEntityInWorld(GlowTNTEntity);
+            EntityTNTPrimed EntityTNTPrimed = new EntityTNTPrimed(p_149723_1_, (double)((float)p_149723_2_ + 0.5F), (double)((float)p_149723_3_ + 0.5F), (double)((float)p_149723_4_ + 0.5F), p_149723_5_.getExplosivePlacedBy());
+            EntityTNTPrimed.fuse = p_149723_1_.rand.nextInt(EntityTNTPrimed.fuse / 4) + EntityTNTPrimed.fuse / 8;
+            p_149723_1_.spawnEntityInWorld(EntityTNTPrimed);
         }
     }
 
@@ -135,9 +133,9 @@ public class GlowTNT extends Block {
         {
             if ((p_150114_5_ & 1) == 1)
             {
-                GlowTNTEntity GlowTNTEntity = new GlowTNTEntity(p_150114_1_, (double)((float)p_150114_2_ + 0.5F), (double)((float)p_150114_3_ + 0.5F), (double)((float)p_150114_4_ + 0.5F), p_150114_6_);
-                p_150114_1_.spawnEntityInWorld(GlowTNTEntity);
-                p_150114_1_.playSoundAtEntity(GlowTNTEntity, "game.tnt.primed", 1.0F, 1.0F);
+                EntityTNTPrimed EntityTNTPrimed = new EntityTNTPrimed(p_150114_1_, (double)((float)p_150114_2_ + 0.5F), (double)((float)p_150114_3_ + 0.5F), (double)((float)p_150114_4_ + 0.5F), p_150114_6_);
+                p_150114_1_.spawnEntityInWorld(EntityTNTPrimed);
+                p_150114_1_.playSoundAtEntity(EntityTNTPrimed, "game.tnt.primed", 1.0F, 1.0F);
             }
         }
     }
