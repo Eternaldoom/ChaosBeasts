@@ -1,13 +1,13 @@
 [
 {
-  "modid": "doomsmod",
-  "name": "Dooms Mod",
-  "description": "A mod for minecraft offering a wide array of new features",
+  "modid": "chaosbeasts",
+  "name": "Chaos Beasts",
+  "description": "Chaos Beasts adds a variety of new mobs to minecraft with new dimensions",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "xv435.com/forge-mods/",
   "updateUrl": "",
-  "credits": "Doomturd - Author",
-  "logoFile": "",
+  "credits": "Doomturd, Xv435 Coding. Wonderfulaxis8 texturing",
+  "logoFile": "banner.png"
   "screenshots": [],
   "dependencies": []
 }
