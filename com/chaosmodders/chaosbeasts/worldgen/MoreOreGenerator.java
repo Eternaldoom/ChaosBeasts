@@ -18,7 +18,8 @@ public void generate(Random random, int chunkX, int chunkZ, World world, IChunkP
 switch (world.provider.dimensionId)
 {
 case 0: generateSurface(world, random, chunkX*16, chunkZ*16);
-case 3: generateDoom(world, random, chunkX*16, chunkZ*16);
+case 14: generateDoom(world, random, chunkX*16, chunkZ*16);
+case 15: generateDark(world, random, chunkX*16, chunkZ*16);
 }
 }
 
@@ -27,6 +28,18 @@ public void generateDoom(World world, Random random, int chunkX, int chunkZ)
 	for(int i = 0; i < 1; i++) 
 	{
 		
+	}
+	}
+
+public void generateDark(World world, Random random, int chunkX, int chunkZ)
+{
+	for(int i = 0; i < 1; i++) 
+	{
+		int Xcoord1 = chunkX + random.nextInt(12);
+		int Ycoord1 = random.nextInt(256);
+		int Zcoord1 = chunkZ + random.nextInt(12);
+		
+		(new StructureDarknessSpire()).generate(world, random, Xcoord1, Ycoord1, Zcoord1);
 	}
 	}
 
