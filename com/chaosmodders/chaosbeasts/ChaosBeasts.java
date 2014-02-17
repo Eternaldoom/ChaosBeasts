@@ -35,11 +35,16 @@ public class ChaosBeasts
     public static final String MODID = "chaosbeasts";
     public static final String VERSION = "Alpha 1.0";
   
-    public static int DoomDimensionId = 3;
+    public static int DoomDimensionId = 14;
+    public static int DarkDimensionId = 15;
+    public static int LightDimensionId = 16;
     
     public static BiomeGenBase reddesert;
+    public static BiomeGenBase doomedland;
+    public static BiomeGenBase darkbiome;
     
     protected static final BiomeGenBase.Height height_PartiallySubmerged = new BiomeGenBase.Height(-0.2F, 0.1F);
+    protected static final BiomeGenBase.Height height_HighPlateaus = new BiomeGenBase.Height(1.5F, 0.025F);
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
@@ -57,10 +62,10 @@ public class ChaosBeasts
 
         AddEntities.addEntities();
         
+         doomedland = (new BiomeGenDoom(50).setHeight(height_PartiallySubmerged));
          reddesert = new BiomeGenRedDesert(51).setHeight(height_PartiallySubmerged);
+         darkbiome = new BiomeGenRedDesert(52).setHeight(height_PartiallySubmerged);
          
-         
-
          MinecraftForge.EVENT_BUS.register(new DoomEventClass());
          MinecraftForge.EVENT_BUS.register(new DoomBucketEvent());
         

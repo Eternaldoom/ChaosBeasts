@@ -31,6 +31,7 @@ public class ChaosBlocks
     public static Block blockDemonic;
     public static Block blockLeadOre;
     public static Block blockCopperOre;
+    public static Block blockDarknessStone;
     
     public static Block LiquidDoomBlock;
     public static Fluid LiquidDoomFluid;
@@ -61,6 +62,8 @@ public class ChaosBlocks
     	blockLeadOre = new BlockCustom().setBlockName("blockLeadOre").setHardness(3.0F).setResistance(5.0F).setBlockTextureName("chaosbeasts:lead_ore");
     	blockCopperOre = new BlockCustom().setBlockName("oreCopper").setHardness(5.0F).setResistance(5.0F).setBlockTextureName("chaosbeasts:copper_ore");
     	blockGlowTNT = new GlowTNT();
+    	blockDarknessStone = new BlockCustom().setBlockName("darknessStone").setBlockTextureName("doomsmod:darkness_stone").setHardness(10.0F).setResistance(0.1F);
+    	
 
     	LiquidDoomBlock = new LiquidDoomBlock().setBlockName("blockLiquidDoom").setBlockTextureName("chaosbeasts:liquiddoom_still");
     	

@@ -1,25 +1,25 @@
-package com.chaosmodders.chaosbeasts.worldgen;
+package com.eternaldoom.chaosbeasts.worldgen;
 
+import com.eternaldoom.chaosbeasts.ChaosBeasts;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;
+import net.minecraft.util.Vec3Pool;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldProvider;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.WorldChunkManagerHell;
 import net.minecraft.world.chunk.IChunkProvider;
 
-import com.chaosmodders.chaosbeasts.ChaosBeasts;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-
-public class DoomWorldProvider extends WorldProvider
+public class DarkWorldProvider extends WorldProvider
 {
 private float[] colorsSunriseSunset = new float[4];
 public void registerWorldChunkManager()
 {
-this.worldChunkMgr = new WorldChunkManagerHell(ChaosBeasts.doomedland, this.dimensionId);
+this.worldChunkMgr = new WorldChunkManagerHell(ChaosBeasts.darkbiome, ChaosBeasts.DarkDimensionId);
 this.hasNoSky = true;
 }
 public IChunkProvider createChunkGenerator()
@@ -37,7 +37,7 @@ return false;
 }
 public String getDimensionName()
 {
-return "Land of Doom";
+return "Land of Darkness";
 }
 public boolean renderStars()
 {
@@ -100,11 +100,11 @@ return new ChunkCoordinates(50, 5, 0);
 }
 protected void generateLightBrightnessTable()
 {
-    float f = 12.0F;
+    float f = 0.0F;
 
     for (int i = 0; i <= 15; ++i)
     {
-        float f1 = 1.0F - (float)i / 15.0F;
+        float f1 = 0.0F - (float)i / 0.0F;
         this.lightBrightnessTable[i] = (1.0F - f1) / (f1 * 3.0F + 1.0F) * (1.0F - f) + f;
     }
 }
