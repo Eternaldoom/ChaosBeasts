@@ -13,9 +13,9 @@ import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.common.util.ForgeDirection;
 
-public class DoomBushBase extends Block implements IPlantable
+public class ChaosBushBase extends Block implements IPlantable
 {
-    protected DoomBushBase(Material p_i45395_1_)
+    protected ChaosBushBase(Material p_i45395_1_)
     {
         super(p_i45395_1_);
         this.setTickRandomly(true);
@@ -23,7 +23,7 @@ public class DoomBushBase extends Block implements IPlantable
         this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, f * 3.0F, 0.5F + f);
     }
 
-    protected DoomBushBase()
+    protected ChaosBushBase()
     {
         this(Material.plants);
     }

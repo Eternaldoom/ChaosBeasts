@@ -17,7 +17,7 @@ import com.chaosmodders.chaosbeasts.worldgen.WorldGenDoomedTree;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class DoomedSapling extends DoomBushBase implements IGrowable
+public class DoomedSapling extends ChaosBushBase implements IGrowable
 {
     public static final String[] field_149882_a = new String[] {"Doomed"};
     private static final IIcon[] field_149881_b = new IIcon[field_149882_a.length];

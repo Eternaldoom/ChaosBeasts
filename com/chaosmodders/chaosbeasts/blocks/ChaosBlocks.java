@@ -32,6 +32,7 @@ public class ChaosBlocks
     public static Block blockLeadOre;
     public static Block blockCopperOre;
     public static Block blockDarknessStone;
+    public static Block BlazeFlower;
     
     public static Block LiquidDoomBlock;
     public static Fluid LiquidDoomFluid;
@@ -67,6 +68,7 @@ public class ChaosBlocks
     	blockCopperOre = new BlockCustom().setBlockName("oreCopper").setHardness(5.0F).setResistance(5.0F).setBlockTextureName("chaosbeasts:copper_ore");
     	blockGlowTNT = new GlowTNT();
     	blockDarknessStone = new BlockCustom().setBlockName("darknessStone").setBlockTextureName("chaosbeasts:darkness_stone").setHardness(15.0F).setResistance(0.1F);
+    	BlazeFlower = new BlazeFlower().setBlockName("blazeFlower").setBlockTextureName("chaosbeasts:blaze_flower");
 
     	LiquidDoomBlock = new LiquidDoomBlock().setBlockName("blockLiquidDoom").setBlockTextureName("chaosbeasts:liquiddoom_still");
     	FluidDarknessBlock = new FluidDarknessBlock().setBlockName("fluidDarkness").setBlockTextureName("chaosbeasts:fluid_darkness");
@@ -95,5 +97,6 @@ public class ChaosBlocks
     	GameRegistry.registerBlock(blockCopperOre, "copper_ore");
     	GameRegistry.registerBlock(blockDarknessStone, "darkness_stone");
     	GameRegistry.registerBlock(FluidDarknessBlock, "fluid_darkness");
+    	GameRegistry.registerBlock(BlazeFlower, "blaze_flower");
 	}
 }

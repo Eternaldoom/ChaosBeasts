@@ -5,6 +5,7 @@ import java.util.Random;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.gen.feature.WorldGenFlowers;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 
 import com.chaosmodders.chaosbeasts.blocks.ChaosBlocks;
@@ -40,6 +41,15 @@ public void generateDark(World world, Random random, int chunkX, int chunkZ)
 		int Zcoord1 = chunkZ + random.nextInt(12);
 		
 		(new StructureDarknessSpire()).generate(world, random, Xcoord1, Ycoord1, Zcoord1);
+	}
+	
+	for(int fred = 0; fred < 1; fred++)
+	{
+		int Xcoord = chunkX + random.nextInt(16);
+		int Ycoord = random.nextInt(256);
+		int Zcoord = chunkZ + random.nextInt(16);
+		
+		(new WorldGenFlowers(ChaosBlocks.BlazeFlower)).generate(world, random, Xcoord, Ycoord, Zcoord);
 	}
 	}
 
