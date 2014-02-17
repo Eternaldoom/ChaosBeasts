@@ -23,7 +23,7 @@ this.hasNoSky = true;
 }
 public IChunkProvider createChunkGenerator()
 {
-return new DoomChunkProvider(this.worldObj, this.worldObj.getSeed(), hasNoSky);
+return new DarkChunkProvider(this.worldObj, this.worldObj.getSeed(), hasNoSky);
 }
 public int getAverageGroundLevel()
 {
@@ -103,7 +103,7 @@ protected void generateLightBrightnessTable()
 
     for (int i = 0; i <= 15; ++i)
     {
-        float f1 = 0.0F - (float)i / 0.0F;
+        float f1 = 1.0F - (float)i / 15.0F;
         this.lightBrightnessTable[i] = (1.0F - f1) / (f1 * 3.0F + 1.0F) * (1.0F - f) + f;
     }
 }

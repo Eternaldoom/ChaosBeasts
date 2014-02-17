@@ -69,7 +69,7 @@ public class ChaosBeasts
         
          doomedland = (new BiomeGenDoom(50).setHeight(height_PartiallySubmerged));
          reddesert = new BiomeGenRedDesert(51).setHeight(height_PartiallySubmerged);
-         darkbiome = new BiomeGenDark(52).setHeight(height_PartiallySubmerged);
+         darkbiome = new BiomeGenDark(52).setHeight(height_HighPlateaus);
          
          MinecraftForge.EVENT_BUS.register(new DoomEventClass());
          MinecraftForge.EVENT_BUS.register(new DoomBucketEvent());
