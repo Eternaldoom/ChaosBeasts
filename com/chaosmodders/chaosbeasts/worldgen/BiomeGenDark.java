@@ -18,6 +18,8 @@ public class BiomeGenDark extends BiomeGenBase
     {
         super(par1);
         this.spawnableCreatureList.clear();
+        this.spawnableWaterCreatureList.clear();
+        this.spawnableMonsterList.clear();
         this.topBlock = ChaosBlocks.blockDarknessStone;
         this.fillerBlock = ChaosBlocks.blockDarknessStone;
         this.field_76754_C = 1;
