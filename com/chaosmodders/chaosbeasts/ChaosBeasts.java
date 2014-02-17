@@ -15,6 +15,7 @@ import com.chaosmodders.chaosbeasts.event.DoomEventClass;
 import com.chaosmodders.chaosbeasts.generic.ChaosCrafting;
 import com.chaosmodders.chaosbeasts.generic.ChaosOreDict;
 import com.chaosmodders.chaosbeasts.items.ChaosItems;
+import com.chaosmodders.chaosbeasts.worldgen.BiomeGenDoom;
 import com.chaosmodders.chaosbeasts.worldgen.BiomeGenRedDesert;
 import com.chaosmodders.chaosbeasts.worldgen.BiomeInitializer;
 import com.chaosmodders.chaosbeasts.worldgen.DoomWorldProvider;
