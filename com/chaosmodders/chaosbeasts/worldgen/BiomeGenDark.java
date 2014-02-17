@@ -1,14 +1,11 @@
 package com.chaosmodders.chaosbeasts.worldgen;
 
-<<<<<<< HEAD
 import java.util.Random;
 
 import com.chaosmodders.chaosbeasts.blocks.ChaosBlocks;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
-=======
->>>>>>> 54a9b3c2e114d6cc62373c0b249621813eaa7056
 import net.minecraft.world.biome.BiomeGenBase;
 
 import com.chaosmodders.chaosbeasts.blocks.ChaosBlocks;
