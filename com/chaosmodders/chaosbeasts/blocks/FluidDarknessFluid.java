@@ -3,13 +3,13 @@ package com.chaosmodders.chaosbeasts.blocks;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 
-public class LiquidDoomFluid extends Fluid
+public class FluidDarknessFluid extends Fluid
 {
-public LiquidDoomFluid()
+public FluidDarknessFluid()
 {
-super("liquid_doom");
+super("fluid_darkness");
 setDensity(10);
-setViscosity(500);
+setViscosity(1);
 FluidRegistry.registerFluid(this);
 }
 }
