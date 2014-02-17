@@ -1,10 +1,9 @@
-package com.eternaldoom.chaosbeasts.worldgen;
+package com.chaosmodders.chaosbeasts.worldgen;
 
 import static net.minecraftforge.event.terraingen.InitMapGenEvent.EventType.CAVE;
 import static net.minecraftforge.event.terraingen.InitMapGenEvent.EventType.MINESHAFT;
 import static net.minecraftforge.event.terraingen.InitMapGenEvent.EventType.RAVINE;
 import static net.minecraftforge.event.terraingen.InitMapGenEvent.EventType.SCATTERED_FEATURE;
-import static net.minecraftforge.event.terraingen.InitMapGenEvent.EventType.STRONGHOLD;
 import static net.minecraftforge.event.terraingen.InitMapGenEvent.EventType.VILLAGE;
 import static net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.EventType.DUNGEON;
 import static net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.EventType.ICE;
@@ -13,8 +12,6 @@ import static net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.Ev
 
 import java.util.List;
 import java.util.Random;
-
-import com.eternaldoom.chaosbeasts.blocks.ChaosBlocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFalling;
@@ -39,12 +36,14 @@ import net.minecraft.world.gen.feature.WorldGenDungeons;
 import net.minecraft.world.gen.feature.WorldGenLakes;
 import net.minecraft.world.gen.structure.MapGenMineshaft;
 import net.minecraft.world.gen.structure.MapGenScatteredFeature;
-import net.minecraft.world.gen.structure.MapGenStronghold;
 import net.minecraft.world.gen.structure.MapGenVillage;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.ChunkProviderEvent;
 import net.minecraftforge.event.terraingen.PopulateChunkEvent;
 import net.minecraftforge.event.terraingen.TerrainGen;
+
+import com.chaosmodders.chaosbeasts.blocks.ChaosBlocks;
+
 import cpw.mods.fml.common.eventhandler.Event.Result;
 
 public class DarkChunkProvider implements IChunkProvider

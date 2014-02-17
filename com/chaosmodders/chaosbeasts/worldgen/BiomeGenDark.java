@@ -1,14 +1,8 @@
-package com.eternaldoom.chaosbeasts.worldgen;
+package com.chaosmodders.chaosbeasts.worldgen;
 
-import java.util.Random;
-
-import com.eternaldoom.chaosbeasts.blocks.ChaosBlocks;
-
-import net.minecraft.init.Blocks;
-import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraft.world.gen.feature.WorldGenDesertWells;
-import net.minecraftforge.common.BiomeDictionary;
+
+import com.chaosmodders.chaosbeasts.blocks.ChaosBlocks;
 
 public class BiomeGenDark extends BiomeGenBase
 {
