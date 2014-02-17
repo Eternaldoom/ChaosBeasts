@@ -47,7 +47,7 @@ public class ChaosBeasts
     public static BiomeGenBase darkbiome;
     
     protected static final BiomeGenBase.Height height_PartiallySubmerged = new BiomeGenBase.Height(-0.2F, 0.1F);
-    protected static final BiomeGenBase.Height height_HighPlateaus = new BiomeGenBase.Height(1.5F, 0.025F);
+    protected static final BiomeGenBase.Height height_HighPlateaus = new BiomeGenBase.Height(2.0F, 15.0F);
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
