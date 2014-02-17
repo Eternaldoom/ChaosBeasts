@@ -15,10 +15,13 @@ import com.chaosmodders.chaosbeasts.event.DoomEventClass;
 import com.chaosmodders.chaosbeasts.generic.ChaosCrafting;
 import com.chaosmodders.chaosbeasts.generic.ChaosOreDict;
 import com.chaosmodders.chaosbeasts.items.ChaosItems;
+import com.chaosmodders.chaosbeasts.worldgen.BiomeGenDoom;
 import com.chaosmodders.chaosbeasts.worldgen.BiomeGenRedDesert;
 import com.chaosmodders.chaosbeasts.worldgen.BiomeInitializer;
 import com.chaosmodders.chaosbeasts.worldgen.DoomWorldProvider;
 import com.chaosmodders.chaosbeasts.worldgen.MoreOreGenerator;
+import com.chaosmodders.chaosbeasts.worldgen.BiomeGenDark;
+import com.chaosmodders.chaosbeasts.worldgen.DarkWorldProvider;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -55,6 +58,8 @@ public class ChaosBeasts
     	
     	DimensionManager.registerProviderType(ChaosBeasts.DoomDimensionId, DoomWorldProvider.class, true);
     	DimensionManager.registerDimension(ChaosBeasts.DoomDimensionId, ChaosBeasts.DoomDimensionId);
+    	DimensionManager.registerProviderType(ChaosBeasts.DarkDimensionId, DarkWorldProvider.class, true);
+    	DimensionManager.registerDimension(ChaosBeasts.DarkDimensionId, ChaosBeasts.DarkDimensionId);
 
     	//Projectiles
         EntityRegistry.registerModEntity(EntityHandgunBullet.class, "HandgunBullet", 550, this, 64, 1, true);
@@ -64,7 +69,7 @@ public class ChaosBeasts
         
          doomedland = (new BiomeGenDoom(50).setHeight(height_PartiallySubmerged));
          reddesert = new BiomeGenRedDesert(51).setHeight(height_PartiallySubmerged);
-         darkbiome = new BiomeGenRedDesert(52).setHeight(height_PartiallySubmerged);
+         darkbiome = new BiomeGenDark(52).setHeight(height_PartiallySubmerged);
          
          MinecraftForge.EVENT_BUS.register(new DoomEventClass());
          MinecraftForge.EVENT_BUS.register(new DoomBucketEvent());

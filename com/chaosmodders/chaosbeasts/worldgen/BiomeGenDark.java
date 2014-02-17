@@ -1,8 +1,8 @@
-package com.eternaldoom.chaosbeasts.worldgen;
+package com.chaosmodders.chaosbeasts.worldgen;
 
 import java.util.Random;
 
-import com.eternaldoom.chaosbeasts.blocks.ChaosBlocks;
+import com.chaosmodders.chaosbeasts.blocks.ChaosBlocks;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;

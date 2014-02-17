@@ -62,8 +62,7 @@ public class ChaosBlocks
     	blockLeadOre = new BlockCustom().setBlockName("blockLeadOre").setHardness(3.0F).setResistance(5.0F).setBlockTextureName("chaosbeasts:lead_ore");
     	blockCopperOre = new BlockCustom().setBlockName("oreCopper").setHardness(5.0F).setResistance(5.0F).setBlockTextureName("chaosbeasts:copper_ore");
     	blockGlowTNT = new GlowTNT();
-    	blockDarknessStone = new BlockCustom().setBlockName("darknessStone").setBlockTextureName("doomsmod:darkness_stone").setHardness(10.0F).setResistance(0.1F);
-    	
+    	blockDarknessStone = new BlockCustom().setBlockName("darknessStone").setBlockTextureName("chaosbeasts:darkness_stone").setHardness(15.0F).setResistance(0.1F);
 
     	LiquidDoomBlock = new LiquidDoomBlock().setBlockName("blockLiquidDoom").setBlockTextureName("chaosbeasts:liquiddoom_still");
     	
@@ -89,5 +88,6 @@ public class ChaosBlocks
     	GameRegistry.registerBlock(blockDemonic, "demonic_block");
     	GameRegistry.registerBlock(blockLeadOre, "lead_ore");
     	GameRegistry.registerBlock(blockCopperOre, "copper_ore");
+    	GameRegistry.registerBlock(blockDarknessStone, "darkness_stone");
 	}
 }

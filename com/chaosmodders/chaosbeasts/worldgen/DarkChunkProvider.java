@@ -1,4 +1,4 @@
-package com.eternaldoom.chaosbeasts.worldgen;
+package com.chaosmodders.chaosbeasts.worldgen;
 
 import static net.minecraftforge.event.terraingen.InitMapGenEvent.EventType.CAVE;
 import static net.minecraftforge.event.terraingen.InitMapGenEvent.EventType.MINESHAFT;
@@ -14,7 +14,7 @@ import static net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.Ev
 import java.util.List;
 import java.util.Random;
 
-import com.eternaldoom.chaosbeasts.blocks.ChaosBlocks;
+import com.chaosmodders.chaosbeasts.blocks.ChaosBlocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFalling;
