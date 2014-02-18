@@ -7,15 +7,23 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+
+import com.chaosmodders.chaosbeasts.generic.ChaosTabs;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockDoomedDirt extends Block
+public class BlockLightDirt extends Block
 {
-    public BlockDoomedDirt()
+    public BlockLightDirt()
     {
     	super(Material.ground);
     	this.setStepSound(soundTypeGrass);
+    	this.setBlockName("lightDirt");
+    	this.setBlockTextureName("chaosbeasts:light_dirt");
+    	this.setHardness(0.01F);
+    	this.setResistance(1000000.0F);
+    	this.setCreativeTab(ChaosTabs.tabChaosBlocks);
     }
 
     public int damageDropped(int p_149692_1_)

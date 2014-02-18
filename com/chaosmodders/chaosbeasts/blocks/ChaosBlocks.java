@@ -34,6 +34,11 @@ public class ChaosBlocks
     public static Block blockDarknessStone;
     public static Block BlazeFlower;
     public static Block blockDenseGlowstone;
+    public static Block blockDarkCobblestone;
+    public static Block blockLightCobblestone;
+    public static Block blockLightStone;
+    public static Block blockLightDirt;
+    public static Block blockHolyCactus;
     
     public static Block LiquidDoomBlock;
     public static Fluid LiquidDoomFluid;
@@ -68,9 +73,14 @@ public class ChaosBlocks
     	blockLeadOre = new BlockCustom().setBlockName("blockLeadOre").setHardness(3.0F).setResistance(5.0F).setBlockTextureName("chaosbeasts:lead_ore");
     	blockCopperOre = new BlockCustom().setBlockName("oreCopper").setHardness(5.0F).setResistance(5.0F).setBlockTextureName("chaosbeasts:copper_ore");
     	blockGlowTNT = new GlowTNT();
-    	blockDarknessStone = new BlockCustom().setBlockName("darknessStone").setBlockTextureName("chaosbeasts:darkness_stone").setHardness(15.0F).setResistance(0.1F);
+    	blockDarknessStone = new BlockDarknessStone();
     	BlazeFlower = new BlazeFlower().setBlockName("blazeFlower").setBlockTextureName("chaosbeasts:blaze_flower");
     	blockDenseGlowstone = new BlockGlassyMod().setBlockName("denseGlowstone").setBlockTextureName("chaosbeasts:dense_glowstone").setHardness(3.0F).setResistance(5.0F).setLightLevel(1);
+    	blockDarkCobblestone = new BlockCustom().setHardness(15.0F).setResistance(0.1F).setBlockTextureName("chaosbeasts:dark_cobblestone").setBlockName("darkCobblestone");
+    	blockLightCobblestone = new BlockCustom().setHardness(0.01F).setResistance(100000.0F).setBlockTextureName("chaosbeasts:light_cobblestone").setBlockName("lightCobblestone");
+    	blockLightStone = new BlockLightStone();
+    	blockLightDirt = new BlockLightDirt();
+    	blockHolyCactus = new BlockHolyCactus();
 
     	LiquidDoomBlock = new LiquidDoomBlock().setBlockName("blockLiquidDoom").setBlockTextureName("chaosbeasts:liquiddoom_still");
     	FluidDarknessBlock = new FluidDarknessBlock().setBlockName("fluidDarkness").setBlockTextureName("chaosbeasts:fluid_darkness");
@@ -101,5 +111,10 @@ public class ChaosBlocks
     	GameRegistry.registerBlock(FluidDarknessBlock, "fluid_darkness");
     	GameRegistry.registerBlock(BlazeFlower, "blaze_flower");
     	GameRegistry.registerBlock(blockDenseGlowstone, "dense_glowstone");
+    	GameRegistry.registerBlock(blockDarkCobblestone, "dark_cobblestone");
+    	GameRegistry.registerBlock(blockLightCobblestone, "light_cobblestone");
+    	GameRegistry.registerBlock(blockLightStone, "light_stone");
+    	GameRegistry.registerBlock(blockLightDirt, "light_dirt");
+    	GameRegistry.registerBlock(blockHolyCactus, "holy_cactus");
 	}
 }

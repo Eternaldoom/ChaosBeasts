@@ -41,7 +41,7 @@ public void onEntityCollidedWithBlock(World world, int x, int y, int z, Entity e
         else if (thePlayer.dimension != ChaosBeasts.DarkDimensionId)
         {
             thePlayer.timeUntilPortal = 10;
-            thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, ChaosBeasts.LightDimensionId);
+            thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, ChaosBeasts.DarkDimensionId);
         }
     }
 }
