@@ -60,7 +60,7 @@ public class DoomTeleporter extends Teleporter
                         int l1 = j + j1;
                         int i2 = k + i1 * b1 - l * b0;
                         boolean flag = j1 < 0;
-                        this.worldServerInstance.setBlock(k1, l1, i2, flag ? ChaosBlocks.blockRainbow : Blocks.air);
+                        this.worldServerInstance.setBlock(k1, l1, i2, flag ? ChaosBlocks.blockEnergyShard : Blocks.air);
                     }
                 }
             }
@@ -442,7 +442,7 @@ public class DoomTeleporter extends Teleporter
                         i4 = j2 + k3;
                         j4 = k2 + (j3 - 1) * l2 - i3 * l5;
                         flag = k3 < 0;
-                        this.worldServerInstance.setBlock(l3, i4, j4, flag ? ChaosBlocks.blockRainbow : Blocks.air);
+                        this.worldServerInstance.setBlock(l3, i4, j4, flag ? ChaosBlocks.blockEnergyShard : Blocks.air);
                     }
                 }
             }
@@ -458,7 +458,7 @@ public class DoomTeleporter extends Teleporter
                     i4 = j2 + k3;
                     j4 = k2 + (j3 - 1) * l2;
                     flag = j3 == 0 || j3 == 3 || k3 == -1 || k3 == 3;
-                    this.worldServerInstance.setBlock(l3, i4, j4, (Block)(flag ? ChaosBlocks.blockRainbow : ChaosBlocks.blockDoomPortal), 0, 2);
+                    this.worldServerInstance.setBlock(l3, i4, j4, (Block)(flag ? ChaosBlocks.blockEnergyShard : ChaosBlocks.blockDoomPortal), 0, 2);
                 }
             }
 

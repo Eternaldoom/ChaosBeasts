@@ -9,7 +9,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ChaosBlocks
 {
-    public static Block blockRainbow;
+    public static Block blockEnergyShard;
     public static Block blockRubyOre;
     public static Block blockRuby;
     public static Block blockDoomPortal;
@@ -46,7 +46,7 @@ public class ChaosBlocks
 		LiquidDoomFluid = new LiquidDoomFluid();
 		FluidDarknessFluid = new FluidDarknessFluid();
 		
-		blockRainbow = new BlockCustom().setBlockName("blockRainbow").setHardness(0.2F).setResistance(1000000.0F).setBlockTextureName("chaosbeasts:rainbow_block");
+		blockEnergyShard = new BlockCustom().setBlockName("blockEnergyShard").setHardness(0.2F).setResistance(1000000.0F).setBlockTextureName("chaosbeasts:energy_shard_block");
     	blockRubyOre = new BlockRubyOre().setBlockName("blockRubyOre").setHardness(3.0F).setResistance(5.0F).setBlockTextureName("chaosbeasts:ruby_ore");
     	blockRuby = new BlockCustom().setBlockName("blockRuby").setHardness(5.0F).setResistance(10.0F).setBlockTextureName("chaosbeasts:ruby_block");
     	blockSapphireOre = new BlockSapphireOre().setBlockName("blockSapphireOre").setHardness(3.0F).setResistance(5.0F).setBlockTextureName("chaosbeasts:sapphire_ore");
@@ -75,7 +75,7 @@ public class ChaosBlocks
     	LiquidDoomBlock = new LiquidDoomBlock().setBlockName("blockLiquidDoom").setBlockTextureName("chaosbeasts:liquiddoom_still");
     	FluidDarknessBlock = new FluidDarknessBlock().setBlockName("fluidDarkness").setBlockTextureName("chaosbeasts:fluid_darkness");
 
-    	GameRegistry.registerBlock(blockRainbow, "rainbow_block");
+    	GameRegistry.registerBlock(blockEnergyShard, "energy_shard_block");
     	GameRegistry.registerBlock(blockRubyOre, "ruby_ore");
     	GameRegistry.registerBlock(blockRuby, "ruby_block");
     	GameRegistry.registerBlock(blockDoomPortal, "doom_portal");

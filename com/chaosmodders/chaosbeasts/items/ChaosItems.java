@@ -73,6 +73,7 @@ public class ChaosItems
 	public static Item ItemHandgun;
 	public static Item ingotCopper;
 	public static Item ingotLead;
+	public static Item ItemEnergyShard;
 
 	public static Item.ToolMaterial toolRuby;
 	public static ItemArmor.ArmorMaterial armorRuby;
@@ -161,6 +162,7 @@ public class ChaosItems
 	pickaxeEnder = new ChaosPick(toolEnder).setUnlocalizedName("pickaxeEnder").setTextureName("chaosbeasts:ender_pickaxe");
 	axeEnder = new ChaosAxe(toolEnder).setUnlocalizedName("axeEnder").setTextureName("chaosbeasts:ender_axe");
 	hoeEnder =  new ChaosHoe(toolEnder).setUnlocalizedName("hoeEnder").setTextureName("chaosbeasts:ender_hoe");
+	ItemEnergyShard = new ItemSimpleFoiled().setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:energy_shard").setUnlocalizedName("shardEnergy");
 	
 	armorRuby.customCraftingMaterial = ItemRuby;
 	
@@ -221,6 +223,7 @@ public class ChaosItems
 	GameRegistry.registerItem(ItemHandgun, "handgun");
 	GameRegistry.registerItem(ingotCopper, "copper_ingot");
 	GameRegistry.registerItem(ingotLead, "lead_ingot");
+	GameRegistry.registerItem(ItemEnergyShard, "energy_shard");
 
 	FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack("liquid_doom", FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(DoomBucket), new ItemStack(Items.bucket));
 	}

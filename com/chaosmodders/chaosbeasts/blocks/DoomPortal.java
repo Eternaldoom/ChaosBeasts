@@ -358,14 +358,14 @@ public class DoomPortal extends BlockBreakable
 
 				Block block1 = this.field_150867_a.getBlock(p_150853_1_ + j1 * i1, p_150853_2_ - 1, p_150853_3_ + k1 * i1);
 
-				if (block1 != ChaosBlocks.blockRainbow)
+				if (block1 != ChaosBlocks.blockEnergyShard)
 				{
 					break;
 				}
 			}
 
 			block = this.field_150867_a.getBlock(p_150853_1_ + j1 * i1, p_150853_2_, p_150853_3_ + k1 * i1);
-			return block == ChaosBlocks.blockRainbow ? i1 : 0;
+			return block == ChaosBlocks.blockEnergyShard ? i1 : 0;
 		}
 
 		protected int func_150858_a()
@@ -400,7 +400,7 @@ public class DoomPortal extends BlockBreakable
 						{
 							block = this.field_150867_a.getBlock(k + Direction.offsetX[DoomPortal.field_150001_a[this.field_150865_b][0]], i, l + Direction.offsetZ[DoomPortal.field_150001_a[this.field_150865_b][0]]);
 
-							if (block != ChaosBlocks.blockRainbow)
+							if (block != ChaosBlocks.blockEnergyShard)
 							{
 								break label56;
 							}
@@ -409,7 +409,7 @@ public class DoomPortal extends BlockBreakable
 						{
 							block = this.field_150867_a.getBlock(k + Direction.offsetX[DoomPortal.field_150001_a[this.field_150865_b][1]], i, l + Direction.offsetZ[DoomPortal.field_150001_a[this.field_150865_b][1]]);
 
-							if (block != ChaosBlocks.blockRainbow)
+							if (block != ChaosBlocks.blockEnergyShard)
 							{
 								break label56;
 							}
@@ -423,7 +423,7 @@ public class DoomPortal extends BlockBreakable
 				k = this.field_150861_f.posY + this.field_150862_g;
 				l = this.field_150861_f.posZ + i * Direction.offsetZ[DoomPortal.field_150001_a[this.field_150865_b][1]];
 
-				if (this.field_150867_a.getBlock(j, k, l) != ChaosBlocks.blockRainbow)
+				if (this.field_150867_a.getBlock(j, k, l) != ChaosBlocks.blockEnergyShard)
 				{
 					this.field_150862_g = 0;
 					break;
