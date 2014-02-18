@@ -114,7 +114,7 @@ public class DarkWorldProvider extends WorldProvider {
 	}
 
 	protected void generateLightBrightnessTable() {
-		float f = 0.0F;
+		float f = 0.02F;
 
 		for (int i = 0; i <= 15; ++i) {
 			float f1 = 1.0F - (float) i / 15.0F;

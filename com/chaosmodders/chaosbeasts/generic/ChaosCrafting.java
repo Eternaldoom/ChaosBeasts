@@ -30,6 +30,7 @@ public class ChaosCrafting
 		GameRegistry.addRecipe(new ItemStack(Items.blaze_rod, 9), new Object[]{"R", 'R', ChaosBlocks.blockBlazeRod});
 		GameRegistry.addRecipe(new ItemStack(ChaosBlocks.blockEnergyShard), new Object[]{"RRR", "EEE", "SSS", 'R', ChaosBlocks.blockRuby, 'E', Blocks.emerald_block, 'S', ChaosBlocks.blockSapphire});
 		GameRegistry.addRecipe(new ItemStack(ChaosItems.rodEmerald, 2), new Object[]{" R ", " R ", 'R', Items.emerald});
+		GameRegistry.addRecipe(new ItemStack(Items.blaze_rod), new Object[]{" R ", " R ", 'R', Items.blaze_powder});
 		CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(new ItemStack(ChaosItems.rodSapphire, 2), " R ", " R ", 'R', "gemSapphire"));
 		CraftingManager.getInstance().getRecipeList().add(new ShapedOreRecipe(new ItemStack(ChaosItems.rodRuby, 2), " R ", " R ", 'R', "gemRuby"));		
 		//armor
@@ -87,5 +88,6 @@ public class ChaosCrafting
 		GameRegistry.addSmelting(ChaosItems.ItemExoskeleton, new ItemStack(ChaosItems.crispyExoskeleton), 1.0f);
 		GameRegistry.addSmelting(ChaosBlocks.blockLeadOre, new ItemStack(ChaosItems.ingotLead), 1.0f);
 		GameRegistry.addSmelting(ChaosBlocks.blockCopperOre, new ItemStack(ChaosItems.ingotCopper), 0.7f);
+		GameRegistry.addSmelting(ChaosBlocks.blockDoomedCobblestone, new ItemStack(ChaosBlocks.blockDoomedStone), 2.0f);
 	}
 }
