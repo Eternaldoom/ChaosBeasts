@@ -24,6 +24,8 @@ public class ChaosCrafting
 		GameRegistry.addRecipe(new ItemStack(ChaosBlocks.blockRainbow, 9), new Object[]{"L", 'L', ChaosItems.lumpRainbow});
 		GameRegistry.addRecipe(new ItemStack(ChaosBlocks.blockBoneBlock), new Object[]{"BBB", "BBB", "BBB", 'B', Items.bone});
 		GameRegistry.addRecipe(new ItemStack(ChaosBlocks.blockBlazeRod), new Object[]{"BBB", "BBB", "BBB", 'B', Items.blaze_rod});
+		GameRegistry.addRecipe(new ItemStack(ChaosBlocks.blockDenseGlowstone), new Object[]{"GGG", "GGG", "GGG", 'G', Blocks.glowstone});
+		GameRegistry.addRecipe(new ItemStack(Blocks.glowstone, 9), new Object[]{"R", 'R', ChaosBlocks.blockDenseGlowstone});
 		GameRegistry.addRecipe(new ItemStack(Items.bone, 9), new Object[]{"R", 'R', ChaosBlocks.blockBoneBlock});
 		GameRegistry.addRecipe(new ItemStack(Items.blaze_rod, 9), new Object[]{"R", 'R', ChaosBlocks.blockBlazeRod});
 		GameRegistry.addRecipe(new ItemStack(ChaosBlocks.blockRainbow), new Object[]{"RRR", "EEE", "SSS", 'R', ChaosBlocks.blockRuby, 'E', Blocks.emerald_block, 'S', ChaosBlocks.blockSapphire});
