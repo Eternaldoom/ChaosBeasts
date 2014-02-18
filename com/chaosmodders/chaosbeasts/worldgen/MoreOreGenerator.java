@@ -52,6 +52,15 @@ public class MoreOreGenerator implements IWorldGenerator {
 
 			(new WorldGenFlowers(ChaosBlocks.BlazeFlower)).generate(blah,
 					random, Xcoord, Ycoord, Zcoord);
+			
+			for (int freefood = 0; freefood<15; freefood++)
+			{
+				int randPosX = chunkX + random.nextInt(16);
+				int randPosY = random.nextInt(256);
+				int randPosZ = chunkZ + random.nextInt(16);
+				(new WorldGenMinable(Blocks.glowstone, 1)).generate(blah,
+						random, randPosX, randPosY, randPosZ);
+			}
 		}
 		}
 	}

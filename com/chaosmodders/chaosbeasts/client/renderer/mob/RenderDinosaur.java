@@ -1,5 +1,8 @@
 package com.chaosmodders.chaosbeasts.client.renderer.mob;
 
+import org.lwjgl.opengl.GL11;
+
+import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
@@ -7,8 +10,8 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.ResourceLocation;
 
 import com.chaosmodders.chaosbeasts.client.model.ModelDinosaur;
-import com.chaosmodders.chaosbeasts.entity.monster.EntityDemon;
 import com.chaosmodders.chaosbeasts.entity.monster.EntityDinosaur;
+import com.chaosmodders.chaosbeasts.entity.monster.EntityGiantPigZombie;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -17,12 +20,24 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class RenderDinosaur extends RenderLiving
 {
     private static final ResourceLocation dinoTextures = new ResourceLocation("chaosbeasts:textures/entity/dinosaur.png");
-
-    public RenderDinosaur()
+    private float scale;
+    
+    public RenderDinosaur(ModelBase par1ModelBase, float par2, float par3)
     {
-        super(new ModelDinosaur(), 0.3F);
+        super(new ModelDinosaur(), par2 * par3);
+        this.scale = par3;
     }
 
+    protected void preRenderCallback(EntityDinosaur par1EntityDinosaur, float par2)
+    {
+        GL11.glScalef(this.scale, this.scale, this.scale);
+    }
+    
+    protected void preRenderCallback(EntityLivingBase par1EntityLivingBase, float par2)
+    {
+        this.preRenderCallback((EntityDinosaur)par1EntityLivingBase, par2);
+    }
+    
     protected float getDeathMaxRotation(EntityDinosaur par1EntityDinosaur)
     {
         return 180.0F;

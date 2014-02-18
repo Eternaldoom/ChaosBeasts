@@ -15,13 +15,14 @@ import com.chaosmodders.chaosbeasts.event.DoomEventClass;
 import com.chaosmodders.chaosbeasts.generic.ChaosCrafting;
 import com.chaosmodders.chaosbeasts.generic.ChaosOreDict;
 import com.chaosmodders.chaosbeasts.items.ChaosItems;
+import com.chaosmodders.chaosbeasts.worldgen.BiomeGenDark;
 import com.chaosmodders.chaosbeasts.worldgen.BiomeGenDoom;
 import com.chaosmodders.chaosbeasts.worldgen.BiomeGenRedDesert;
 import com.chaosmodders.chaosbeasts.worldgen.BiomeInitializer;
-import com.chaosmodders.chaosbeasts.worldgen.DoomWorldProvider;
-import com.chaosmodders.chaosbeasts.worldgen.MoreOreGenerator;
-import com.chaosmodders.chaosbeasts.worldgen.BiomeGenDark;
 import com.chaosmodders.chaosbeasts.worldgen.DarkWorldProvider;
+import com.chaosmodders.chaosbeasts.worldgen.DoomWorldProvider;
+import com.chaosmodders.chaosbeasts.worldgen.LightWorldProvider;
+import com.chaosmodders.chaosbeasts.worldgen.MoreOreGenerator;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -60,6 +61,8 @@ public class ChaosBeasts
     	DimensionManager.registerDimension(ChaosBeasts.DoomDimensionId, ChaosBeasts.DoomDimensionId);
     	DimensionManager.registerProviderType(ChaosBeasts.DarkDimensionId, DarkWorldProvider.class, true);
     	DimensionManager.registerDimension(ChaosBeasts.DarkDimensionId, ChaosBeasts.DarkDimensionId);
+    	DimensionManager.registerProviderType(ChaosBeasts.LightDimensionId, LightWorldProvider.class, true);
+    	DimensionManager.registerDimension(ChaosBeasts.LightDimensionId, ChaosBeasts.LightDimensionId);
 
     	//Projectiles
         EntityRegistry.registerModEntity(EntityHandgunBullet.class, "HandgunBullet", 550, this, 64, 1, true);

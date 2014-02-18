@@ -7,6 +7,7 @@ import net.minecraft.client.model.ModelZombie;
 import net.minecraft.client.renderer.entity.RenderSnowball;
 
 import com.chaosmodders.chaosbeasts.blocks.TileEntityBlockLobsterEntity;
+import com.chaosmodders.chaosbeasts.client.model.ModelDinosaur;
 import com.chaosmodders.chaosbeasts.client.renderer.mob.RenderDemon;
 import com.chaosmodders.chaosbeasts.client.renderer.mob.RenderDinosaur;
 import com.chaosmodders.chaosbeasts.client.renderer.mob.RenderGiantPigZombie;
@@ -35,7 +36,7 @@ public class AddRendering
 		RenderingRegistry.registerEntityRenderingHandler(EntityLobster.class, new RenderLobster());
 		RenderingRegistry.registerEntityRenderingHandler(EntityHellLobster.class, new RenderHellLobster());
 		RenderingRegistry.registerEntityRenderingHandler(EntityDemon.class, new RenderDemon());
-		RenderingRegistry.registerEntityRenderingHandler(EntityDinosaur.class, new RenderDinosaur());
+		RenderingRegistry.registerEntityRenderingHandler(EntityDinosaur.class, new RenderDinosaur(new ModelDinosaur(), 0.5F, 3.0F));
 		RenderingRegistry.registerEntityRenderingHandler(EntityThrowingStar.class, new RenderThrowingStar(ChaosItems.ItemThrowingStar));
 		RenderingRegistry.registerEntityRenderingHandler(EntityHandgunBullet.class, new RenderSnowball(ChaosItems.ItemBullet));
 

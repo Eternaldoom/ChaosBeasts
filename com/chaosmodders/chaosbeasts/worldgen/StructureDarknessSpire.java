@@ -3,13 +3,13 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-import com.chaosmodders.chaosbeasts.ChaosBeasts;
-
-import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenerator;
+
+import com.chaosmodders.chaosbeasts.ChaosBeasts;
+import com.chaosmodders.chaosbeasts.blocks.ChaosBlocks;
 
 public class StructureDarknessSpire extends WorldGenerator
 {
@@ -137,7 +137,7 @@ public class StructureDarknessSpire extends WorldGenerator
 		world.setBlock(i + 5, j + 8, k + 5, Blocks.stone);
 		world.setBlock(i + 5, j + 9, k + 5, Blocks.stone);
 		world.setBlock(i + 5, j + 10, k + 5, Blocks.stone);
-		world.setBlock(i + 5, j + 11, k + 5, Blocks.stone);
+		world.setBlock(i + 5, j + 11, k + 5, ChaosBlocks.blockDenseGlowstone);
 		world.setBlock(i + 6, j + 0, k + 1, Blocks.stone);
 		world.setBlock(i + 6, j + 0, k + 2, Blocks.stone);
 		world.setBlock(i + 6, j + 0, k + 3, Blocks.stone);

@@ -30,7 +30,7 @@ public class EntityDinosaur extends EntityMob
     public EntityDinosaur(World par1World)
     {
         super(par1World);
-        this.setSize(0.3F, 0.5F);
+        this.setSize(2.0F, 1.5F);
         this.tasks.addTask(0, new EntityAISwimming(this));
         this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, 100.0D, false));
         this.tasks.addTask(3, new EntityAIAttackOnCollide(this, EntityCow.class, 1.0D, false));
