@@ -132,10 +132,10 @@ public class ChaosItems
 	pickaxeRuby = new ChaosPick(toolRuby).setUnlocalizedName("pickaxeRuby").setTextureName("chaosbeasts:ruby_pickaxe");
 	axeRuby = new ChaosAxe(toolRuby).setUnlocalizedName("axeRuby").setTextureName("chaosbeasts:ruby_axe");
 	hoeRuby =  new ChaosHoe(toolRuby).setUnlocalizedName("hoeRuby").setTextureName("chaosbeasts:ruby_hoe");
-	helmetRainbow = new ChaosArmor(armorRainbow, HEAD, 0, 12.5D, "rainbow").setUnlocalizedName("helmetRainbow").setTextureName("chaosbeasts:rainbow_helmet");
-	chestplateRainbow = new ChaosArmor(armorRainbow, BODY, 1, 15.5D, "rainbow").setUnlocalizedName("chestplateRainbow").setTextureName("chaosbeasts:rainbow_chestplate");
-	leggingsRainbow = new ChaosArmor(armorRainbow, LEGS, 2, 15.5D, "rainbow").setUnlocalizedName("leggingsRainbow").setTextureName("chaosbeasts:rainbow_leggings");
-	bootsRainbow = new ChaosArmor(armorRainbow, BOOTS, 3, 15.5D, "rainbow").setUnlocalizedName("bootsRainbow").setTextureName("chaosbeasts:rainbow_boots");
+	helmetRainbow = new ChaosInfiniteArmor(armorRainbow, HEAD, 0, 20D, "rainbow").setUnlocalizedName("helmetRainbow").setTextureName("chaosbeasts:rainbow_helmet");
+	chestplateRainbow = new ChaosInfiniteArmor(armorRainbow, BODY, 1, 20D, "rainbow").setUnlocalizedName("chestplateRainbow").setTextureName("chaosbeasts:rainbow_chestplate");
+	leggingsRainbow = new ChaosInfiniteArmor(armorRainbow, LEGS, 2, 20D, "rainbow").setUnlocalizedName("leggingsRainbow").setTextureName("chaosbeasts:rainbow_leggings");
+	bootsRainbow = new ChaosInfiniteArmor(armorRainbow, BOOTS, 3, 20D, "rainbow").setUnlocalizedName("bootsRainbow").setTextureName("chaosbeasts:rainbow_boots");
 	swordRainbow = new ChaosSword(toolRainbow).setUnlocalizedName("swordRainbow").setTextureName("chaosbeasts:rainbow_sword");
 	spadeRainbow = new ChaosSpade(toolRainbow).setUnlocalizedName("spadeRainbow").setTextureName("chaosbeasts:rainbow_shovel");
 	pickaxeRainbow = new ChaosPick(toolRainbow).setUnlocalizedName("pickaxeRainbow").setTextureName("chaosbeasts:rainbow_pickaxe");
