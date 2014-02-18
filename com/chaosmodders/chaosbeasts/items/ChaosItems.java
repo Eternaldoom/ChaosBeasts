@@ -2,7 +2,7 @@ package com.chaosmodders.chaosbeasts.items;
 
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemSimpleFoiled;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
@@ -10,12 +10,14 @@ import net.minecraftforge.fluids.FluidContainerRegistry;
 import net.minecraftforge.fluids.FluidRegistry;
 
 import com.chaosmodders.chaosbeasts.blocks.ChaosBlocks;
+import com.chaosmodders.chaosbeasts.generic.ChaosHelper;
 import com.chaosmodders.chaosbeasts.generic.ChaosTabs;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ChaosItems
 {
+	public static final int HEAD = 0, BODY = 1, LEGS = 2, BOOTS = 3;
 	public static Item ItemRuby;
 	public static Item helmetRuby;
 	public static Item chestplateRuby;
@@ -76,12 +78,12 @@ public class ChaosItems
 	public static Item ItemEnergyShard;
 
 	public static Item.ToolMaterial toolRuby;
-	public static ItemArmor.ArmorMaterial armorRuby;
-	public static ItemArmor.ArmorMaterial armorRainbow;
+	public static ArmorMaterial armorRuby;
+	public static ArmorMaterial armorRainbow;
 	public static Item.ToolMaterial toolRainbow;
-	public static ItemArmor.ArmorMaterial armorEmerald;
+	public static ArmorMaterial armorEmerald;
 	public static Item.ToolMaterial toolEmerald;
-	public static ItemArmor.ArmorMaterial armorSapphire;
+	public static ArmorMaterial armorSapphire;
 	public static Item.ToolMaterial toolSapphire;
 	public static Item.ToolMaterial toolEnder;
 	
@@ -89,13 +91,13 @@ public class ChaosItems
 	{
 	//tool and armor type declarations
 	toolRuby = EnumHelper.addToolMaterial("RUBY", 3, 999, 10.0F, 4.0F, 10);
-	armorRuby = EnumHelper.addArmorMaterial("RUBY", 25, new int[]{5, 3, 3, 5}, 10);
+	armorRuby = ChaosHelper.addArmorMaterial("RUBY", 25, new int[]{5, 3, 3, 5}, 10);
 	toolRainbow = EnumHelper.addToolMaterial("RAINBOW", 3, 5000, 20.0F, 26.0F, 35);
-	armorRainbow = EnumHelper.addArmorMaterial("RAINBOW", 5000, new int[]{12, 17, 15, 12}, 35);
+	armorRainbow = ChaosHelper.addArmorMaterial("RAINBOW", -1, new int[]{12, 17, 15, 12}, 35);
 	toolEmerald = EnumHelper.addToolMaterial("REALEMERALD", 3, 3000, 7.0F, 2.0F, 99);
-	armorEmerald = EnumHelper.addArmorMaterial("REALEMERALD", 66, new int[]{3, 4, 4, 3}, 99);
+	armorEmerald = ChaosHelper.addArmorMaterial("REALEMERALD", 66, new int[]{3, 4, 4, 3}, 99);
 	toolSapphire = EnumHelper.addToolMaterial("SAPPHIRE", 3, 3500, 10.0F, 5.0F, 50);
-	armorSapphire = EnumHelper.addArmorMaterial("SAPPHIRE", 85, new int[]{4, 5, 5, 4}, 50);
+	armorSapphire = ChaosHelper.addArmorMaterial("SAPPHIRE", 85, new int[]{4, 5, 5, 4}, 50);
 	toolEnder = EnumHelper.addToolMaterial("ENDER", 3, -1, 10.0F, 8.0F, 0);
 	
 	//Fluid and bucket stuff
@@ -121,28 +123,28 @@ public class ChaosItems
 	crispyExoskeleton = new ChaosFood(4, 0.3F, true).setUnlocalizedName("crispyExoSkeleton").setTextureName("chaosbeasts:crispy_exoskeleton");
 	
 	//tools and armor
-	helmetRuby = new ChaosArmor(armorRuby, 0, "helmet_ruby", "ruby").setUnlocalizedName("helmetRuby").setTextureName("chaosbeasts:ruby_helmet");
-	chestplateRuby = new ChaosArmor(armorRuby, 1, "chestplate_ruby", "ruby").setUnlocalizedName("chestplateRuby").setTextureName("chaosbeasts:ruby_chestplate");
-	leggingsRuby = new ChaosArmor(armorRuby, 2, "leggings_ruby", "ruby").setUnlocalizedName("leggingsRuby").setTextureName("chaosbeasts:ruby_leggings");
-	bootsRuby = new ChaosArmor(armorRuby, 3, "boots_ruby", "ruby").setUnlocalizedName("bootsRuby").setTextureName("chaosbeasts:ruby_boots");
+	helmetRuby = new ChaosArmor(armorRuby, HEAD, 0, 12.5D, "ruby").setUnlocalizedName("helmetRuby").setTextureName("chaosbeasts:ruby_helmet");
+	chestplateRuby = new ChaosArmor(armorRuby, BODY, 1, 12.5D, "ruby").setUnlocalizedName("chestplateRuby").setTextureName("chaosbeasts:ruby_chestplate");
+	leggingsRuby = new ChaosArmor(armorRuby, LEGS, 2, 12.5D, "ruby").setUnlocalizedName("leggingsRuby").setTextureName("chaosbeasts:ruby_leggings");
+	bootsRuby = new ChaosArmor(armorRuby, BOOTS, 3, 12.5D, "ruby").setUnlocalizedName("bootsRuby").setTextureName("chaosbeasts:ruby_boots");
 	swordRuby = new ChaosSword(toolRuby).setUnlocalizedName("swordRuby").setTextureName("chaosbeasts:ruby_sword");
 	spadeRuby = new ChaosSpade(toolRuby).setUnlocalizedName("spadeRuby").setTextureName("chaosbeasts:ruby_shovel");
 	pickaxeRuby = new ChaosPick(toolRuby).setUnlocalizedName("pickaxeRuby").setTextureName("chaosbeasts:ruby_pickaxe");
 	axeRuby = new ChaosAxe(toolRuby).setUnlocalizedName("axeRuby").setTextureName("chaosbeasts:ruby_axe");
 	hoeRuby =  new ChaosHoe(toolRuby).setUnlocalizedName("hoeRuby").setTextureName("chaosbeasts:ruby_hoe");
-	helmetRainbow = new ChaosArmor(armorRainbow, 0, "helmet_rainbow", "rainbow").setUnlocalizedName("helmetRainbow").setTextureName("chaosbeasts:rainbow_helmet");
-	chestplateRainbow = new ChaosArmor(armorRainbow, 1, "chestplate_rainbow", "rainbow").setUnlocalizedName("chestplateRainbow").setTextureName("chaosbeasts:rainbow_chestplate");
-	leggingsRainbow = new ChaosArmor(armorRainbow, 2, "leggings_rainbow", "rainbow").setUnlocalizedName("leggingsRainbow").setTextureName("chaosbeasts:rainbow_leggings");
-	bootsRainbow = new ChaosArmor(armorRainbow, 3, "boots_rainbow", "rainbow").setUnlocalizedName("bootsRainbow").setTextureName("chaosbeasts:rainbow_boots");
+	helmetRainbow = new ChaosArmor(armorRainbow, HEAD, 0, 12.5D, "rainbow").setUnlocalizedName("helmetRainbow").setTextureName("chaosbeasts:rainbow_helmet");
+	chestplateRainbow = new ChaosArmor(armorRainbow, BODY, 1, 15.5D, "rainbow").setUnlocalizedName("chestplateRainbow").setTextureName("chaosbeasts:rainbow_chestplate");
+	leggingsRainbow = new ChaosArmor(armorRainbow, LEGS, 2, 15.5D, "rainbow").setUnlocalizedName("leggingsRainbow").setTextureName("chaosbeasts:rainbow_leggings");
+	bootsRainbow = new ChaosArmor(armorRainbow, BOOTS, 3, 15.5D, "rainbow").setUnlocalizedName("bootsRainbow").setTextureName("chaosbeasts:rainbow_boots");
 	swordRainbow = new ChaosSword(toolRainbow).setUnlocalizedName("swordRainbow").setTextureName("chaosbeasts:rainbow_sword");
 	spadeRainbow = new ChaosSpade(toolRainbow).setUnlocalizedName("spadeRainbow").setTextureName("chaosbeasts:rainbow_shovel");
 	pickaxeRainbow = new ChaosPick(toolRainbow).setUnlocalizedName("pickaxeRainbow").setTextureName("chaosbeasts:rainbow_pickaxe");
 	axeRainbow = new ChaosAxe(toolRainbow).setUnlocalizedName("axeRainbow").setTextureName("chaosbeasts:rainbow_axe");
 	hoeRainbow =  new ChaosHoe(toolRainbow).setUnlocalizedName("hoeRainbow").setTextureName("chaosbeasts:rainbow_hoe");
-	helmetEmerald = new ChaosArmor(armorEmerald, 0, "helmet_Emerald", "Emerald").setUnlocalizedName("helmetEmerald").setTextureName("chaosbeasts:emerald_helmet");
-	chestplateEmerald = new ChaosArmor(armorEmerald, 1, "chestplate_Emerald", "Emerald").setUnlocalizedName("chestplateEmerald").setTextureName("chaosbeasts:emerald_chestplate");
-	leggingsEmerald = new ChaosArmor(armorEmerald, 2, "leggings_Emerald", "Emerald").setUnlocalizedName("leggingsEmerald").setTextureName("chaosbeasts:emerald_leggings");
-	bootsEmerald = new ChaosArmor(armorEmerald, 3, "boots_Emerald", "Emerald").setUnlocalizedName("bootsEmerald").setTextureName("chaosbeasts:emerald_boots");
+	helmetEmerald = new ChaosArmor(armorEmerald, HEAD, 0, 12.5D, "Emerald").setUnlocalizedName("helmetEmerald").setTextureName("chaosbeasts:emerald_helmet");
+	chestplateEmerald = new ChaosArmor(armorEmerald, BODY, 1, 12.5D, "Emerald").setUnlocalizedName("chestplateEmerald").setTextureName("chaosbeasts:emerald_chestplate");
+	leggingsEmerald = new ChaosArmor(armorEmerald, LEGS, 2, 12.5D, "Emerald").setUnlocalizedName("leggingsEmerald").setTextureName("chaosbeasts:emerald_leggings");
+	bootsEmerald = new ChaosArmor(armorEmerald, BOOTS, 3, 12.5D, "Emerald").setUnlocalizedName("bootsEmerald").setTextureName("chaosbeasts:emerald_boots");
 	swordEmerald = new ChaosSword(toolEmerald).setUnlocalizedName("swordEmerald").setTextureName("chaosbeasts:emerald_sword");
 	spadeEmerald = new ChaosSpade(toolEmerald).setUnlocalizedName("spadeEmerald").setTextureName("chaosbeasts:emerald_shovel");
 	pickaxeEmerald = new ChaosPick(toolEmerald).setUnlocalizedName("pickaxeEmerald").setTextureName("chaosbeasts:emerald_pickaxe");
