@@ -70,7 +70,7 @@ public class ChaosBlocks
     	blockGlowTNT = new GlowTNT();
     	blockDarknessStone = new BlockCustom().setBlockName("darknessStone").setBlockTextureName("chaosbeasts:darkness_stone").setHardness(15.0F).setResistance(0.1F);
     	BlazeFlower = new BlazeFlower().setBlockName("blazeFlower").setBlockTextureName("chaosbeasts:blaze_flower");
-    	blockDenseGlowstone = new BlockGlassyMod().setBlockName("denseGlowstone").setBlockTextureName("chaosbeasts:dense_glowstone").setHardness(3.0F).setResistance(5.0F);
+    	blockDenseGlowstone = new BlockGlassyMod().setBlockName("denseGlowstone").setBlockTextureName("chaosbeasts:dense_glowstone").setHardness(3.0F).setResistance(5.0F).setLightLevel(1);
 
     	LiquidDoomBlock = new LiquidDoomBlock().setBlockName("blockLiquidDoom").setBlockTextureName("chaosbeasts:liquiddoom_still");
     	FluidDarknessBlock = new FluidDarknessBlock().setBlockName("fluidDarkness").setBlockTextureName("chaosbeasts:fluid_darkness");
