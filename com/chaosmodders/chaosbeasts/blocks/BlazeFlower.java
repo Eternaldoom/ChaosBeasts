@@ -25,6 +25,7 @@ public class BlazeFlower extends Block implements IPlantable
         super(p_i45395_1_);
         this.setTickRandomly(true);
         float f = 0.2F;
+        this.setLightLevel(0.2F);
         this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, f * 3.0F, 0.5F + f);
     }
 
