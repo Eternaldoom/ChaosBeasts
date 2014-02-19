@@ -17,6 +17,8 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 import com.chaosmodders.chaosbeasts.ChaosBeasts;
 import com.chaosmodders.chaosbeasts.generic.ChaosTabs;
+import com.chaosmodders.chaosbeasts.worldgen.DoomTeleporter;
+import com.chaosmodders.chaosbeasts.worldgen.LightTeleporter;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -107,13 +109,13 @@ public class BlockHolyCactus extends Block
             else if (thePlayer.dimension == 0)
             {
                 thePlayer.timeUntilPortal = 10;
-                thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, ChaosBeasts.LightDimensionId);
+                thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, ChaosBeasts.LightDimensionId, new LightTeleporter(thePlayer.mcServer.worldServerForDimension(ChaosBeasts.LightDimensionId)));
             }
             
             else if (thePlayer.dimension == ChaosBeasts.LightDimensionId)
             {
                 thePlayer.timeUntilPortal = 10;
-                thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, 0);
+                thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, 0, new LightTeleporter(thePlayer.mcServer.worldServerForDimension(0)));
             }
         }
     }

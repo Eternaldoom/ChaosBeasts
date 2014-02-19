@@ -14,7 +14,9 @@ import net.minecraftforge.fluids.BlockFluidClassic;
 import com.chaosmodders.chaosbeasts.ChaosBeasts;
 import com.chaosmodders.chaosbeasts.entity.fx.DoomPortalFX;
 import com.chaosmodders.chaosbeasts.generic.ChaosTabs;
+import com.chaosmodders.chaosbeasts.worldgen.DarkTeleporter;
 import com.chaosmodders.chaosbeasts.worldgen.DoomTeleporter;
+import com.chaosmodders.chaosbeasts.worldgen.LightTeleporter;
 
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
@@ -41,7 +43,7 @@ public void onEntityCollidedWithBlock(World world, int x, int y, int z, Entity e
         else if (thePlayer.dimension != ChaosBeasts.DarkDimensionId)
         {
             thePlayer.timeUntilPortal = 10;
-            thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, ChaosBeasts.DarkDimensionId);
+            thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, ChaosBeasts.DarkDimensionId, new DarkTeleporter(thePlayer.mcServer.worldServerForDimension(ChaosBeasts.DarkDimensionId)));
         }
     }
 }

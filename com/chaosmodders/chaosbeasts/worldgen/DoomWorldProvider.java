@@ -88,7 +88,7 @@ return 128.0F;
 @SideOnly(Side.CLIENT)
 public String getSunTexture()
 {
-return "/textures/environment/doomsun.png";
+return "chaosbeasts:doomsun";
 }
 public boolean canCoordinateBeSpawn(int par1, int par2)
 {
