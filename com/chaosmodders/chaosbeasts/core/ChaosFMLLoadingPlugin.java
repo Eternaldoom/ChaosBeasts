@@ -19,13 +19,11 @@ public class ChaosFMLLoadingPlugin implements IFMLLoadingPlugin {
 
 	@Override
 	public String[] getASMTransformerClass() {
-	//This will return the name of the class "mod.culegooner.CreeperBurnCore.CBClassTransformer"
 		return new String[]{ChaosClassTransformer.class.getName()};
 	}
 
 	@Override
 	public String getModContainerClass() {
-		//This is the name of our dummy container "mod.culegooner.CreeperBurnCore.CBDummyContainer"
 		return ChaosDummyContainer.class.getName();
 	}
 
