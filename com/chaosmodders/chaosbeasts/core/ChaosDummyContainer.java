@@ -21,7 +21,7 @@ public class ChaosDummyContainer extends DummyModContainer {
 		ModMetadata meta = getMetadata();
 		meta.modId = "ChaosBeastsCore";
 		meta.name = "ChaosBeastsCore";
-		meta.version = "@VERSION@"; //String.format("%d.%d.%d.%d", majorVersion, minorVersion, revisionVersion, buildVersion);
+		meta.version = "Alpha 1.0"; //String.format("%d.%d.%d.%d", majorVersion, minorVersion, revisionVersion, buildVersion);
 		meta.credits = "Roll Credits ...";
 		meta.authorList = Arrays.asList("Doomturd, xv345");
 		meta.description = "";
