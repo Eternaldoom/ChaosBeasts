@@ -19,7 +19,7 @@ public class LightWorldProvider extends WorldProvider
 private float[] colorsSunriseSunset = new float[4];
 public void registerWorldChunkManager()
 {
-this.worldChunkMgr = new WorldChunkManagerHell(BiomeGenBase.plains, ChaosBeasts.LightDimensionId);
+this.worldChunkMgr = new WorldChunkManagerHell(ChaosBeasts.lightbiome, ChaosBeasts.LightDimensionId);
 this.hasNoSky = true;
 }
 public IChunkProvider createChunkGenerator()

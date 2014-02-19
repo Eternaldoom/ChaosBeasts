@@ -22,6 +22,9 @@ import net.minecraft.world.gen.feature.WorldGenLakes;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.ChunkProviderEvent;
+
+import com.chaosmodders.chaosbeasts.blocks.ChaosBlocks;
+
 import cpw.mods.fml.common.eventhandler.Event.Result;
 
 public class ChunkProviderLight implements IChunkProvider{
@@ -112,7 +115,7 @@ public class ChunkProviderLight implements IChunkProvider{
 
 								if (var47 > 0.0D)
 								{
-									var52 = Blocks.stone;
+									var52 = ChaosBlocks.blockLightStone;
 								}
 
 								var3[var43] = var52;
@@ -172,7 +175,7 @@ public class ChunkProviderLight implements IChunkProvider{
 				int var12 = (int)(this.stoneNoise[var8 + var9 * 16] / 3.0D + 3.0D + this.rand.nextDouble() * 0.25D);
 				int var13 = -1;
 				Block var14 = var10.topBlock;
-				Block var15 = Blocks.grass;
+				Block var15 = ChaosBlocks.blockLightDirt;
 
 				for (int var16 = 127; var16 >= 0; --var16)
 				{
@@ -190,19 +193,19 @@ public class ChunkProviderLight implements IChunkProvider{
 						{
 							var13 = -1;
 						}
-						else if (var18 == Blocks.stone)
+						else if (var18 == ChaosBlocks.blockLightStone)
 						{
 							if (var13 == -1)
 							{
 								if (var12 <= 0)
 								{
-									var14 = Blocks.grass;
-									var15 = Blocks.grass;
+									var14 = ChaosBlocks.blockLightStone;
+									var15 = ChaosBlocks.blockLightStone;
 								}
 								else if (var16 >= var5 - 4 && var16 <= var5 + 1)
 								{
-									var14 = Blocks.grass;
-									var15 = Blocks.stone;
+									var14 = ChaosBlocks.blockLightDirt;
+									var15 = ChaosBlocks.blockLightStone;
 								}
 
 								if (var16 >= var5 - 1)
@@ -219,10 +222,10 @@ public class ChunkProviderLight implements IChunkProvider{
 								--var13;
 								var3[var17] = var15;
 
-								if (var13 == 0 && var15 == Blocks.grass)
+								if (var13 == 0 && var15 == ChaosBlocks.blockLightDirt)
 								{
 									var13 = -1;
-									var15 = Blocks.grass;
+									var15 = ChaosBlocks.blockLightStone;
 								}
 							}
 						}
@@ -232,10 +235,10 @@ public class ChunkProviderLight implements IChunkProvider{
 							--var13;
 							var3[var17] = var15;
 
-							if (var13 == 0 && var15 == Blocks.stone)
+							if (var13 == 0 && var15 == ChaosBlocks.blockLightStone)
 							{
 								var13 = -1;
-								var15 = Blocks.stone;
+								var15 = ChaosBlocks.blockLightStone;
 							}
 						}
 					}
@@ -386,7 +389,7 @@ public class ChunkProviderLight implements IChunkProvider{
 			var14 = var4 + this.rand.nextInt(16);
 			var15 = this.rand.nextInt(200);
 			var16 = var5 + this.rand.nextInt(16);
-			(new WorldGenMinable(Blocks.diamond_ore, 11, Blocks.stone)).generate(this.worldObj, this.rand, var14, var15, var16);
+			(new WorldGenMinable(Blocks.diamond_ore, 11, ChaosBlocks.blockLightStone)).generate(this.worldObj, this.rand, var14, var15, var16);
 		}
 
 		WorldGenDoomedTree var17 = new WorldGenDoomedTree(true);

@@ -17,6 +17,7 @@ import com.chaosmodders.chaosbeasts.generic.ChaosOreDict;
 import com.chaosmodders.chaosbeasts.items.ChaosItems;
 import com.chaosmodders.chaosbeasts.worldgen.BiomeGenDark;
 import com.chaosmodders.chaosbeasts.worldgen.BiomeGenDoom;
+import com.chaosmodders.chaosbeasts.worldgen.BiomeGenLight;
 import com.chaosmodders.chaosbeasts.worldgen.BiomeGenRedDesert;
 import com.chaosmodders.chaosbeasts.worldgen.BiomeInitializer;
 import com.chaosmodders.chaosbeasts.worldgen.DarkWorldProvider;
@@ -46,6 +47,7 @@ public class ChaosBeasts
     public static BiomeGenBase reddesert;
     public static BiomeGenBase doomedland;
     public static BiomeGenBase darkbiome;
+    public static BiomeGenBase lightbiome;
     
     protected static final BiomeGenBase.Height height_PartiallySubmerged = new BiomeGenBase.Height(-0.2F, 0.1F);
     protected static final BiomeGenBase.Height height_HighPlateaus = new BiomeGenBase.Height(2.0F, 15.0F);
@@ -73,6 +75,7 @@ public class ChaosBeasts
          doomedland = (new BiomeGenDoom(50).setHeight(height_PartiallySubmerged));
          reddesert = new BiomeGenRedDesert(51).setHeight(height_PartiallySubmerged);
          darkbiome = new BiomeGenDark(52).setHeight(height_HighPlateaus);
+         lightbiome = new BiomeGenLight(53).setHeight(height_PartiallySubmerged);
          
          MinecraftForge.EVENT_BUS.register(new DoomEventClass());
          MinecraftForge.EVENT_BUS.register(new DoomBucketEvent());
