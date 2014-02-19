@@ -12,7 +12,7 @@ public class ChaosClassTransformer implements IClassTransformer {
 @Override
 public byte[] transform(String arg0, String arg1, byte[] arg2) {
 
-if (arg0.equals("act") || arg0.equals("net.minecraft.item.ItemSword")) {
+if (arg0.equals("amh") || arg0.equals("net.minecraft.block.BlockStone")) {
 System.out.println("********* ChaosBeasts Now Patching: " + arg0);
 arg2 = patchClassInJar(arg0, arg2, arg0, ChaosFMLLoadingPlugin.location);
 }
