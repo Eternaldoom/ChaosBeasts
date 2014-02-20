@@ -28,5 +28,6 @@ public DryWaterBlock()
 {
 super(ChaosBlocks.DryWaterFluid, Material.water);
 this.setCreativeTab(ChaosTabs.tabChaosBlocks);
+this.setBlockTextureName("water_still");
 }
 }

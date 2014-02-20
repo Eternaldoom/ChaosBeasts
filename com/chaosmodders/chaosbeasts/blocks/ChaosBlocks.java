@@ -90,7 +90,7 @@ public class ChaosBlocks
 
     	LiquidDoomBlock = new LiquidDoomBlock().setBlockName("blockLiquidDoom").setBlockTextureName("chaosbeasts:liquiddoom_still");
     	FluidDarknessBlock = new FluidDarknessBlock().setBlockName("fluidDarkness").setBlockTextureName("chaosbeasts:fluid_darkness");
-    	DryWaterBlock = new DryWaterBlock().setBlockName("dryWater").setBlockName("water_still");
+    	DryWaterBlock = new DryWaterBlock().setBlockName("dryWater").setBlockName("still_water");
 
     	GameRegistry.registerBlock(blockEnergyShard, "energy_shard_block");
     	GameRegistry.registerBlock(blockRubyOre, "ruby_ore");
