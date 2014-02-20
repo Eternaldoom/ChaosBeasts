@@ -76,6 +76,7 @@ public class ChaosItems
 	public static Item ingotCopper;
 	public static Item ingotLead;
 	public static Item ItemEnergyShard;
+	public static Item ItemBouncyBall;
 
 	public static Item.ToolMaterial toolRuby;
 	public static ArmorMaterial armorRuby;
@@ -118,6 +119,7 @@ public class ChaosItems
 	ItemHandgun = new ItemHandgun();
 	ingotCopper = new Item().setUnlocalizedName("ingotCopper").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:copper_ingot");
 	ingotLead = new Item().setUnlocalizedName("ingotLead").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:lead_ingot");
+	ItemBouncyBall = new ItemBouncyBall().setUnlocalizedName("bouncyBall");
 
 	//food
 	crispyExoskeleton = new ChaosFood(4, 0.3F, true).setUnlocalizedName("crispyExoSkeleton").setTextureName("chaosbeasts:crispy_exoskeleton");
@@ -226,6 +228,7 @@ public class ChaosItems
 	GameRegistry.registerItem(ingotCopper, "copper_ingot");
 	GameRegistry.registerItem(ingotLead, "lead_ingot");
 	GameRegistry.registerItem(ItemEnergyShard, "energy_shard");
+	GameRegistry.registerItem(ItemBouncyBall, "bouncy_ball");
 
 	FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack("liquid_doom", FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(DoomBucket), new ItemStack(Items.bucket));
 	}

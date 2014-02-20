@@ -20,6 +20,7 @@ import com.chaosmodders.chaosbeasts.entity.monster.EntityDinosaur;
 import com.chaosmodders.chaosbeasts.entity.monster.EntityGiantPigZombie;
 import com.chaosmodders.chaosbeasts.entity.monster.EntityHellLobster;
 import com.chaosmodders.chaosbeasts.entity.monster.EntityLobster;
+import com.chaosmodders.chaosbeasts.entity.projectile.EntityBouncyBall;
 import com.chaosmodders.chaosbeasts.entity.projectile.EntityHandgunBullet;
 import com.chaosmodders.chaosbeasts.entity.projectile.EntityThrowingStar;
 import com.chaosmodders.chaosbeasts.items.ChaosItems;
@@ -39,6 +40,7 @@ public class AddRendering
 		RenderingRegistry.registerEntityRenderingHandler(EntityDinosaur.class, new RenderDinosaur(new ModelDinosaur(), 0.5F, 3.0F));
 		RenderingRegistry.registerEntityRenderingHandler(EntityThrowingStar.class, new RenderThrowingStar(ChaosItems.ItemThrowingStar));
 		RenderingRegistry.registerEntityRenderingHandler(EntityHandgunBullet.class, new RenderSnowball(ChaosItems.ItemBullet));
+		RenderingRegistry.registerEntityRenderingHandler(EntityBouncyBall.class, new RenderSnowball(ChaosItems.ItemRuby));
 
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBlockLobsterEntity.class, new TileEntityBlockLobsterRenderer());
 	}

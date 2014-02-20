@@ -1,7 +1,5 @@
 package com.chaosmodders.chaosbeasts;
 
-import java.util.Arrays;
-
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.MinecraftForge;
@@ -10,6 +8,7 @@ import com.chaosmodders.chaosbeasts.blocks.ChaosBlocks;
 import com.chaosmodders.chaosbeasts.client.renderer.AddRendering;
 import com.chaosmodders.chaosbeasts.entity.AddEntities;
 import com.chaosmodders.chaosbeasts.entity.other.EntityDoomTNT;
+import com.chaosmodders.chaosbeasts.entity.projectile.EntityBouncyBall;
 import com.chaosmodders.chaosbeasts.entity.projectile.EntityHandgunBullet;
 import com.chaosmodders.chaosbeasts.entity.projectile.EntityThrowingStar;
 import com.chaosmodders.chaosbeasts.event.DoomBucketEvent;
@@ -28,10 +27,8 @@ import com.chaosmodders.chaosbeasts.worldgen.LightWorldProvider;
 import com.chaosmodders.chaosbeasts.worldgen.MoreOreGenerator;
 import com.chaosmodders.chaosbeasts.worldgen.WaterWorldProvider;
 
-import cpw.mods.fml.common.DummyModContainer;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -78,6 +75,7 @@ public class ChaosBeasts
     	//Projectiles
         EntityRegistry.registerModEntity(EntityHandgunBullet.class, "HandgunBullet", 550, this, 64, 1, true);
     	EntityRegistry.registerModEntity(EntityThrowingStar.class, "ThrowingStar", 551, this, 64, 1, true);
+    	EntityRegistry.registerModEntity(EntityBouncyBall.class, "BouncyBall", 552, this, 64, 1, true);
 
         AddEntities.addEntities();
         
