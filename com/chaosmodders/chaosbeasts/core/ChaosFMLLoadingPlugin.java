@@ -3,6 +3,8 @@ package com.chaosmodders.chaosbeasts.core;
 import java.io.File;
 import java.util.Map;
 
+import com.chaosmodders.chaosbeasts.ChaosBeasts;
+
 import cpw.mods.fml.relauncher.IFMLLoadingPlugin;
 import cpw.mods.fml.relauncher.IFMLLoadingPlugin.MCVersion;
 
@@ -13,7 +15,6 @@ public class ChaosFMLLoadingPlugin implements IFMLLoadingPlugin {
 	public static File location;
 
 	public String[] getLibraryRequestClass() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -24,12 +25,11 @@ public class ChaosFMLLoadingPlugin implements IFMLLoadingPlugin {
 
 	@Override
 	public String getModContainerClass() {
-		return ChaosDummyContainer.class.getName();
+		return null;
 	}
 
 	@Override
 	public String getSetupClass() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -40,7 +40,6 @@ public class ChaosFMLLoadingPlugin implements IFMLLoadingPlugin {
 
 	@Override
 	public String getAccessTransformerClass() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

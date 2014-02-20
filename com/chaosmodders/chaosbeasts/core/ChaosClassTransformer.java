@@ -36,7 +36,7 @@ public class ChaosClassTransformer implements net.minecraft.launchwrapper.IClass
 		 	String targetMethodName = "";
 
 	        if(obfuscated == true)
-	        	targetMethodName ="func_77279_a";
+	        	targetMethodName ="a";
 	        else
 	        	targetMethodName ="doExplosionB";
 

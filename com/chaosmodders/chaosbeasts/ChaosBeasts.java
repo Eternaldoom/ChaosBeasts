@@ -1,5 +1,7 @@
 package com.chaosmodders.chaosbeasts;
 
+import java.util.Arrays;
+
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.MinecraftForge;
@@ -26,8 +28,10 @@ import com.chaosmodders.chaosbeasts.worldgen.LightWorldProvider;
 import com.chaosmodders.chaosbeasts.worldgen.MoreOreGenerator;
 import com.chaosmodders.chaosbeasts.worldgen.WaterWorldProvider;
 
+import cpw.mods.fml.common.DummyModContainer;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
