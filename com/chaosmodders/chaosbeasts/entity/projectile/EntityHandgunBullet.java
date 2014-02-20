@@ -9,6 +9,8 @@ import net.minecraft.world.World;
 
 public class EntityHandgunBullet extends EntityThrowable
 {
+	int i = 0;
+	int speed = 5;
     public EntityHandgunBullet(World var1)
     {
         super(var1);
@@ -17,6 +19,9 @@ public class EntityHandgunBullet extends EntityThrowable
     public EntityHandgunBullet(World var1, EntityLivingBase var2)
     {
         super(var1, var2);
+        this.motionX*=speed;
+        this.motionY*=speed;
+        this.motionZ*=speed;
     }
 
     public EntityHandgunBullet(World var1, double var2, double var4, double var6)
@@ -39,10 +44,24 @@ public class EntityHandgunBullet extends EntityThrowable
 
             var1.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), var2);
         }
-
+        else
+        {
+        	this.motionX = 0;
+            this.motionY = 0;
+            this.motionZ = 0;
+        
+    if (i == 10)
+    {
         if (!this.worldObj.isRemote)
         {
             this.setDead();
+            i = 0;
         }
+    }
+    else
+    {
+    	i++;
+    }
+    }
     }
 }

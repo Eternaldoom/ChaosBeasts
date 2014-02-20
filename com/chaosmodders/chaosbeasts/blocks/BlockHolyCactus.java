@@ -106,7 +106,7 @@ public class BlockHolyCactus extends Block
             {
                 thePlayer.timeUntilPortal = 10;
             }
-            else if (thePlayer.dimension > 0 || thePlayer.dimension == 0)
+            else if (thePlayer.dimension == 0 || thePlayer.dimension == 17 || thePlayer.dimension == 15)
             {
                 thePlayer.timeUntilPortal = 10;
                 thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, ChaosBeasts.LightDimensionId, new LightTeleporter(thePlayer.mcServer.worldServerForDimension(ChaosBeasts.LightDimensionId)));
