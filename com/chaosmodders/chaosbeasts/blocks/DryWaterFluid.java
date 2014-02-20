@@ -1,0 +1,15 @@
+package com.chaosmodders.chaosbeasts.blocks;
+
+import net.minecraftforge.fluids.Fluid;
+import net.minecraftforge.fluids.FluidRegistry;
+
+public class DryWaterFluid extends Fluid
+{
+public DryWaterFluid()
+{
+super("dry_water");
+setDensity(10);
+setViscosity(1000);
+FluidRegistry.registerFluid(this);
+}
+}

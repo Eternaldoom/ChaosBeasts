@@ -39,6 +39,7 @@ public class ChaosBlocks
     public static Block blockLightStone;
     public static Block blockLightDirt;
     public static Block blockHolyCactus;
+    public static Block blockHydratedStone;
     
     public static Block LiquidDoomBlock;
     public static Fluid LiquidDoomFluid;
@@ -46,10 +47,14 @@ public class ChaosBlocks
     public static Fluid FluidDarknessFluid;
     public static Block FluidDarknessBlock;
     
+    public static Fluid DryWaterFluid;
+    public static Block DryWaterBlock;
+    
 	public static void addBlocks()
 	{
 		LiquidDoomFluid = new LiquidDoomFluid();
 		FluidDarknessFluid = new FluidDarknessFluid();
+		DryWaterFluid = new DryWaterFluid();
 		
 		blockEnergyShard = new BlockCustom().setBlockName("blockEnergyShard").setHardness(0.2F).setResistance(1000000.0F).setBlockTextureName("chaosbeasts:energy_shard_block");
     	blockRubyOre = new BlockRubyOre().setBlockName("blockRubyOre").setHardness(3.0F).setResistance(5.0F).setBlockTextureName("chaosbeasts:ruby_ore");
@@ -81,9 +86,11 @@ public class ChaosBlocks
     	blockLightStone = new BlockLightStone();
     	blockLightDirt = new BlockLightDirt();
     	blockHolyCactus = new BlockHolyCactus();
+    	blockHydratedStone = new BlockHydrastone();
 
     	LiquidDoomBlock = new LiquidDoomBlock().setBlockName("blockLiquidDoom").setBlockTextureName("chaosbeasts:liquiddoom_still");
     	FluidDarknessBlock = new FluidDarknessBlock().setBlockName("fluidDarkness").setBlockTextureName("chaosbeasts:fluid_darkness");
+    	DryWaterBlock = new DryWaterBlock().setBlockName("dryWater").setBlockName("water_still");
 
     	GameRegistry.registerBlock(blockEnergyShard, "energy_shard_block");
     	GameRegistry.registerBlock(blockRubyOre, "ruby_ore");
@@ -116,5 +123,7 @@ public class ChaosBlocks
     	GameRegistry.registerBlock(blockLightStone, "light_stone");
     	GameRegistry.registerBlock(blockLightDirt, "light_dirt");
     	GameRegistry.registerBlock(blockHolyCactus, "holy_cactus");
+    	GameRegistry.registerBlock(blockHydratedStone, "hydrated_stone");
+    	GameRegistry.registerBlock(DryWaterBlock, "dry_water");
 	}
 }

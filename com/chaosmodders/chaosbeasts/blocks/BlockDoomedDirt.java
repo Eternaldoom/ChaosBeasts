@@ -16,6 +16,7 @@ public class BlockDoomedDirt extends Block
     {
     	super(Material.ground);
     	this.setStepSound(soundTypeGrass);
+    	this.setHarvestLevel("shovel", 5);
     }
 
     public int damageDropped(int p_149692_1_)

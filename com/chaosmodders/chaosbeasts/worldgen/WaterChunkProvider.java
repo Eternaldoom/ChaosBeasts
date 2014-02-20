@@ -156,12 +156,12 @@ public class WaterChunkProvider implements IChunkProvider
 
                                 if (k1 * 8 + l1 < b1)
                                 {
-                                    block = Blocks.water;
+                                    block = ChaosBlocks.DryWaterBlock;
                                 }
 
                                 if (d15 > 0.0D)
                                 {
-                                    block = ChaosBlocks.blockDarknessStone;
+                                    block = ChaosBlocks.blockHydratedStone;
                                 }
 
                                 p_147419_3_[j2] = block;

@@ -29,6 +29,7 @@ public BlockDoomGrass(int par1)
 super(Material.grass);
 this.setTickRandomly(true);
 this.setCreativeTab(ChaosTabs.tabChaosBlocks);
+this.setHarvestLevel("shovel", 5);
 }
 
 @SideOnly(Side.CLIENT)
