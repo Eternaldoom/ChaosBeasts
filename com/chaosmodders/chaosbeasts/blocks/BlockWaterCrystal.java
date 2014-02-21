@@ -32,6 +32,8 @@ public class BlockWaterCrystal extends Block
         this.setBlockTextureName("glass");
         this.setLightLevel(1.0F);
         this.setBlockName("waterCrystal");
+        float var1 = 0.4F;
+        this.setBlockBounds(0.5F - var1, 0.0F, 0.5F - var1, 0.5F + var1, 0.8F, 0.5F + var1);
     }
 
 

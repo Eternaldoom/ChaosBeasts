@@ -154,7 +154,7 @@ public class WaterChunkProvider implements IChunkProvider
                             {
                                 Block block = null;
 
-                                if (k1 * 8 + l1 < b1)
+                                if (k1 * 8 + l1 < 256)//b1)
                                 {
                                     block = ChaosBlocks.DryWaterBlock;
                                 }

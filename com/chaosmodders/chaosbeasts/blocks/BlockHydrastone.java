@@ -26,6 +26,7 @@ public class BlockHydrastone extends Block {
 		this.setResistance(1.0F);
 		this.setBlockName("hydratedStone");
 		this.setCreativeTab(ChaosTabs.tabChaosBlocks);
+		this.setLightLevel(1.0F);
 		
 		this.particle = "water_drip";
 		this.upVel = 0.5D;
