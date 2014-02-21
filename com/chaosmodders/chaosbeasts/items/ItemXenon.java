@@ -8,6 +8,7 @@ public class ItemXenon extends Item {
     public ItemXenon()
     {
         this.maxStackSize = 64;
+        this.setMaxDamage(30000);
         this.setCreativeTab(ChaosTabs.tabChaosMaterials);
         this.setTextureName("chaosbeasts:xenon");
         this.setUnlocalizedName("xenon");
