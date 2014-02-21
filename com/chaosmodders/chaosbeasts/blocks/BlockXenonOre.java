@@ -15,14 +15,12 @@ public class BlockXenonOre extends Block {
 		this.setCreativeTab(ChaosTabs.tabChaosBlocks);
 		this.setBlockTextureName("chaosbeasts:xenonore");
 		this.setBlockName("xenonore");
+		this.setHardness(25.0F);
+		this.setResistance(0.1F);
+		this.setHarvestLevel("pickaxe", 10);
 	}
-	
-    public int func_149745_a(Random p_149745_1_)
-    {
-        return 1;
-    }
 
-    public Item func_149650_a(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
+    public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
     {
         return ChaosItems.ItemXenon;
     }

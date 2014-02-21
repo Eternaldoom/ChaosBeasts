@@ -58,7 +58,16 @@ public class MoreOreGenerator implements IWorldGenerator {
 				int randPosX = chunkX + random.nextInt(16);
 				int randPosY = random.nextInt(256);
 				int randPosZ = chunkZ + random.nextInt(16);
-				(new WorldGenMinable(Blocks.glowstone, 1)).generate(blah,
+				(new WorldGenAirMinable(Blocks.glowstone, 1)).generate(blah,
+						random, randPosX, randPosY, randPosZ);
+			}
+			
+			for (int regularfood = 0; regularfood<4; regularfood++)
+			{
+				int randPosX = chunkX + random.nextInt(16);
+				int randPosY = random.nextInt(256);
+				int randPosZ = chunkZ + random.nextInt(16);
+				(new WorldGenDarkMinable(ChaosBlocks.blockXenonOre, 7)).generate(blah,
 						random, randPosX, randPosY, randPosZ);
 			}
 		}
