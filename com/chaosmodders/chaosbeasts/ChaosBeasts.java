@@ -31,6 +31,7 @@ import com.chaosmodders.chaosbeasts.worldgen.WaterWorldProvider;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -42,6 +43,9 @@ public class ChaosBeasts
 {
     public static final String MODID = "chaosbeasts";
     public static final String VERSION = "Alpha 1.0";
+    
+    @Instance(MODID)
+	public static ChaosBeasts instance;
   
     public static int DoomDimensionId = 14;
     public static int DarkDimensionId = 15;

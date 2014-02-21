@@ -86,12 +86,9 @@ public class ChaosCrafting
 		GameRegistry.addRecipe(new ItemStack(ChaosItems.ItemHandgun), new Object[]{"SS ", "CCC", "  I", 'S', ChaosItems.ItemSapphire, 'C', ChaosItems.ingotCopper, 'I', Items.iron_ingot});
 
 		//smelting
-		//xenon give lotttts of XP!!!
 		GameRegistry.addSmelting(ChaosItems.ItemExoskeleton, new ItemStack(ChaosItems.crispyExoskeleton), 1.0f);
 		GameRegistry.addSmelting(ChaosBlocks.blockLeadOre, new ItemStack(ChaosItems.ingotLead), 1.0f);
 		GameRegistry.addSmelting(ChaosBlocks.blockCopperOre, new ItemStack(ChaosItems.ingotCopper), 0.7f);
 		GameRegistry.addSmelting(ChaosBlocks.blockDoomedCobblestone, new ItemStack(ChaosBlocks.blockDoomedStone), 2.0f);
-		GameRegistry.addSmelting(ChaosItems.ItemXenon, new ItemStack(ChaosItems.ItemStableXenon), 100.0f);
-		GameRegistry.addSmelting(ChaosItems.ItemStableXenon, new ItemStack(ChaosItems.ItemRefinedXenon), 500.0f);
 	}
 }

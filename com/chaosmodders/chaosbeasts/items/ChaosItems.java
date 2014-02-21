@@ -78,7 +78,7 @@ public class ChaosItems
 	public static Item ItemEnergyShard;
 	public static Item ItemBouncyBall;
 	public static Item BasicGrenadeLauncher;
-	public static Item ItemXenon;
+	public static Item ItemRawXenon;
 	public static Item ItemStableXenon;
 	public static Item ItemRefinedXenon;
 	
@@ -127,9 +127,9 @@ public class ChaosItems
 	ingotLead = new Item().setUnlocalizedName("ingotLead").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:lead_ingot");
 	ItemBouncyBall = new ItemBouncyBall().setUnlocalizedName("bouncyBall");
 	BasicGrenadeLauncher = new ItemGrenadeLauncher();
-	ItemXenon = new ItemXenon();
-	ItemStableXenon = new Item().setUnlocalizedName("stablexenon").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:stablexenon");
-	ItemRefinedXenon = new Item().setUnlocalizedName("refinedxenon").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:refinedxenon");
+	ItemRawXenon = new Item().setUnlocalizedName("xenonRaw").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:raw_xenon");
+	ItemStableXenon = new Item().setUnlocalizedName("xenonStable").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:stable_xenon");
+	ItemRefinedXenon = new Item().setUnlocalizedName("xenonRefined").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:refined_xenon");
 
 	//food
 	crispyExoskeleton = new ChaosFood(4, 0.3F, true).setUnlocalizedName("crispyExoSkeleton").setTextureName("chaosbeasts:crispy_exoskeleton");
@@ -240,9 +240,9 @@ public class ChaosItems
 	GameRegistry.registerItem(ItemEnergyShard, "energy_shard");
 	GameRegistry.registerItem(ItemBouncyBall, "bouncy_ball");
 	GameRegistry.registerItem(BasicGrenadeLauncher, "basic_grenade_launcher");
-	GameRegistry.registerItem(ItemXenon, "xenon");
-	GameRegistry.registerItem(ItemStableXenon, "stablexenon");
-	GameRegistry.registerItem(ItemRefinedXenon, "refinedxenon");
+	GameRegistry.registerItem(ItemRawXenon, "raw_xenon");
+	GameRegistry.registerItem(ItemStableXenon, "stable_xenon");
+	GameRegistry.registerItem(ItemRefinedXenon, "refined_xenon");
 
 	FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack("liquid_doom", FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(DoomBucket), new ItemStack(Items.bucket));
 	}

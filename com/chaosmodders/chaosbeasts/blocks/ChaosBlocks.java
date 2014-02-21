@@ -43,6 +43,9 @@ public class ChaosBlocks
     public static Block blockHydratedStone;
     public static Block blockWaterCrystal;
     public static Block blockXenonOre;
+   
+    public static Block EnergyReactor;
+    public static Block EnergyReactorOn;
     
     public static ItemBlock ItemLobsterBlock;
     
@@ -94,6 +97,8 @@ public class ChaosBlocks
     	blockHydratedStone = new BlockHydrastone();
     	blockWaterCrystal = new BlockWaterCrystal();
     	blockXenonOre = new BlockXenonOre();
+    	EnergyReactor = new BlockEnergyReactor(false).setBlockName("energyReactor");
+    	EnergyReactorOn = new BlockEnergyReactor(true).setBlockName("energyReactorOn");
     	
     	//ItemLobsterBlock = new ItemBlockLobsterBlock();
     	
@@ -136,6 +141,8 @@ public class ChaosBlocks
     	GameRegistry.registerBlock(DryWaterBlock, "dry_water");
     	GameRegistry.registerBlock(blockWaterCrystal, "water_crystal");
     	GameRegistry.registerBlock(blockXenonOre, "xenon_ore");
+    	GameRegistry.registerBlock(EnergyReactor, "energy_reactor");
+    	GameRegistry.registerBlock(EnergyReactorOn, "energy_reactor_on");
     	//GameRegistry.registerItem(ItemLobsterBlock, "lobster_block");
 	}
 }
