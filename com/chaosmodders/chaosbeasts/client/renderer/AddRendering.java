@@ -8,7 +8,6 @@ import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraftforge.client.MinecraftForgeClient;
 
-import com.chaosmodders.chaosbeasts.blocks.TileEntityBlockLobsterBlock;
 import com.chaosmodders.chaosbeasts.blocks.TileEntityBlockLobsterEntity;
 import com.chaosmodders.chaosbeasts.client.model.ModelDinosaur;
 import com.chaosmodders.chaosbeasts.client.renderer.mob.RenderDemon;
@@ -48,6 +47,6 @@ public class AddRendering
 		
 		TileEntitySpecialRenderer render = new TileEntityBlockLobsterRenderer();
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBlockLobsterEntity.class, render);
-		MinecraftForgeClient.registerItemRenderer(TileEntityBlockLobsterBlock.instance, new ItemRendererLobsterStatue(render, new TileEntityBlockLobsterEntity()));
+		//MinecraftForgeClient.registerItemRenderer(ChaosItems.ItemLobsterBlock, new ItemRendererLobsterStatue(render, new TileEntityBlockLobsterEntity()));
 	}
 }

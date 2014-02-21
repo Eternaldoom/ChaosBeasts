@@ -79,6 +79,8 @@ public class ChaosItems
 	public static Item ItemBouncyBall;
 	public static Item BasicGrenadeLauncher;
 	public static Item ItemXenon;
+	
+	public static Item ItemLobsterBlock;
 
 	public static Item.ToolMaterial toolRuby;
 	public static ArmorMaterial armorRuby;
