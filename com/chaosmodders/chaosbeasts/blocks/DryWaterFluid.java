@@ -8,8 +8,9 @@ public class DryWaterFluid extends Fluid
 public DryWaterFluid()
 {
 super("dry_water");
-setDensity(10000);
+setDensity(-100);
 setViscosity(1000);
+this.setGaseous(isGaseous);
 FluidRegistry.registerFluid(this);
 }
 }
