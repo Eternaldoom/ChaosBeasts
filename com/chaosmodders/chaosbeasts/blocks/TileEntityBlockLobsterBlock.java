@@ -3,6 +3,7 @@ package com.chaosmodders.chaosbeasts.blocks;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
@@ -10,6 +11,7 @@ import com.chaosmodders.chaosbeasts.generic.ChaosTabs;
 
 public class TileEntityBlockLobsterBlock extends BlockContainer
 {
+	public static Item instance;
 	public TileEntityBlockLobsterBlock()
 	{
                 super(Material.rock);
@@ -40,7 +42,7 @@ public class TileEntityBlockLobsterBlock extends BlockContainer
         }
         
         //This is the icon to use for showing the block in your hand.
-        public void registerIcons(IIconRegister icon) {
-                this.blockIcon = icon.registerIcon("chaosbeasts:lobster_block_icon");
-        }
+        //public void registerIcons(IIconRegister icon) {
+        //        this.blockIcon = icon.registerIcon("chaosbeasts:lobster_block_icon");
+        //}
 }

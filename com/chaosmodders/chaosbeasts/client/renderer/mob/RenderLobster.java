@@ -15,7 +15,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class RenderLobster extends RenderLiving
 {
-    private static final ResourceLocation lobsterTextures = new ResourceLocation("chaosbeasts:textures/entity/lobster.png");
+    public static final ResourceLocation lobsterTextures = new ResourceLocation("chaosbeasts:textures/entity/lobster.png");
     private static final String __OBFID = "CL_00001022";
 
     public RenderLobster()

@@ -5,7 +5,10 @@ import java.util.Map;
 
 import net.minecraft.client.model.ModelZombie;
 import net.minecraft.client.renderer.entity.RenderSnowball;
+import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
+import net.minecraftforge.client.MinecraftForgeClient;
 
+import com.chaosmodders.chaosbeasts.blocks.TileEntityBlockLobsterBlock;
 import com.chaosmodders.chaosbeasts.blocks.TileEntityBlockLobsterEntity;
 import com.chaosmodders.chaosbeasts.client.model.ModelDinosaur;
 import com.chaosmodders.chaosbeasts.client.renderer.mob.RenderDemon;
@@ -24,6 +27,7 @@ import com.chaosmodders.chaosbeasts.entity.projectile.EntityBouncyBall;
 import com.chaosmodders.chaosbeasts.entity.projectile.EntityHandgunBullet;
 import com.chaosmodders.chaosbeasts.entity.projectile.EntityThrowingStar;
 import com.chaosmodders.chaosbeasts.items.ChaosItems;
+import com.chaosmodders.chaosbeasts.items.rendering.ItemRendererLobsterStatue;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
@@ -41,7 +45,9 @@ public class AddRendering
 		RenderingRegistry.registerEntityRenderingHandler(EntityThrowingStar.class, new RenderThrowingStar(ChaosItems.ItemThrowingStar));
 		RenderingRegistry.registerEntityRenderingHandler(EntityHandgunBullet.class, new RenderSnowball(ChaosItems.ItemBullet));
 		RenderingRegistry.registerEntityRenderingHandler(EntityBouncyBall.class, new RenderSnowball(ChaosItems.ItemRuby));
-
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBlockLobsterEntity.class, new TileEntityBlockLobsterRenderer());
+		
+		TileEntitySpecialRenderer render = new TileEntityBlockLobsterRenderer();
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBlockLobsterEntity.class, render);
+		MinecraftForgeClient.registerItemRenderer(TileEntityBlockLobsterBlock.instance, new ItemRendererLobsterStatue(render, new TileEntityBlockLobsterEntity()));
 	}
 }

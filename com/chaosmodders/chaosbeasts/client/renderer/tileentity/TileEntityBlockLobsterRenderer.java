@@ -13,14 +13,15 @@ import net.minecraft.world.World;
 import org.lwjgl.opengl.GL11;
 
 import com.chaosmodders.chaosbeasts.client.model.ModelDemon;
+import com.chaosmodders.chaosbeasts.client.model.ModelLobster;
 
 public class TileEntityBlockLobsterRenderer extends TileEntitySpecialRenderer {
         
         //The model of your block
-        private final ModelDemon model;
+        private final ModelLobster model;
         
         public TileEntityBlockLobsterRenderer() {
-                this.model = new ModelDemon();
+                this.model = new ModelLobster();
         }
         
         private void adjustRotatePivotViaMeta(World world, int x, int y, int z) {
@@ -39,7 +40,7 @@ public class TileEntityBlockLobsterRenderer extends TileEntitySpecialRenderer {
         //This is the texture of your block. It's pathed to be the same place as your other blocks here.
                 //Outdated bindTextureByName("/mods/roads/textures/blocks/TrafficLightPoleRed.png");
        //Use in 1.6.2  this
-                ResourceLocation textures = (new ResourceLocation("chaosbeasts:textures/entity/demon.png")); 
+                ResourceLocation textures = (new ResourceLocation("chaosbeasts:textures/entity/lobster.png")); 
         //the ':' is very important
         //binding the textures
                 Minecraft.getMinecraft().renderEngine.bindTexture(textures);

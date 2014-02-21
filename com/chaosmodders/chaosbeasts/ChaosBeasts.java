@@ -8,6 +8,7 @@ import com.chaosmodders.chaosbeasts.blocks.ChaosBlocks;
 import com.chaosmodders.chaosbeasts.client.renderer.AddRendering;
 import com.chaosmodders.chaosbeasts.entity.AddEntities;
 import com.chaosmodders.chaosbeasts.entity.other.EntityDoomTNT;
+import com.chaosmodders.chaosbeasts.entity.projectile.EntityBasicGrenade;
 import com.chaosmodders.chaosbeasts.entity.projectile.EntityBouncyBall;
 import com.chaosmodders.chaosbeasts.entity.projectile.EntityHandgunBullet;
 import com.chaosmodders.chaosbeasts.entity.projectile.EntityThrowingStar;
@@ -76,6 +77,7 @@ public class ChaosBeasts
         EntityRegistry.registerModEntity(EntityHandgunBullet.class, "HandgunBullet", 550, this, 64, 1, true);
     	EntityRegistry.registerModEntity(EntityThrowingStar.class, "ThrowingStar", 551, this, 64, 1, true);
     	EntityRegistry.registerModEntity(EntityBouncyBall.class, "BouncyBall", 552, this, 64, 1, true);
+    	EntityRegistry.registerModEntity(EntityBasicGrenade.class, "BasicGrenade", 553, this, 64, 1, true);
 
         AddEntities.addEntities();
         

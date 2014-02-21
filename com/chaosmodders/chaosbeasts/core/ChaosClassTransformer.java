@@ -1,6 +1,7 @@
 package com.chaosmodders.chaosbeasts.core;
 
 import static org.objectweb.asm.Opcodes.FDIV;
+import static org.objectweb.asm.Opcodes.LDC;
 import static org.objectweb.asm.Opcodes.INVOKEVIRTUAL;
 import static org.objectweb.asm.tree.AbstractInsnNode.METHOD_INSN;
 
@@ -10,8 +11,10 @@ import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.tree.AbstractInsnNode;
 import org.objectweb.asm.tree.ClassNode;
+import org.objectweb.asm.tree.LdcInsnNode;
 import org.objectweb.asm.tree.MethodInsnNode;
 import org.objectweb.asm.tree.MethodNode;
+import org.objectweb.asm.tree.TypeInsnNode;
 
 
 public class ChaosClassTransformer implements net.minecraft.launchwrapper.IClassTransformer {
@@ -177,7 +180,7 @@ public class ChaosClassTransformer implements net.minecraft.launchwrapper.IClass
 	                */
 
 	                System.out.println("[ChaosBeastsCore] Patching Complete!");
-	                break;
+	                //break;
 	            }
 	        }
 
@@ -186,4 +189,51 @@ public class ChaosClassTransformer implements net.minecraft.launchwrapper.IClass
 	        classNode.accept(writer);
 	        return writer.toByteArray();
       }
+	 
+	 public byte[] patchClassBlock(byte[] data, boolean obfuscated)
+		{
+		 System.out.println("[ChaosBeastsCore]: Patching Bedrock!");
+			String classBlock = obfuscated ? "ahu" : "net/minecraft/block/Block";
+			
+			String methodRegisterBlocks = obfuscated ? "p" : "registerBlocks";
+			String methodSetHardness = obfuscated ? "c" : "setHardness";
+			
+			ClassNode classNode = new ClassNode();
+			ClassReader classReader = new ClassReader(data);
+			classReader.accept(classNode, 0);
+			
+			boolean bedrockFound = false;
+			boolean coal_oreFound = false;
+
+			for(int i = 0; i < classNode.methods.size(); i++)
+			{
+				MethodNode method = classNode.methods.get(i);
+				if(method.name.equals(methodRegisterBlocks) && method.desc.equals("()V"))
+				{
+					for(int j = 0; j < method.instructions.size(); j++)
+					{
+						AbstractInsnNode instruction = method.instructions.get(j);
+						if(instruction.getOpcode() == LDC)
+						{
+							LdcInsnNode ldcInstruction = (LdcInsnNode)instruction;
+							if(ldcInstruction.cst.equals("bedrock"))
+							{
+								if(!bedrockFound)
+								{
+									((TypeInsnNode)method.instructions.get(j + 1)).desc = "com/chaosmodders/chaosbeasts/blocks/BlockHolyCactus";
+									((MethodInsnNode)method.instructions.get(j + 4)).owner = "com/chaosmodders/chaosbeasts/blocks/BlockHolyCactus";
+								}
+								bedrockFound = true;
+								System.out.println("[ChaosBeastsCore]: Successfully Patched Bedrock!");
+							}
+						}
+					}
+					break;
+				}
+			}
+
+			ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
+			classNode.accept(writer);
+			return writer.toByteArray();
+		}
 }

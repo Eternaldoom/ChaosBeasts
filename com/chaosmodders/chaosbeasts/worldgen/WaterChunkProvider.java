@@ -214,7 +214,7 @@ public class WaterChunkProvider implements IChunkProvider
                     {
                         Block block2 = p_147418_3_[l1];
 
-                        if (block2 != null && block2.getMaterial() != Material.air)
+                        if (block2 != null && block2.getMaterial() != Material.water)
                         {
                             if (block2 == ChaosBlocks.blockDarknessStone)
                             {
@@ -243,9 +243,9 @@ public class WaterChunkProvider implements IChunkProvider
                                         }
                                     }
 
-                                    if (k1 < b0 && (block == null || block.getMaterial() == Material.air))
+                                    if (k1 < b0 && (block == null || block.getMaterial() == Material.water))
                                     {
-                                        block = Blocks.water;
+                                        block = ChaosBlocks.DryWaterBlock;
                                     }
 
                                     j1 = i1;
@@ -489,10 +489,10 @@ public class WaterChunkProvider implements IChunkProvider
         boolean doGen = TerrainGen.populate(par1IChunkProvider, worldObj, hellRNG, par2, par3, false, NETHER_LAVA);
         for (i1 = 0; doGen && i1 < 8; ++i1)
         {
-            j1 = k + this.hellRNG.nextInt(16) + 8;
-            k1 = this.hellRNG.nextInt(120) + 4;
-            l1 = l + this.hellRNG.nextInt(16) + 8;
-            (new WorldGenWaterWater(Blocks.water, false)).generate(this.worldObj, this.hellRNG, j1, k1, l1);
+            j1 = k + this.hellRNG.nextInt(16) + 80;
+            k1 = this.hellRNG.nextInt(120) + 40;
+            l1 = l + this.hellRNG.nextInt(16) + 80;
+            (new WorldGenWaterWater(ChaosBlocks.DryWaterBlock, false)).generate(this.worldObj, this.hellRNG, j1, k1, l1);
         }
 
         i1 = this.hellRNG.nextInt(this.hellRNG.nextInt(10) + 1) + 1;
@@ -562,7 +562,7 @@ public class WaterChunkProvider implements IChunkProvider
             l1 = k + this.hellRNG.nextInt(16);
             i2 = this.hellRNG.nextInt(108) + 10;
             j2 = l + this.hellRNG.nextInt(16);
-            (new WorldGenWaterWater(Blocks.water, true)).generate(this.worldObj, this.hellRNG, l1, i2, j2);
+            (new WorldGenWaterWater(ChaosBlocks.DryWaterBlock, true)).generate(this.worldObj, this.hellRNG, l1, i2, j2);
         }
 
         MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(worldObj, hellRNG, k, l));
