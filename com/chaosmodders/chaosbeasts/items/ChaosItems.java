@@ -79,6 +79,8 @@ public class ChaosItems
 	public static Item ItemBouncyBall;
 	public static Item BasicGrenadeLauncher;
 	public static Item ItemXenon;
+	public static Item ItemStableXenon;
+	public static Item ItemRefinedXenon;
 	
 	public static Item ItemLobsterBlock;
 
@@ -126,6 +128,8 @@ public class ChaosItems
 	ItemBouncyBall = new ItemBouncyBall().setUnlocalizedName("bouncyBall");
 	BasicGrenadeLauncher = new ItemGrenadeLauncher();
 	ItemXenon = new ItemXenon();
+	ItemStableXenon = new Item().setUnlocalizedName("stablexenon").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:stablexenon");
+	ItemRefinedXenon = new Item().setUnlocalizedName("refinedxenon").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:refinedxenon");
 
 	//food
 	crispyExoskeleton = new ChaosFood(4, 0.3F, true).setUnlocalizedName("crispyExoSkeleton").setTextureName("chaosbeasts:crispy_exoskeleton");
@@ -237,6 +241,8 @@ public class ChaosItems
 	GameRegistry.registerItem(ItemBouncyBall, "bouncy_ball");
 	GameRegistry.registerItem(BasicGrenadeLauncher, "basic_grenade_launcher");
 	GameRegistry.registerItem(ItemXenon, "xenon");
+	GameRegistry.registerItem(ItemStableXenon, "stablexenon");
+	GameRegistry.registerItem(ItemRefinedXenon, "refinedxenon");
 
 	FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack("liquid_doom", FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(DoomBucket), new ItemStack(Items.bucket));
 	}

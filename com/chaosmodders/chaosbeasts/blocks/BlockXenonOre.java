@@ -15,7 +15,7 @@ public class BlockXenonOre extends Block {
 		this.setCreativeTab(ChaosTabs.tabChaosBlocks);
 		this.setBlockTextureName("chaosbeasts:xenonore");
 		this.setBlockName("xenonore");
-		this.setHardness(25.0F);
+		this.setHardness(10.0F);
 		this.setResistance(0.1F);
 		this.setHarvestLevel("pickaxe", 10);
 	}
