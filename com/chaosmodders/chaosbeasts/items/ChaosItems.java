@@ -77,7 +77,11 @@ public class ChaosItems
 	public static Item ingotLead;
 	public static Item ItemEnergyShard;
 	public static Item ItemBouncyBall;
+<<<<<<< HEAD
 	public static Item BasicGrenadeLauncher;
+=======
+	public static Item ItemXenon;
+>>>>>>> 9a38e5e4c7e166d47a2b32ebc64699954c94e8b0
 
 	public static Item.ToolMaterial toolRuby;
 	public static ArmorMaterial armorRuby;
@@ -121,7 +125,11 @@ public class ChaosItems
 	ingotCopper = new Item().setUnlocalizedName("ingotCopper").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:copper_ingot");
 	ingotLead = new Item().setUnlocalizedName("ingotLead").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:lead_ingot");
 	ItemBouncyBall = new ItemBouncyBall().setUnlocalizedName("bouncyBall");
+<<<<<<< HEAD
 	BasicGrenadeLauncher = new ItemGrenadeLauncher();
+=======
+	ItemXenon = new ItemXenon();
+>>>>>>> 9a38e5e4c7e166d47a2b32ebc64699954c94e8b0
 
 	//food
 	crispyExoskeleton = new ChaosFood(4, 0.3F, true).setUnlocalizedName("crispyExoSkeleton").setTextureName("chaosbeasts:crispy_exoskeleton");
@@ -231,7 +239,11 @@ public class ChaosItems
 	GameRegistry.registerItem(ingotLead, "lead_ingot");
 	GameRegistry.registerItem(ItemEnergyShard, "energy_shard");
 	GameRegistry.registerItem(ItemBouncyBall, "bouncy_ball");
+<<<<<<< HEAD
 	GameRegistry.registerItem(BasicGrenadeLauncher, "basic_grenade_launcher");
+=======
+	GameRegistry.registerItem(ItemXenon, "xenon");
+>>>>>>> 9a38e5e4c7e166d47a2b32ebc64699954c94e8b0
 
 	FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack("liquid_doom", FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(DoomBucket), new ItemStack(Items.bucket));
 	}

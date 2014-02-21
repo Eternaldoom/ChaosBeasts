@@ -40,7 +40,11 @@ public class ChaosBlocks
     public static Block blockLightDirt;
     public static Block blockHolyCactus;
     public static Block blockHydratedStone;
+<<<<<<< HEAD
     public static Block blockWaterCrystal;
+=======
+    public static Block blockXenonOre;
+>>>>>>> 9a38e5e4c7e166d47a2b32ebc64699954c94e8b0
     
     public static Block LiquidDoomBlock;
     public static Fluid LiquidDoomFluid;
@@ -88,7 +92,11 @@ public class ChaosBlocks
     	blockLightDirt = new BlockLightDirt();
     	blockHolyCactus = new BlockHolyCactus();
     	blockHydratedStone = new BlockHydrastone();
+<<<<<<< HEAD
     	blockWaterCrystal = new BlockWaterCrystal();
+=======
+    	blockXenonOre = new BlockXenonOre();
+>>>>>>> 9a38e5e4c7e166d47a2b32ebc64699954c94e8b0
 
     	LiquidDoomBlock = new LiquidDoomBlock().setBlockName("blockLiquidDoom").setBlockTextureName("chaosbeasts:liquiddoom_still");
     	FluidDarknessBlock = new FluidDarknessBlock().setBlockName("fluidDarkness").setBlockTextureName("chaosbeasts:fluid_darkness");
@@ -127,6 +135,10 @@ public class ChaosBlocks
     	GameRegistry.registerBlock(blockHolyCactus, "holy_cactus");
     	GameRegistry.registerBlock(blockHydratedStone, "hydrated_stone");
     	GameRegistry.registerBlock(DryWaterBlock, "dry_water");
+<<<<<<< HEAD
     	GameRegistry.registerBlock(blockWaterCrystal, "water_crystal");
+=======
+    	GameRegistry.registerBlock(blockXenonOre, "xenon_ore");
+>>>>>>> 9a38e5e4c7e166d47a2b32ebc64699954c94e8b0
 	}
 }
