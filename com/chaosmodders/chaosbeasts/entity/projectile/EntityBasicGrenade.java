@@ -30,7 +30,7 @@ public class EntityBasicGrenade extends EntityThrowable
     protected void onImpact(MovingObjectPosition var1)
     {
     	byte var2 = 5;
-        for (int george = 0; george<150; george++)
+        for (int george = 0; george<3; george++)
         {
     	if (var1.entityHit != null)
         {
