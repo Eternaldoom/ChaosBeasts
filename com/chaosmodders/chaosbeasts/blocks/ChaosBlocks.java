@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fluids.Fluid;
 
+import com.chaosmodders.chaosbeasts.blocks.itemblocks.ItemBlockLobster;
 import com.chaosmodders.chaosbeasts.generic.ChaosTabs;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -114,7 +115,7 @@ public class ChaosBlocks
     	GameRegistry.registerBlock(blockSapphireOre, "sapphire_ore");
     	GameRegistry.registerBlock(blockBoneBlock, "bone_block");
     	GameRegistry.registerBlock(blockBlazeRod, "blaze_rod_block");
-    	GameRegistry.registerBlock(blockLobster, /*ItemBlockLobsterBlock.class,*/"lobster_block");
+    	GameRegistry.registerBlock(blockLobster, ItemBlockLobster.class,"lobster_block");
     	GameRegistry.registerBlock(doomFire, "doom_fire");
     	GameRegistry.registerBlock(blockDoomedStone, "doomed_stone");
     	GameRegistry.registerBlock(blockDoomedCobblestone, "doomed_cobblestone");

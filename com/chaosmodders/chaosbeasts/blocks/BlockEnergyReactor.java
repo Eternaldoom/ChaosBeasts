@@ -43,6 +43,22 @@ public class BlockEnergyReactor extends BlockContainer {
 	}
 
 	@Override
+    public int getRenderType() {
+            return -1;
+    }
+    
+    //It's not an opaque cube, so you need this.
+    @Override
+    public boolean isOpaqueCube() {
+            return false;
+    }
+    
+    //It's not a normal block, so you need this too.
+    public boolean renderAsNormalBlock() {
+            return false;
+    }
+    
+	@Override
 	public boolean onBlockActivated(World var1, int var2, int var3, int var4, EntityPlayer player, int var6, float var7, float var8, float var9) {
 		if (!player.isSneaking()) {
 			player.openGui(ChaosBeasts.instance, ChaosGUIHandler.energyReactor, var1, var2, var3, var4);
