@@ -1,8 +1,7 @@
 package com.chaosmodders.chaosbeasts.worldgen;
 
+import java.awt.Color;
 import java.util.Random;
-
-import com.chaosmodders.chaosbeasts.blocks.ChaosBlocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -11,6 +10,9 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 
 import com.chaosmodders.chaosbeasts.blocks.ChaosBlocks;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class BiomeGenLight extends BiomeGenBase
 {
@@ -29,6 +31,12 @@ public class BiomeGenLight extends BiomeGenBase
         this.theBiomeDecorator.cactiPerChunk = 10;
         this.spawnableCreatureList.clear();
         this.setBiomeName("World Of Light");
+    }
+    
+    @Override
+    @SideOnly(Side.CLIENT)
+    public int getSkyColorByTemp(float par1) {
+        return Color.getHSBColor(0.0F, 0.0F, 1.0F).getRGB();
     }
     
     @Override
