@@ -15,7 +15,7 @@ public class TileEntityBlockLobsterBlock extends BlockContainer
 	public TileEntityBlockLobsterBlock()
 	{
                 super(Material.rock);
-                this.setCreativeTab(ChaosTabs.tabChaosBlocks);
+                this.setCreativeTab(null);
                 this.setBlockBounds(-2.0F, 0.0F, 0.0F, 3.5F, 1.5F, 1.0F);
         }
 

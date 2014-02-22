@@ -72,7 +72,7 @@ public class ChaosBlocks
     	blockDoomPortal = new DoomPortal().setBlockName("blockDoomPortal").setBlockTextureName("chaosbeasts:doom_portal");
     	blockBoneBlock = new BlockCustom().setBlockName("blockBoneBlock").setHardness(5.0F).setResistance(10.0F).setBlockTextureName("chaosbeasts:bone_block");
     	blockBlazeRod = new BlockCustom().setBlockName("blockBlazeRod").setHardness(5.0F).setResistance(10.0F).setBlockTextureName("chaosbeasts:blaze_rod_block");
-    	blockLobster = new TileEntityBlockLobsterBlock().setBlockName("blockLobster").setHardness(0.5F).setResistance(1000000.0F);//.setBlockTextureName("chaosbeasts:lobster_block_icon");
+    	blockLobster = new TileEntityBlockLobsterBlock().setBlockName("blockLobster").setHardness(0.5F).setResistance(1000000.0F).setBlockTextureName("chaosbeasts:lobster_block_icon");
     	doomFire = new DoomFire().setBlockName("blockDoomFire").setBlockTextureName("chaosbeasts:doom_fire");
     	blockDoomedStone = new BlockDoomedStone().setBlockName("blockDoomedStone").setHardness(5.0F).setResistance(50.0F).setBlockTextureName("chaosbeasts:doomed_stone");
     	blockDoomedCobblestone = new BlockCustom().setBlockName("blockDoomedCobblestone").setHardness(5.0F).setResistance(50.0F).setBlockTextureName("chaosbeasts:doomed_cobblestone");
@@ -100,9 +100,7 @@ public class ChaosBlocks
     	blockXenonOre = new BlockXenonOre();
     	EnergyReactor = new BlockEnergyReactor(false).setBlockName("energyReactor");
     	EnergyReactorOn = new BlockEnergyReactor(true).setBlockName("energyReactorOn");
-    	
-    	//ItemLobsterBlock = new ItemBlockLobsterBlock();
-    	
+    	    	
     	LiquidDoomBlock = new LiquidDoomBlock().setBlockName("blockLiquidDoom").setBlockTextureName("chaosbeasts:liquiddoom_still");
     	FluidDarknessBlock = new FluidDarknessBlock().setBlockName("fluidDarkness").setBlockTextureName("chaosbeasts:fluid_darkness");
     	DryWaterBlock = new DryWaterBlock().setBlockName("dryWater");
@@ -145,6 +143,5 @@ public class ChaosBlocks
     	GameRegistry.registerBlock(blockXenonOre, "xenon_ore");
     	GameRegistry.registerBlock(EnergyReactor, "energy_reactor");
     	GameRegistry.registerBlock(EnergyReactorOn, "energy_reactor_on");
-    	//GameRegistry.registerItem(ItemLobsterBlock, "lobster_block");
 	}
 }

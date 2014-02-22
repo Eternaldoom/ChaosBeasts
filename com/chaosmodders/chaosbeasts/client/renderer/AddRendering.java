@@ -1,16 +1,11 @@
 package com.chaosmodders.chaosbeasts.client.renderer;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import net.minecraft.client.model.ModelZombie;
 import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraftforge.client.MinecraftForgeClient;
 
 import com.chaosmodders.chaosbeasts.ChaosBeasts;
-import com.chaosmodders.chaosbeasts.blocks.ChaosBlocks;
-import com.chaosmodders.chaosbeasts.blocks.TileEntityBlockLobsterBlock;
 import com.chaosmodders.chaosbeasts.blocks.TileEntityBlockLobsterEntity;
 import com.chaosmodders.chaosbeasts.blocks.TileEntityEnergyReactor;
 import com.chaosmodders.chaosbeasts.client.model.ModelDinosaur;
@@ -35,15 +30,11 @@ import com.chaosmodders.chaosbeasts.items.ChaosItems;
 import com.chaosmodders.chaosbeasts.items.rendering.ItemRendererLobsterStatue;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
-import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.network.NetworkRegistry;
 
 public class AddRendering
-{
-	private static Map entityRenderMap = new HashMap();
-	static int r = 0;
-	
+{	
 	public static void addRendering()
 	{
 		RenderingRegistry.registerEntityRenderingHandler(EntityGiantPigZombie.class, new RenderGiantPigZombie(new ModelZombie(), 0.5F, 6.0F));
@@ -59,11 +50,9 @@ public class AddRendering
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBlockLobsterEntity.class, render);
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityEnergyReactor.class, new EnergyReactorRenderer());
 		
-		r = RenderingRegistry.getNextAvailableRenderId();
-		ISimpleBlockRenderingHandler handler = new ItemRendererLobsterStatue();
-		handler = new ItemRendererLobsterStatue();
-		RenderingRegistry.registerBlockHandler(handler);
-		
+        MinecraftForgeClient.registerItemRenderer(ChaosItems.ItemLobsterBlock, new ItemRendererLobsterStatue(render, new TileEntityBlockLobsterEntity()));
+        MinecraftForgeClient.registerItemRenderer(ChaosItems.ItemEnergyReactor, new ItemRendererLobsterStatue(new EnergyReactorRenderer(), new TileEntityEnergyReactor()));
+
 		NetworkRegistry.INSTANCE.registerGuiHandler(ChaosBeasts.instance, new ChaosGUIHandler());
 	}
 }

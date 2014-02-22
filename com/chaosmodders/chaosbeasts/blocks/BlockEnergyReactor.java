@@ -20,6 +20,7 @@ import net.minecraft.world.World;
 import com.chaosmodders.chaosbeasts.ChaosBeasts;
 import com.chaosmodders.chaosbeasts.generic.ChaosGUIHandler;
 import com.chaosmodders.chaosbeasts.generic.ChaosTabs;
+import com.chaosmodders.chaosbeasts.items.ChaosItems;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -38,9 +39,10 @@ public class BlockEnergyReactor extends BlockContainer {
 		setHardness(20.0F);
 		setResistance(6000000.0F);
 		setHarvestLevel("pickaxe", 17);
+		this.setBlockTextureName("chosbeasts:energy_reactor");
 		isActive = active;
 		if(!active){
-			setCreativeTab(ChaosTabs.tabChaosBlocks);
+			setCreativeTab(null);
 		}else if(active){
 			setCreativeTab(null);
 		}
@@ -74,7 +76,7 @@ public class BlockEnergyReactor extends BlockContainer {
 
 	public Item func_149650_a(int par1, Random par2Random, int par3)
 	{
-		return Item.getItemFromBlock(ChaosBlocks.EnergyReactor);
+		return ChaosItems.ItemEnergyReactor;
 	}
 
 	public void onBlockAdded(World par1World, int par2, int par3, int par4)

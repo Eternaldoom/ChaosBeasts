@@ -3,6 +3,7 @@ package com.chaosmodders.chaosbeasts.items;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraft.item.ItemReed;
 import net.minecraft.item.ItemSimpleFoiled;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
@@ -83,6 +84,7 @@ public class ChaosItems
 	public static Item ItemRefinedXenon;
 	
 	public static Item ItemLobsterBlock;
+	public static Item ItemEnergyReactor;
 
 	public static Item.ToolMaterial toolRuby;
 	public static ArmorMaterial armorRuby;
@@ -130,6 +132,9 @@ public class ChaosItems
 	ItemRawXenon = new Item().setUnlocalizedName("xenonRaw").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:raw_xenon");
 	ItemStableXenon = new Item().setUnlocalizedName("xenonStable").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:stabilized_xenon");
 	ItemRefinedXenon = new Item().setUnlocalizedName("xenonRefined").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:refined_xenon");
+	
+	ItemLobsterBlock = new ItemReed(ChaosBlocks.blockLobster).setCreativeTab(ChaosTabs.tabChaosBlocks).setUnlocalizedName("lobsterStatue");
+	ItemEnergyReactor = new ItemReed(ChaosBlocks.EnergyReactor).setCreativeTab(ChaosTabs.tabChaosBlocks).setUnlocalizedName("energyReactor");
 
 	//food
 	crispyExoskeleton = new ChaosFood(4, 0.3F, true).setUnlocalizedName("crispyExoSkeleton").setTextureName("chaosbeasts:crispy_exoskeleton");
@@ -243,6 +248,8 @@ public class ChaosItems
 	GameRegistry.registerItem(ItemRawXenon, "raw_xenon");
 	GameRegistry.registerItem(ItemStableXenon, "stable_xenon");
 	GameRegistry.registerItem(ItemRefinedXenon, "refined_xenon");
+	GameRegistry.registerItem(ItemLobsterBlock, "lobster_statue");
+	GameRegistry.registerItem(ItemEnergyReactor, "energy_reactor");
 
 	FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack("liquid_doom", FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(DoomBucket), new ItemStack(Items.bucket));
 	}
