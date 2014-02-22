@@ -39,7 +39,7 @@ public class BlockEnergyReactor extends BlockContainer {
 		setHardness(20.0F);
 		setResistance(6000000.0F);
 		setHarvestLevel("pickaxe", 17);
-		this.setBlockTextureName("chosbeasts:energy_reactor");
+		this.setBlockTextureName("chaosbeasts:energy_reactor");
 		isActive = active;
 		if(!active){
 			setCreativeTab(null);
