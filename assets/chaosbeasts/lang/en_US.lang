@@ -76,6 +76,7 @@ tile.glowtnt.name=Glow TNT
 tile.darknessStone.name=Darkness Stone
 tile.darkCobblestone.name=Dark Cobblestone
 tile.lightStone.name=Light Stone
+tile.lightGrass.name=Light Grass
 tile.lightCobblestone.name=Light Cobblestone
 tile.fluidDarkness.name=Fluid Darkness
 tile.dryWater.name=Dry Water

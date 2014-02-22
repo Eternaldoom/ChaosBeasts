@@ -44,6 +44,7 @@ public class ChaosBlocks
     public static Block blockHydratedStone;
     public static Block blockWaterCrystal;
     public static Block blockXenonOre;
+    public static Block blockLightGrass;
    
     public static Block EnergyReactor;
     public static Block EnergyReactorOn;
@@ -94,6 +95,7 @@ public class ChaosBlocks
     	blockLightCobblestone = new BlockCustom().setHardness(0.01F).setResistance(100000.0F).setBlockTextureName("chaosbeasts:light_cobblestone").setBlockName("lightCobblestone");
     	blockLightStone = new BlockLightStone();
     	blockLightDirt = new BlockLightDirt();
+    	blockLightGrass = new BlockLightGrass();
     	blockHolyCactus = new BlockHolyCactus();
     	blockHydratedStone = new BlockHydrastone();
     	blockWaterCrystal = new BlockWaterCrystal();
@@ -137,6 +139,7 @@ public class ChaosBlocks
     	GameRegistry.registerBlock(blockLightCobblestone, "light_cobblestone");
     	GameRegistry.registerBlock(blockLightStone, "light_stone");
     	GameRegistry.registerBlock(blockLightDirt, "light_dirt");
+    	GameRegistry.registerBlock(blockLightGrass, "light_grass");
     	GameRegistry.registerBlock(blockHolyCactus, "holy_cactus");
     	GameRegistry.registerBlock(blockHydratedStone, "hydrated_stone");
     	GameRegistry.registerBlock(DryWaterBlock, "dry_water");

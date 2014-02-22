@@ -14,13 +14,19 @@ import com.chaosmodders.chaosbeasts.generic.ChaosTabs;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockLightDirt extends Block
+public class BlockLightGrass extends Block
 {
-    public BlockLightDirt()
+	@SideOnly(Side.CLIENT)
+	private IIcon iconTop;
+	
+	@SideOnly(Side.CLIENT)
+	private IIcon iconBottom;
+	
+    public BlockLightGrass()
     {
     	super(Material.ground);
     	this.setStepSound(soundTypeGrass);
-    	this.setBlockName("lightDirt");
+    	this.setBlockName("lightGrass");
     	this.setBlockTextureName("chaosbeasts:light_grass");
     	this.setHardness(0.01F);
     	this.setResistance(1000000.0F);
@@ -35,18 +41,31 @@ public class BlockLightDirt extends Block
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(int p_149691_1_, int p_149691_2_)
 	{
-	    return this.blockIcon;
+	    return p_149691_1_ == 1 ? this.iconTop : (p_149691_1_ == 0 ? this.iconBottom : this.blockIcon);
 	}
 	
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(IBlockAccess p_149673_1_, int p_149673_2_, int p_149673_3_, int p_149673_4_, int p_149673_5_)
 	{
-		return this.blockIcon;
+	    if (p_149673_5_ == 1)
+	    {
+	        return this.iconTop;
+	    }
+	    else if (p_149673_5_ == 0)
+	    {
+	        return this.iconBottom;
+	    }
+	    else
+	    {
+		    return this.blockIcon;
+	    }
 	}
     @SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister p_149651_1_)
 	{
-	    this.blockIcon = p_149651_1_.registerIcon(this.getTextureName() + "bottom");
+	    this.blockIcon = p_149651_1_.registerIcon(this.getTextureName() + "side");
+	    this.iconTop = p_149651_1_.registerIcon(this.getTextureName() + "top");
+	    this.iconBottom = p_149651_1_.registerIcon(this.getTextureName() + "bottom");
 	}
 
     /**
