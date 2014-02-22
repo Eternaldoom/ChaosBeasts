@@ -21,7 +21,7 @@ public class BiomeGenLight extends BiomeGenBase
         this.spawnableWaterCreatureList.clear();
         this.spawnableMonsterList.clear();
         this.topBlock = ChaosBlocks.blockLightDirt;
-        this.fillerBlock = ChaosBlocks.blockLightDirt;
+        this.fillerBlock = ChaosBlocks.blockLightGrass;
         this.field_76754_C = 1;
         this.theBiomeDecorator.treesPerChunk = -999;
         this.theBiomeDecorator.deadBushPerChunk = 2;

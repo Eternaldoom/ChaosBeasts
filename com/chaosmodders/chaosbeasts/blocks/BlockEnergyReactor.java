@@ -34,6 +34,10 @@ public class BlockEnergyReactor extends BlockContainer {
 
 	public BlockEnergyReactor(boolean active) {
 		super(Material.rock);
+		setLightLevel(1.0F);
+		setHardness(20.0F);
+		setResistance(6000000.0F);
+		setHarvestLevel("pickaxe", 17);
 		isActive = active;
 		if(!active){
 			setCreativeTab(ChaosTabs.tabChaosBlocks);

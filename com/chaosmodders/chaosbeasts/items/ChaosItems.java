@@ -105,7 +105,7 @@ public class ChaosItems
 	armorEmerald = ChaosHelper.addArmorMaterial("REALEMERALD", 66, new int[]{3, 4, 4, 3}, 99);
 	toolSapphire = EnumHelper.addToolMaterial("SAPPHIRE", 10, 3500, 10.0F, 5.0F, 50);
 	armorSapphire = ChaosHelper.addArmorMaterial("SAPPHIRE", 85, new int[]{4, 5, 5, 4}, 50);
-	toolEnder = EnumHelper.addToolMaterial("ENDER", 9, -1, 10.0F, 8.0F, 0);
+	toolEnder = EnumHelper.addToolMaterial("ENDER", 12, -1, 10.0F, 8.0F, 0);
 	
 	//Fluid and bucket stuff
 	DoomBucket = new ItemDoomBucket(ChaosBlocks.LiquidDoomBlock).setUnlocalizedName("doomBucket").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:liquiddoom_bucket");
@@ -128,7 +128,7 @@ public class ChaosItems
 	ItemBouncyBall = new ItemBouncyBall().setUnlocalizedName("bouncyBall");
 	BasicGrenadeLauncher = new ItemGrenadeLauncher();
 	ItemRawXenon = new Item().setUnlocalizedName("xenonRaw").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:raw_xenon");
-	ItemStableXenon = new Item().setUnlocalizedName("xenonStable").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:stable_xenon");
+	ItemStableXenon = new Item().setUnlocalizedName("xenonStable").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:stabilized_xenon");
 	ItemRefinedXenon = new Item().setUnlocalizedName("xenonRefined").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:refined_xenon");
 
 	//food
