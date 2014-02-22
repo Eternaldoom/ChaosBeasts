@@ -22,12 +22,10 @@ import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class DryWaterBlock extends BlockFluidClassic
-{
-public DryWaterBlock()
-{
-super(ChaosBlocks.DryWaterFluid, Material.water);
-this.setCreativeTab(ChaosTabs.tabChaosBlocks);
-this.setBlockTextureName("water_still");
-}
+public class DryWaterBlock extends BlockFluidClassic {
+	public DryWaterBlock() {
+		super(ChaosBlocks.DryWaterFluid, Material.water);
+		this.setCreativeTab(ChaosTabs.tabChaosBlocks);
+		this.setBlockTextureName("water_still");
+	}
 }

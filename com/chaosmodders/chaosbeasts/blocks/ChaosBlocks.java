@@ -48,9 +48,7 @@ public class ChaosBlocks
    
     public static Block EnergyReactor;
     public static Block EnergyReactorOn;
-    
-    public static ItemBlock ItemLobsterBlock;
-    
+        
     public static Block LiquidDoomBlock;
     public static Fluid LiquidDoomFluid;
     
@@ -117,7 +115,7 @@ public class ChaosBlocks
     	GameRegistry.registerBlock(blockSapphireOre, "sapphire_ore");
     	GameRegistry.registerBlock(blockBoneBlock, "bone_block");
     	GameRegistry.registerBlock(blockBlazeRod, "blaze_rod_block");
-    	GameRegistry.registerBlock(blockLobster, ItemBlockLobster.class,"lobster_block");
+    	GameRegistry.registerBlock(blockLobster, "lobster_block");
     	GameRegistry.registerBlock(doomFire, "doom_fire");
     	GameRegistry.registerBlock(blockDoomedStone, "doomed_stone");
     	GameRegistry.registerBlock(blockDoomedCobblestone, "doomed_cobblestone");

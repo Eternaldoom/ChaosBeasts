@@ -54,7 +54,7 @@ public class AddRendering
 		TileEntitySpecialRenderer render = new TileEntityBlockLobsterRenderer();
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBlockLobsterEntity.class, render);
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityEnergyReactor.class, new EnergyReactorRenderer());
-		//MinecraftForgeClient.registerItemRenderer(ChaosBlocks.blockLobster, new ItemRendererLobsterStatue(render, new TileEntityBlockLobsterEntity()));
+		RenderingRegistry.registerBlockHandler(new ItemRendererLobsterStatue());
 		
 		NetworkRegistry.INSTANCE.registerGuiHandler(ChaosBeasts.instance, new ChaosGUIHandler());
 	}
