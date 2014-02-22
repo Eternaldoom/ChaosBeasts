@@ -115,7 +115,7 @@ public class ChunkProviderLight implements IChunkProvider{
 
 								if (var47 > 0.0D)
 								{
-									var52 = ChaosBlocks.blockLightStone;
+									var52 = Blocks.stone;
 								}
 
 								var3[var43] = var52;
@@ -175,7 +175,7 @@ public class ChunkProviderLight implements IChunkProvider{
 				int var12 = (int)(this.stoneNoise[var8 + var9 * 16] / 3.0D + 3.0D + this.rand.nextDouble() * 0.25D);
 				int var13 = -1;
 				Block var14 = var10.topBlock;
-				Block var15 = ChaosBlocks.blockLightDirt;
+				Block var15 = ChaosBlocks.blockLightGrass;
 
 				for (int var16 = 127; var16 >= 0; --var16)
 				{
@@ -193,14 +193,14 @@ public class ChunkProviderLight implements IChunkProvider{
 						{
 							var13 = -1;
 						}
-						else if (var18 == ChaosBlocks.blockLightStone)
+						else if (var18 == Blocks.stone)
 						{
 							if (var13 == -1)
 							{
 								if (var12 <= 0)
 								{
-									var14 = ChaosBlocks.blockLightStone;
-									var15 = ChaosBlocks.blockLightStone;
+									var14 = ChaosBlocks.blockLightGrass;
+									var15 = ChaosBlocks.blockLightDirt;
 								}
 								else if (var16 >= var5 - 4 && var16 <= var5 + 1)
 								{
@@ -225,7 +225,7 @@ public class ChunkProviderLight implements IChunkProvider{
 								if (var13 == 0 && var15 == ChaosBlocks.blockLightDirt)
 								{
 									var13 = -1;
-									var15 = ChaosBlocks.blockLightStone;
+									var15 = ChaosBlocks.blockLightGrass;
 								}
 							}
 						}
@@ -437,7 +437,7 @@ public class ChunkProviderLight implements IChunkProvider{
 
 	@Override
 	public String makeString() {
-		return "Eden";
+		return "Wild Wood";
 	}
 
 	@Override
