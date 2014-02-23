@@ -47,6 +47,7 @@ public class ChaosBlocks
     public static Block blockArgonOre;
     public static Block blockLightGrass;
     public static Block blockRefinedXenon;
+    public static Block blockReactorCore;
    
     public static Block EnergyReactor;
     public static Block EnergyReactorOn;
@@ -108,6 +109,7 @@ public class ChaosBlocks
     	EnergyReactor = new BlockEnergyReactor(false).setBlockName("energyReactor");
     	EnergyReactorOn = new BlockEnergyReactor(true).setBlockName("energyReactorOn");
     	blockRefinedXenon = new BlockCustom().setBlockName("refinedXenonBlock").setBlockTextureName("chaosbeasts:refined_xenon_block");
+    	blockReactorCore = new BlockCustom().setBlockName("reactorCore").setBlockTextureName("chaosbeasts:reactor_core").setHardness(13.0F).setResistance(6000000.0F);
     	    	
     	LiquidDoomBlock = new LiquidDoomBlock().setBlockName("blockLiquidDoom").setBlockTextureName("chaosbeasts:liquiddoom_still");
     	FluidDarknessBlock = new FluidDarknessBlock().setBlockName("fluidDarkness").setBlockTextureName("chaosbeasts:fluid_darkness");
@@ -157,5 +159,6 @@ public class ChaosBlocks
     	GameRegistry.registerBlock(blockRefinedXenon, "refined_xenon_block");
     	GameRegistry.registerBlock(ArgonGasBlock, "argon_gas");
     	GameRegistry.registerBlock(blockArgonOre, "argon_ore");
+    	GameRegistry.registerBlock(blockReactorCore, "reactor_core");
 	}
 }
