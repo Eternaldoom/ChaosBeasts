@@ -31,46 +31,43 @@ public class MoreOreGenerator implements IWorldGenerator {
 		}
 	}
 
-	public void generateDark(World blah, Random random, int chunkX, int chunkZ)
-	{
-		if (blah.provider.dimensionId == 15)
-		{
-		for (int i = 0; i < 1; i++) {
-			int Xcoord1 = chunkX + random.nextInt(12);
-			int Ycoord1 = random.nextInt(256);
-			int Zcoord1 = chunkZ + random.nextInt(12);
+	public void generateDark(World blah, Random random, int chunkX, int chunkZ) {
+		if (blah.provider.dimensionId == 15) {
+			for (int i = 0; i < 1; i++) {
+				int Xcoord1 = chunkX + random.nextInt(12);
+				int Ycoord1 = random.nextInt(256);
+				int Zcoord1 = chunkZ + random.nextInt(12);
 
-			(new StructureDarknessSpire()).generate(blah, random, Xcoord1,
-					Ycoord1, Zcoord1);
-		
-		}
+				(new StructureDarknessSpire()).generate(blah, random, Xcoord1,
+						Ycoord1, Zcoord1);
 
-		for (int fred = 0; fred < 1; fred++) {
-			int Xcoord = chunkX + random.nextInt(16);
-			int Ycoord = random.nextInt(256);
-			int Zcoord = chunkZ + random.nextInt(16);
-
-			(new WorldGenFlowers(ChaosBlocks.BlazeFlower)).generate(blah,
-					random, Xcoord, Ycoord, Zcoord);
-			
-			for (int freefood = 0; freefood<15; freefood++)
-			{
-				int randPosX = chunkX + random.nextInt(16);
-				int randPosY = random.nextInt(256);
-				int randPosZ = chunkZ + random.nextInt(16);
-				(new WorldGenAirMinable(Blocks.glowstone, 1)).generate(blah,
-						random, randPosX, randPosY, randPosZ);
 			}
-			
-			for (int regularfood = 0; regularfood<4; regularfood++)
-			{
-				int randPosX = chunkX + random.nextInt(16);
-				int randPosY = random.nextInt(256);
-				int randPosZ = chunkZ + random.nextInt(16);
-				(new WorldGenDarkMinable(ChaosBlocks.blockXenonOre, 7)).generate(blah,
-						random, randPosX, randPosY, randPosZ);
+
+			for (int fred = 0; fred < 1; fred++) {
+				int Xcoord = chunkX + random.nextInt(16);
+				int Ycoord = random.nextInt(256);
+				int Zcoord = chunkZ + random.nextInt(16);
+
+				(new WorldGenFlowers(ChaosBlocks.BlazeFlower)).generate(blah,
+						random, Xcoord, Ycoord, Zcoord);
+
+				for (int freefood = 0; freefood < 15; freefood++) {
+					int randPosX = chunkX + random.nextInt(16);
+					int randPosY = random.nextInt(256);
+					int randPosZ = chunkZ + random.nextInt(16);
+					(new WorldGenAirMinable(Blocks.glowstone, 1)).generate(
+							blah, random, randPosX, randPosY, randPosZ);
+				}
+
+				for (int regularfood = 0; regularfood < 4; regularfood++) {
+					int randPosX = chunkX + random.nextInt(16);
+					int randPosY = random.nextInt(256);
+					int randPosZ = chunkZ + random.nextInt(16);
+					(new WorldGenDarkMinable(ChaosBlocks.blockXenonOre, 7))
+							.generate(blah, random, randPosX, randPosY,
+									randPosZ);
+				}
 			}
-		}
 		}
 	}
 
@@ -102,22 +99,28 @@ public class MoreOreGenerator implements IWorldGenerator {
 					random, randPosX, randPosY, randPosZ);
 		}
 
-		for (int lasagna = 0; lasagna < 3; lasagna++)
-		{
+		for (int lasagna = 0; lasagna < 3; lasagna++) {
 			int randPosX = chunkX + random.nextInt(16);
 			int randPosY = random.nextInt(32);
 			int randPosZ = chunkZ + random.nextInt(16);
 			(new WorldGenMinable(ChaosBlocks.blockCopperOre, 5)).generate(
 					world, random, randPosX, randPosY, randPosZ);
 		}
-		
-		for (int elmo = 0; elmo < 1; elmo++)
-		{
+
+		for (int elmo = 0; elmo < 1; elmo++) {
 			int randPosX = chunkX + random.nextInt(16);
 			int randPosY = random.nextInt(8);
 			int randPosZ = chunkZ + random.nextInt(16);
 			(new WorldGenMinable(ChaosBlocks.FluidDarknessBlock, 16)).generate(
 					world, random, randPosX, randPosY, randPosZ);
+		}
+
+		for (int i = 0; i < 4; i++) {
+			int randPosX = chunkX + random.nextInt(16);
+			int randPosY = random.nextInt(8);
+			int randPosZ = chunkZ + random.nextInt(16);
+			(new WorldGenMinable(ChaosBlocks.blockUraniumOre, 4)).generate(
+					world, random, randPosX, randPosY, randPosZ);
+		}
 	}
-}
 }

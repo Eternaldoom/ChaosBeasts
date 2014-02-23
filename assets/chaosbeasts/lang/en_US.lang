@@ -107,3 +107,7 @@ tile.oreUranium.name=Uranium Ore
 tile.argonGas.name=Argon Gas
 tile.reactorCore.name=Reactor Core
 tile.refinedXenonBlock.name=Refined Xenon Block
+tile.blockUranium.name=Uranium Block
+death.attack.chaosbeasts.radiation=%1$s Disintegrated due to Radiation
+death.attack.chaosbeasts.radiation.player=%1$s Disintegrated due to Radiation
+item.ingotUranium.name=Uranium Ingot

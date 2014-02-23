@@ -95,5 +95,6 @@ public class ChaosCrafting
 		GameRegistry.addSmelting(ChaosBlocks.blockCopperOre, new ItemStack(ChaosItems.ingotCopper), 0.7f);
 		GameRegistry.addSmelting(ChaosBlocks.blockDoomedCobblestone, new ItemStack(ChaosBlocks.blockDoomedStone), 2.0f);
 		GameRegistry.addSmelting(ChaosBlocks.blockDarkCobblestone, new ItemStack(ChaosBlocks.blockDarknessStone), 5.0f);
+		GameRegistry.addSmelting(ChaosBlocks.blockUraniumOre, new ItemStack(ChaosItems.ingotUranium), 5.0f);
 	}
 }
