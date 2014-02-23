@@ -60,11 +60,15 @@ public class ChaosBlocks
     public static Fluid DryWaterFluid;
     public static Block DryWaterBlock;
     
+    public static Fluid ArgonGasFluid;
+    public static Block ArgonGasBlock;
+    
 	public static void addBlocks()
 	{
 		LiquidDoomFluid = new LiquidDoomFluid();
 		FluidDarknessFluid = new FluidDarknessFluid();
 		DryWaterFluid = new DryWaterFluid();
+		ArgonGasFluid = new ArgonFluid();
 		
 		blockEnergyShard = new BlockCustom().setBlockName("blockEnergyShard").setHardness(0.2F).setResistance(1000000.0F).setBlockTextureName("chaosbeasts:energy_shard_block");
     	blockRubyOre = new BlockRubyOre().setBlockName("blockRubyOre").setHardness(3.0F).setResistance(5.0F).setBlockTextureName("chaosbeasts:ruby_ore");
@@ -108,6 +112,7 @@ public class ChaosBlocks
     	LiquidDoomBlock = new LiquidDoomBlock().setBlockName("blockLiquidDoom").setBlockTextureName("chaosbeasts:liquiddoom_still");
     	FluidDarknessBlock = new FluidDarknessBlock().setBlockName("fluidDarkness").setBlockTextureName("chaosbeasts:fluid_darkness");
     	DryWaterBlock = new DryWaterBlock().setBlockName("dryWater");
+    	ArgonGasBlock = new ArgonFluidBlock().setBlockName("argonGas");
     	
     	BlockReplaceHelper.replaceBlock(Blocks.bedrock, BlockChaosBedrock.class);
 
@@ -150,6 +155,7 @@ public class ChaosBlocks
     	GameRegistry.registerBlock(EnergyReactor, "energy_reactor");
     	GameRegistry.registerBlock(EnergyReactorOn, "energy_reactor_on");
     	GameRegistry.registerBlock(blockRefinedXenon, "refined_xenon_block");
+    	GameRegistry.registerBlock(ArgonGasBlock, "argon_gas");
     	GameRegistry.registerBlock(blockArgonOre, "argon_ore");
 	}
 }
