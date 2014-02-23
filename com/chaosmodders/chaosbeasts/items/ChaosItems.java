@@ -82,11 +82,13 @@ public class ChaosItems
 	public static Item ItemRawXenon;
 	public static Item ItemStableXenon;
 	public static Item ItemRefinedXenon;
+	public static Item pickaxeDimensional;
 	
 	public static Item ItemLobsterBlock;
 	public static Item ItemEnergyReactor;
 
 	public static Item.ToolMaterial toolRuby;
+	public static Item.ToolMaterial toolDimensional;
 	public static ArmorMaterial armorRuby;
 	public static ArmorMaterial armorRainbow;
 	public static Item.ToolMaterial toolRainbow;
@@ -108,6 +110,7 @@ public class ChaosItems
 	toolSapphire = EnumHelper.addToolMaterial("SAPPHIRE", 10, 3500, 10.0F, 5.0F, 50);
 	armorSapphire = ChaosHelper.addArmorMaterial("SAPPHIRE", 85, new int[]{4, 5, 5, 4}, 50);
 	toolEnder = EnumHelper.addToolMaterial("ENDER", 12, -1, 10.0F, 8.0F, 0);
+	toolDimensional = EnumHelper.addToolMaterial("DIMENSIONAL", 351, 10, 5000, 100, 0);
 	
 	//Fluid and bucket stuff
 	DoomBucket = new ItemDoomBucket(ChaosBlocks.LiquidDoomBlock).setUnlocalizedName("doomBucket").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:liquiddoom_bucket");
@@ -182,6 +185,7 @@ public class ChaosItems
 	axeEnder = new ChaosAxe(toolEnder).setUnlocalizedName("axeEnder").setTextureName("chaosbeasts:ender_axe");
 	hoeEnder =  new ChaosHoe(toolEnder).setUnlocalizedName("hoeEnder").setTextureName("chaosbeasts:ender_hoe");
 	ItemEnergyShard = new ItemSimpleFoiled().setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:energy_shard").setUnlocalizedName("shardEnergy");
+	pickaxeDimensional = new ChaosPick(toolDimensional).setUnlocalizedName("pickaxeDimensional").setTextureName("chaosbeasts:dimensional_pickaxe");
 	
 	armorRuby.customCraftingMaterial = ItemRuby;
 	
@@ -250,6 +254,7 @@ public class ChaosItems
 	GameRegistry.registerItem(ItemRefinedXenon, "refined_xenon");
 	GameRegistry.registerItem(ItemLobsterBlock, "lobster_statue");
 	GameRegistry.registerItem(ItemEnergyReactor, "energy_reactor");
+	GameRegistry.registerItem(pickaxeDimensional, "dimensional_pickaxe");
 
 	FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack("liquid_doom", FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(DoomBucket), new ItemStack(Items.bucket));
 	}

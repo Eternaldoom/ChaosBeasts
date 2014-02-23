@@ -1,10 +1,10 @@
 package com.chaosmodders.chaosbeasts.blocks;
 
 import net.minecraft.block.Block;
-import net.minecraft.item.ItemBlock;
+import net.minecraft.init.Blocks;
 import net.minecraftforge.fluids.Fluid;
 
-import com.chaosmodders.chaosbeasts.blocks.itemblocks.ItemBlockLobster;
+import com.chaosmodders.chaosbeasts.generic.BlockReplaceHelper;
 import com.chaosmodders.chaosbeasts.generic.ChaosTabs;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -45,6 +45,7 @@ public class ChaosBlocks
     public static Block blockWaterCrystal;
     public static Block blockXenonOre;
     public static Block blockLightGrass;
+    public static Block blockRefinedXenon;
    
     public static Block EnergyReactor;
     public static Block EnergyReactorOn;
@@ -100,10 +101,13 @@ public class ChaosBlocks
     	blockXenonOre = new BlockXenonOre();
     	EnergyReactor = new BlockEnergyReactor(false).setBlockName("energyReactor");
     	EnergyReactorOn = new BlockEnergyReactor(true).setBlockName("energyReactorOn");
+    	blockRefinedXenon = new BlockCustom().setBlockName("refinedXenonBlock").setBlockTextureName("chaosbeasts:refined_xenon_block");
     	    	
     	LiquidDoomBlock = new LiquidDoomBlock().setBlockName("blockLiquidDoom").setBlockTextureName("chaosbeasts:liquiddoom_still");
     	FluidDarknessBlock = new FluidDarknessBlock().setBlockName("fluidDarkness").setBlockTextureName("chaosbeasts:fluid_darkness");
     	DryWaterBlock = new DryWaterBlock().setBlockName("dryWater");
+    	
+    	BlockReplaceHelper.replaceBlock(Blocks.bedrock, BlockChaosBedrock.class);
 
     	GameRegistry.registerBlock(blockEnergyShard, "energy_shard_block");
     	GameRegistry.registerBlock(blockRubyOre, "ruby_ore");
@@ -143,5 +147,6 @@ public class ChaosBlocks
     	GameRegistry.registerBlock(blockXenonOre, "xenon_ore");
     	GameRegistry.registerBlock(EnergyReactor, "energy_reactor");
     	GameRegistry.registerBlock(EnergyReactorOn, "energy_reactor_on");
+    	GameRegistry.registerBlock(blockRefinedXenon, "refined_xenon_block");
 	}
 }
