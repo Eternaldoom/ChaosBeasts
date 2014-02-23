@@ -44,6 +44,7 @@ public class ChaosBlocks
     public static Block blockHydratedStone;
     public static Block blockWaterCrystal;
     public static Block blockXenonOre;
+    public static Block blockArgonOre;
     public static Block blockLightGrass;
     public static Block blockRefinedXenon;
    
@@ -99,6 +100,7 @@ public class ChaosBlocks
     	blockHydratedStone = new BlockHydrastone();
     	blockWaterCrystal = new BlockWaterCrystal();
     	blockXenonOre = new BlockXenonOre();
+    	blockArgonOre = new BlockArgonOre();
     	EnergyReactor = new BlockEnergyReactor(false).setBlockName("energyReactor");
     	EnergyReactorOn = new BlockEnergyReactor(true).setBlockName("energyReactorOn");
     	blockRefinedXenon = new BlockCustom().setBlockName("refinedXenonBlock").setBlockTextureName("chaosbeasts:refined_xenon_block");
@@ -148,5 +150,6 @@ public class ChaosBlocks
     	GameRegistry.registerBlock(EnergyReactor, "energy_reactor");
     	GameRegistry.registerBlock(EnergyReactorOn, "energy_reactor_on");
     	GameRegistry.registerBlock(blockRefinedXenon, "refined_xenon_block");
+    	GameRegistry.registerBlock(blockArgonOre, "argon_ore");
 	}
 }
