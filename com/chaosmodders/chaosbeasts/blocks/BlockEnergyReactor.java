@@ -42,7 +42,7 @@ public class BlockEnergyReactor extends BlockContainer {
 		this.setBlockTextureName("chaosbeasts:energy_reactor");
 		isActive = active;
 		if(!active){
-			setCreativeTab(null);
+			setCreativeTab(ChaosTabs.tabChaosBlocks);
 		}else if(active){
 			setCreativeTab(null);
 		}
@@ -76,7 +76,7 @@ public class BlockEnergyReactor extends BlockContainer {
 
 	public Item func_149650_a(int par1, Random par2Random, int par3)
 	{
-		return ChaosItems.ItemEnergyReactor;
+		return Item.getItemFromBlock(ChaosBlocks.EnergyReactor);
 	}
 
 	public void onBlockAdded(World par1World, int par2, int par3, int par4)

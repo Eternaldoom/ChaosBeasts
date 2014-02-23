@@ -15,7 +15,7 @@ public class ChaosTabs
 	    {
 			public Item getTabIconItem()
 			{
-				return ChaosItems.ItemSapphire;
+				return ChaosItems.ItemRuby;
 			}
 	    };
 	    
@@ -31,7 +31,7 @@ public class ChaosTabs
 	    {
 			public Item getTabIconItem()
 			{
-				return ChaosItems.pickaxeRuby;
+				return ChaosItems.pickaxeSapphire;
 			}
 	    };
 	    
@@ -39,7 +39,7 @@ public class ChaosTabs
 	    {
 			public Item getTabIconItem()
 			{
-				return Item.getItemFromBlock(ChaosBlocks.blockGlowTNT);
+				return Item.getItemFromBlock(ChaosBlocks.EnergyReactor);
 			}
 	    };
 }

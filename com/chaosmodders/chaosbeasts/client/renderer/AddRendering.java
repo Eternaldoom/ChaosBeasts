@@ -3,9 +3,11 @@ package com.chaosmodders.chaosbeasts.client.renderer;
 import net.minecraft.client.model.ModelZombie;
 import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
+import net.minecraft.item.Item;
 import net.minecraftforge.client.MinecraftForgeClient;
 
 import com.chaosmodders.chaosbeasts.ChaosBeasts;
+import com.chaosmodders.chaosbeasts.blocks.ChaosBlocks;
 import com.chaosmodders.chaosbeasts.blocks.TileEntityBlockLobsterEntity;
 import com.chaosmodders.chaosbeasts.blocks.TileEntityEnergyReactor;
 import com.chaosmodders.chaosbeasts.client.model.ModelDinosaur;
@@ -50,8 +52,8 @@ public class AddRendering
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBlockLobsterEntity.class, render);
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityEnergyReactor.class, new EnergyReactorRenderer());
 		
-        MinecraftForgeClient.registerItemRenderer(ChaosItems.ItemLobsterBlock, new ItemRendererLobsterStatue(render, new TileEntityBlockLobsterEntity()));
-        MinecraftForgeClient.registerItemRenderer(ChaosItems.ItemEnergyReactor, new ItemRendererLobsterStatue(new EnergyReactorRenderer(), new TileEntityEnergyReactor()));
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(ChaosBlocks.blockLobster), new ItemRendererLobsterStatue(render, new TileEntityBlockLobsterEntity()));
+        MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(ChaosBlocks.EnergyReactor), new ItemRendererLobsterStatue(new EnergyReactorRenderer(), new TileEntityEnergyReactor()));
 
 		NetworkRegistry.INSTANCE.registerGuiHandler(ChaosBeasts.instance, new ChaosGUIHandler());
 	}
