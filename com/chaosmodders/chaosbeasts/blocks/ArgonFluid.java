@@ -9,6 +9,8 @@ public class ArgonFluid extends Fluid {
 		setDensity(-100);
 		setViscosity(1000);
 		setGaseous(true);
+		setTemperature(350);
+		setLuminosity(150);
 		FluidRegistry.registerFluid(this);
 	}
 }

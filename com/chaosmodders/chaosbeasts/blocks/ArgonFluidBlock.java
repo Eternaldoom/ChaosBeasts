@@ -10,5 +10,6 @@ public class ArgonFluidBlock extends BlockFluidClassic {
 		super(ChaosBlocks.ArgonGasFluid, ChaosHelper.gas);
 		this.setCreativeTab(ChaosTabs.tabChaosBlocks);
 		this.setBlockTextureName("chaosbeasts:argon_gas");
+		this.setTickRate(20);
 	}
 }
