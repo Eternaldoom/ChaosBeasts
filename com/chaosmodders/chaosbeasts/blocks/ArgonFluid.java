@@ -7,7 +7,7 @@ public class ArgonFluid extends Fluid {
 	public ArgonFluid() {
 		super("argon");
 		setDensity(-100);
-		setViscosity(1000);
+		setViscosity(700);
 		setGaseous(true);
 		setTemperature(350);
 		setLuminosity(150);
