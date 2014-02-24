@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.MapColor;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialLiquid;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
@@ -24,4 +27,6 @@ public class ChaosHelper
 	public static DamageSource radiation = new DamageSource("chaosbeasts.radiation");
 	
 	public static final ResourceLocation energyReactor	= new ResourceLocation("chaosbeasts:textures/gui/energy_reactor.png");
+	
+	public static final Material gas = (new MaterialLiquid(MapColor.waterColor));
 }
