@@ -1,15 +1,17 @@
 package com.chaosmodders.chaosbeasts.event;
 
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.player.BonemealEvent;
 
 import com.chaosmodders.chaosbeasts.blocks.ChaosBlocks;
 import com.chaosmodders.chaosbeasts.blocks.DoomedSapling;
+import com.chaosmodders.chaosbeasts.generic.ChaosHelper;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
-public class DoomEventClass {
+public class ChaosEventClass {
 	private int BlockID;
 
 	/** Used to make the sapling grow the tree **/

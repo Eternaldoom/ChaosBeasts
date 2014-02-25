@@ -99,11 +99,11 @@ public class MoreOreGenerator implements IWorldGenerator {
 					random, randPosX, randPosY, randPosZ);
 		}
 
-		for (int lasagna = 0; lasagna < 3; lasagna++) {
+		for (int lasagna = 0; lasagna < 8; lasagna++) {
 			int randPosX = chunkX + random.nextInt(16);
 			int randPosY = random.nextInt(32);
 			int randPosZ = chunkZ + random.nextInt(16);
-			(new WorldGenMinable(ChaosBlocks.blockCopperOre, 5)).generate(
+			(new WorldGenMinable(ChaosBlocks.blockCopperOre, 7)).generate(
 					world, random, randPosX, randPosY, randPosZ);
 		}
 

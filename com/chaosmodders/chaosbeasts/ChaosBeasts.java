@@ -12,8 +12,8 @@ import com.chaosmodders.chaosbeasts.entity.projectile.EntityBasicGrenade;
 import com.chaosmodders.chaosbeasts.entity.projectile.EntityBouncyBall;
 import com.chaosmodders.chaosbeasts.entity.projectile.EntityHandgunBullet;
 import com.chaosmodders.chaosbeasts.entity.projectile.EntityThrowingStar;
-import com.chaosmodders.chaosbeasts.event.DoomBucketEvent;
-import com.chaosmodders.chaosbeasts.event.DoomEventClass;
+import com.chaosmodders.chaosbeasts.event.ChaosBucketEvent;
+import com.chaosmodders.chaosbeasts.event.ChaosEventClass;
 import com.chaosmodders.chaosbeasts.generic.ChaosCrafting;
 import com.chaosmodders.chaosbeasts.generic.ChaosOreDict;
 import com.chaosmodders.chaosbeasts.items.ChaosItems;
@@ -91,8 +91,8 @@ public class ChaosBeasts
          lightbiome = new BiomeGenLight(53).setHeight(height_PartiallySubmerged);
          waterbiome = new BiomeGenLight(54).setHeight(height_PartiallySubmerged);
          
-         MinecraftForge.EVENT_BUS.register(new DoomEventClass());
-         MinecraftForge.EVENT_BUS.register(new DoomBucketEvent());
+         MinecraftForge.EVENT_BUS.register(new ChaosEventClass());
+         MinecraftForge.EVENT_BUS.register(new ChaosBucketEvent());
         
     	GameRegistry.registerWorldGenerator(new MoreOreGenerator(), 1);
     	

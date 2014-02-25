@@ -12,7 +12,7 @@ import com.chaosmodders.chaosbeasts.items.ChaosItems;
 import cpw.mods.fml.common.eventhandler.Event.Result;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
-public class DoomBucketEvent {
+public class ChaosBucketEvent {
 
 	@SubscribeEvent
 	public void onBucketFill(FillBucketEvent event) {
