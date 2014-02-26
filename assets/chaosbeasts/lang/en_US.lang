@@ -87,6 +87,7 @@ tile.lightDirt.name=Light Dirt
 tile.xenonore.name=Xenon Ore
 tile.oreCopper.name=Copper Ore
 tile.argonOre.name=Argon Ore
+tile.trampoline.name=Trampoline
 entity.Demon.name=Demon
 item.doomBucket.name=Liquid Doom Bucket
 item.shardDemonic.name=Demonic Shard
