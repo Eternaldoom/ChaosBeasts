@@ -31,6 +31,7 @@ public class BlockTrampoline extends Block
 	@Override
 	public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity par5Entity)
 	{
+		par5Entity.fallDistance = 0.0F;
 		if (par5Entity.motionX > par5Entity.motionZ)
 		{
 		par5Entity.motionX *= 30.0D;
