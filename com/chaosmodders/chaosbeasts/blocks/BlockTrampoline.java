@@ -31,11 +31,6 @@ public class BlockTrampoline extends Block
 	@Override
 	public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity par5Entity)
 	{
-<<<<<<< HEAD
-		par5Entity.motionX *= -5.0D;
-		par5Entity.motionY *= 5.0D;
-		par5Entity.motionZ *= -5.0D;
-=======
 		if (par5Entity.motionX > par5Entity.motionZ)
 		{
 		par5Entity.motionX *= 30.0D;
@@ -45,7 +40,6 @@ public class BlockTrampoline extends Block
 		par5Entity.motionZ *= 30.0D;
 		}
 		par5Entity.motionY = 4.0D;
->>>>>>> FETCH_HEAD
 
 	}
 }
