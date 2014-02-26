@@ -28,10 +28,11 @@ public class BlockTrampoline extends Block
         return AxisAlignedBB.getAABBPool().getAABB((double)((float)p_149668_2_ + f), (double)p_149668_3_, (double)((float)p_149668_4_ + f), (double)((float)(p_149668_2_ + 1) - f), (double)((float)(p_149668_3_ + 1) - f), (double)((float)(p_149668_4_ + 1) - f));
     }
 	
+	@Override
 	public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity par5Entity)
 	{
 		par5Entity.motionX *= -5.0D;
-		par5Entity.motionY *= -5.0D;
+		par5Entity.motionY *= 5.0D;
 		par5Entity.motionZ *= -5.0D;
 
 	}
