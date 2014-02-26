@@ -50,6 +50,7 @@ public class ChaosBlocks
     public static Block blockReactorCore;
     public static Block blockUraniumOre;
     public static Block blockUranium;
+    public static Block blockTrampoline;
    
     public static Block EnergyReactor;
     public static Block EnergyReactorOn;
@@ -114,6 +115,7 @@ public class ChaosBlocks
     	blockReactorCore = new BlockCustom().setBlockName("reactorCore").setBlockTextureName("chaosbeasts:reactor_core").setHardness(13.0F).setResistance(6000000.0F);
     	blockUraniumOre = new BlockCustom().setBlockName("oreUranium").setBlockTextureName("chaosbeasts:uranium_ore").setHardness(7.0F).setResistance(11.0F);
     	blockUranium = new BlockUranium();
+    	blockTrampoline = new BlockTrampoline();
 
     	LiquidDoomBlock = new LiquidDoomBlock().setBlockName("blockLiquidDoom").setBlockTextureName("chaosbeasts:liquiddoom_still");
     	FluidDarknessBlock = new FluidDarknessBlock().setBlockName("fluidDarkness").setBlockTextureName("chaosbeasts:fluid_darkness");
@@ -166,5 +168,6 @@ public class ChaosBlocks
     	GameRegistry.registerBlock(blockReactorCore, "reactor_core");
     	GameRegistry.registerBlock(blockUraniumOre, "uranium_ore");
     	GameRegistry.registerBlock(blockUranium, "uranium_block");
+    	GameRegistry.registerBlock(blockTrampoline, "trampoline");
 	}
 }
