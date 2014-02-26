@@ -16,20 +16,6 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class ChaosEventClass {
 	private int BlockID;
-	
-	EntityPlayer player = Minecraft.getMinecraft().thePlayer;
-
-	private Item boots = null;
-	private Item body = null;
-	private Item legs = null;
-	private Item helmet = null;
-
-	ItemStack boot = player.inventory.armorInventory[0];
-	ItemStack leg = player.inventory.armorInventory[1];
-	ItemStack chestplate = player.inventory.armorInventory[2];
-	ItemStack head = player.inventory.armorInventory[3];
-	
-	private ChaosItems items;
 
 	/** Used to make the sapling grow the tree **/
 	public void bonemealUsed(BonemealEvent event) {
