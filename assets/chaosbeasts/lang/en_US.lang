@@ -112,3 +112,4 @@ tile.blockUranium.name=Uranium Block
 death.attack.chaosbeasts.radiation=%1$s Disintegrated due to Radiation
 death.attack.chaosbeasts.radiation.player=%1$s Disintegrated due to Radiation
 item.ingotUranium.name=Uranium Ingot
+tile.xenonGas.name=Xenon Gas
