@@ -30,6 +30,7 @@ import com.chaosmodders.chaosbeasts.entity.projectile.EntityThrowingStar;
 import com.chaosmodders.chaosbeasts.generic.ChaosGUIHandler;
 import com.chaosmodders.chaosbeasts.items.ChaosItems;
 import com.chaosmodders.chaosbeasts.items.rendering.ItemRendererLobsterStatue;
+import com.jadarstudios.developercapes.DevCapes;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
@@ -56,5 +57,7 @@ public class AddRendering
         MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(ChaosBlocks.EnergyReactor), new ItemRendererLobsterStatue(new EnergyReactorRenderer(), new TileEntityEnergyReactor()));
 
 		NetworkRegistry.INSTANCE.registerGuiHandler(ChaosBeasts.instance, new ChaosGUIHandler());
+		
+		DevCapes.getInstance().registerConfig("https://github.com/Eternaldoom/ChaosBeasts/blob/master/capes.json", ChaosBeasts.MODID);
 	}
 }
