@@ -58,6 +58,6 @@ public class AddRendering
 
 		NetworkRegistry.INSTANCE.registerGuiHandler(ChaosBeasts.instance, new ChaosGUIHandler());
 		
-		DevCapes.getInstance().registerConfig("https://github.com/Eternaldoom/ChaosBeasts/blob/master/capes.json", ChaosBeasts.MODID);
+		DevCapes.getInstance().registerConfig("https://raw.github.com/Eternaldoom/ChaosBeasts/master/capes.json", ChaosBeasts.MODID);
 	}
 }
