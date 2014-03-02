@@ -23,7 +23,7 @@ public class ChaosTabs
 	    {
 			public Item getTabIconItem()
 			{
-				return ChaosItems.swordRainbow;
+				return ChaosItems.swordangelic;
 			}
 	    };
 	    

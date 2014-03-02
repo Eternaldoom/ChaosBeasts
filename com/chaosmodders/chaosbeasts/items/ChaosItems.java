@@ -29,16 +29,16 @@ public class ChaosItems
 	public static Item pickaxeRuby;
 	public static Item hoeRuby;
 	public static Item axeRuby;
-	public static Item helmetRainbow;
-	public static Item chestplateRainbow;
-	public static Item leggingsRainbow;
-	public static Item bootsRainbow;
-	public static Item lumpRainbow;
-	public static Item swordRainbow;
-	public static Item spadeRainbow;
-	public static Item pickaxeRainbow;
-	public static Item hoeRainbow;
-	public static Item axeRainbow;
+	public static Item helmetangelic;
+	public static Item chestplateangelic;
+	public static Item leggingsangelic;
+	public static Item bootsangelic;
+	public static Item lumpangelic;
+	public static Item swordangelic;
+	public static Item spadeangelic;
+	public static Item pickaxeangelic;
+	public static Item hoeangelic;
+	public static Item axeangelic;
 	public static Item helmetEmerald;
 	public static Item chestplateEmerald;
 	public static Item leggingsEmerald;
@@ -89,8 +89,8 @@ public class ChaosItems
 	public static Item.ToolMaterial toolRuby;
 	public static Item.ToolMaterial toolDimensional;
 	public static ArmorMaterial armorRuby;
-	public static ArmorMaterial armorRainbow;
-	public static Item.ToolMaterial toolRainbow;
+	public static ArmorMaterial armorangelic;
+	public static Item.ToolMaterial toolangelic;
 	public static ArmorMaterial armorEmerald;
 	public static Item.ToolMaterial toolEmerald;
 	public static ArmorMaterial armorSapphire;
@@ -102,8 +102,8 @@ public class ChaosItems
 	//tool and armor type declarations
 	toolRuby = EnumHelper.addToolMaterial("RUBY", 7, 999, 10.0F, 4.0F, 10);
 	armorRuby = ChaosHelper.addArmorMaterial("RUBY", 25, new int[]{5, 3, 3, 5}, 10);
-	toolRainbow = EnumHelper.addToolMaterial("RAINBOW", 30, 5000, 30.0F, 26.0F, 35);
-	armorRainbow = ChaosHelper.addArmorMaterial("RAINBOW", -1, new int[]{12, 17, 15, 12}, 35);
+	toolangelic = EnumHelper.addToolMaterial("angelic", 30, 5000, 30.0F, 26.0F, 35);
+	armorangelic = ChaosHelper.addArmorMaterial("angelic", -1, new int[]{12, 17, 15, 12}, 35);
 	toolEmerald = EnumHelper.addToolMaterial("REALEMERALD", 5, 3000, 7.0F, 2.0F, 99);
 	armorEmerald = ChaosHelper.addArmorMaterial("REALEMERALD", 66, new int[]{3, 4, 4, 3}, 99);
 	toolSapphire = EnumHelper.addToolMaterial("SAPPHIRE", 10, 3500, 10.0F, 5.0F, 50);
@@ -116,7 +116,7 @@ public class ChaosItems
 	
 	//normal items
 	ItemRuby = new Item().setUnlocalizedName("ruby").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("ruby");
-	lumpRainbow = new Item().setUnlocalizedName("lumpRainbow").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:rainbow_lump");
+	lumpangelic = new Item().setUnlocalizedName("lumpangelic").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:angelic_lump");
 	ItemSapphire = new ItemSimpleFoiled().setUnlocalizedName("sapphire").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:sapphire");
 	rodSapphire = new Item().setUnlocalizedName("rodSapphire").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:sapphire_rod");
 	rodRuby = new Item().setUnlocalizedName("rodRuby").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:ruby_rod");
@@ -150,15 +150,15 @@ public class ChaosItems
 	pickaxeRuby = new ChaosPick(toolRuby).setUnlocalizedName("pickaxeRuby").setTextureName("chaosbeasts:ruby_pickaxe");
 	axeRuby = new ChaosAxe(toolRuby).setUnlocalizedName("axeRuby").setTextureName("chaosbeasts:ruby_axe");
 	hoeRuby =  new ChaosHoe(toolRuby).setUnlocalizedName("hoeRuby").setTextureName("chaosbeasts:ruby_hoe");
-	helmetRainbow = new ChaosInfiniteArmor(armorRainbow, HEAD, 0, 20D, "rainbow").setUnlocalizedName("helmetRainbow").setTextureName("chaosbeasts:rainbow_helmet");
-	chestplateRainbow = new ChaosInfiniteArmor(armorRainbow, BODY, 1, 20D, "rainbow").setUnlocalizedName("chestplateRainbow").setTextureName("chaosbeasts:rainbow_chestplate");
-	leggingsRainbow = new ChaosInfiniteArmor(armorRainbow, LEGS, 2, 20D, "rainbow").setUnlocalizedName("leggingsRainbow").setTextureName("chaosbeasts:rainbow_leggings");
-	bootsRainbow = new ChaosInfiniteArmor(armorRainbow, BOOTS, 3, 20D, "rainbow").setUnlocalizedName("bootsRainbow").setTextureName("chaosbeasts:rainbow_boots");
-	swordRainbow = new ChaosSword(toolRainbow).setUnlocalizedName("swordRainbow").setTextureName("chaosbeasts:rainbow_sword");
-	spadeRainbow = new ChaosSpade(toolRainbow).setUnlocalizedName("spadeRainbow").setTextureName("chaosbeasts:rainbow_shovel");
-	pickaxeRainbow = new ChaosPick(toolRainbow).setUnlocalizedName("pickaxeRainbow").setTextureName("chaosbeasts:rainbow_pickaxe");
-	axeRainbow = new ChaosAxe(toolRainbow).setUnlocalizedName("axeRainbow").setTextureName("chaosbeasts:rainbow_axe");
-	hoeRainbow =  new ChaosHoe(toolRainbow).setUnlocalizedName("hoeRainbow").setTextureName("chaosbeasts:rainbow_hoe");
+	helmetangelic = new ChaosInfiniteArmor(armorangelic, HEAD, 0, 20D, "angelic").setUnlocalizedName("helmetangelic").setTextureName("chaosbeasts:angelic_helmet");
+	chestplateangelic = new ChaosInfiniteArmor(armorangelic, BODY, 1, 20D, "angelic").setUnlocalizedName("chestplateangelic").setTextureName("chaosbeasts:angelic_chestplate");
+	leggingsangelic = new ChaosInfiniteArmor(armorangelic, LEGS, 2, 20D, "angelic").setUnlocalizedName("leggingsangelic").setTextureName("chaosbeasts:angelic_leggings");
+	bootsangelic = new ChaosInfiniteArmor(armorangelic, BOOTS, 3, 20D, "angelic").setUnlocalizedName("bootsangelic").setTextureName("chaosbeasts:angelic_boots");
+	swordangelic = new ChaosSword(toolangelic).setUnlocalizedName("swordangelic").setTextureName("chaosbeasts:angelic_sword");
+	spadeangelic = new ChaosSpade(toolangelic).setUnlocalizedName("spadeangelic").setTextureName("chaosbeasts:angelic_shovel");
+	pickaxeangelic = new ChaosPick(toolangelic).setUnlocalizedName("pickaxeangelic").setTextureName("chaosbeasts:angelic_pickaxe");
+	axeangelic = new ChaosAxe(toolangelic).setUnlocalizedName("axeangelic").setTextureName("chaosbeasts:angelic_axe");
+	hoeangelic =  new ChaosHoe(toolangelic).setUnlocalizedName("hoeangelic").setTextureName("chaosbeasts:angelic_hoe");
 	helmetEmerald = new ChaosArmor(armorEmerald, HEAD, 0, 12.5D, "Emerald").setUnlocalizedName("helmetEmerald").setTextureName("chaosbeasts:emerald_helmet");
 	chestplateEmerald = new ChaosArmor(armorEmerald, BODY, 1, 12.5D, "Emerald").setUnlocalizedName("chestplateEmerald").setTextureName("chaosbeasts:emerald_chestplate");
 	leggingsEmerald = new ChaosArmor(armorEmerald, LEGS, 2, 12.5D, "Emerald").setUnlocalizedName("leggingsEmerald").setTextureName("chaosbeasts:emerald_leggings");
@@ -189,7 +189,7 @@ public class ChaosItems
 	
 	GameRegistry.registerItem(ItemRuby, "ruby");
 	GameRegistry.registerItem(ItemSapphire, "sapphire");
-	GameRegistry.registerItem(lumpRainbow, "rainbow_lump");
+	GameRegistry.registerItem(lumpangelic, "angelic_lump");
 	GameRegistry.registerItem(helmetRuby, "ruby_helmet");
 	GameRegistry.registerItem(chestplateRuby, "ruby_chestplate");
 	GameRegistry.registerItem(leggingsRuby, "ruby_leggings");
@@ -199,15 +199,15 @@ public class ChaosItems
 	GameRegistry.registerItem(pickaxeRuby, "ruby_pickaxe");
 	GameRegistry.registerItem(axeRuby, "ruby_axe");
 	GameRegistry.registerItem(hoeRuby, "ruby_hoe");
-	GameRegistry.registerItem(helmetRainbow, "rainbow_helmet");
-	GameRegistry.registerItem(chestplateRainbow, "rainbow_chestplate");
-	GameRegistry.registerItem(leggingsRainbow, "rainbow_leggings");
-	GameRegistry.registerItem(bootsRainbow, "rainbow_boots");
-	GameRegistry.registerItem(swordRainbow, "rainbow_sword");
-	GameRegistry.registerItem(spadeRainbow, "rainbow_shovel");
-	GameRegistry.registerItem(pickaxeRainbow, "rainbow_pickaxe");
-	GameRegistry.registerItem(axeRainbow, "rainbow_axe");
-	GameRegistry.registerItem(hoeRainbow, "rainbow_hoe");
+	GameRegistry.registerItem(helmetangelic, "angelic_helmet");
+	GameRegistry.registerItem(chestplateangelic, "angelic_chestplate");
+	GameRegistry.registerItem(leggingsangelic, "angelic_leggings");
+	GameRegistry.registerItem(bootsangelic, "angelic_boots");
+	GameRegistry.registerItem(swordangelic, "angelic_sword");
+	GameRegistry.registerItem(spadeangelic, "angelic_shovel");
+	GameRegistry.registerItem(pickaxeangelic, "angelic_pickaxe");
+	GameRegistry.registerItem(axeangelic, "angelic_axe");
+	GameRegistry.registerItem(hoeangelic, "angelic_hoe");
 	GameRegistry.registerItem(helmetEmerald, "emerald_helmet");
 	GameRegistry.registerItem(chestplateEmerald, "emerald_chestplate");
 	GameRegistry.registerItem(leggingsEmerald, "emerald_leggings");
