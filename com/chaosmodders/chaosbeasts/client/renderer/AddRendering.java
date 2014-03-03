@@ -10,7 +10,9 @@ import com.chaosmodders.chaosbeasts.ChaosBeasts;
 import com.chaosmodders.chaosbeasts.blocks.ChaosBlocks;
 import com.chaosmodders.chaosbeasts.blocks.TileEntityBlockLobsterEntity;
 import com.chaosmodders.chaosbeasts.blocks.TileEntityEnergyReactor;
+import com.chaosmodders.chaosbeasts.client.model.ModelCoralFish;
 import com.chaosmodders.chaosbeasts.client.model.ModelDinosaur;
+import com.chaosmodders.chaosbeasts.client.renderer.mob.RenderCoralFish;
 import com.chaosmodders.chaosbeasts.client.renderer.mob.RenderDemon;
 import com.chaosmodders.chaosbeasts.client.renderer.mob.RenderDinosaur;
 import com.chaosmodders.chaosbeasts.client.renderer.mob.RenderGiantPigZombie;
@@ -19,6 +21,7 @@ import com.chaosmodders.chaosbeasts.client.renderer.mob.RenderLobster;
 import com.chaosmodders.chaosbeasts.client.renderer.projectile.RenderThrowingStar;
 import com.chaosmodders.chaosbeasts.client.renderer.tileentity.EnergyReactorRenderer;
 import com.chaosmodders.chaosbeasts.client.renderer.tileentity.TileEntityBlockLobsterRenderer;
+import com.chaosmodders.chaosbeasts.entity.aquatic.EntityCoralFish;
 import com.chaosmodders.chaosbeasts.entity.monster.EntityDemon;
 import com.chaosmodders.chaosbeasts.entity.monster.EntityDinosaur;
 import com.chaosmodders.chaosbeasts.entity.monster.EntityGiantPigZombie;
@@ -48,7 +51,8 @@ public class AddRendering
 		RenderingRegistry.registerEntityRenderingHandler(EntityThrowingStar.class, new RenderThrowingStar(ChaosItems.ItemThrowingStar));
 		RenderingRegistry.registerEntityRenderingHandler(EntityHandgunBullet.class, new RenderSnowball(ChaosItems.ItemBullet));
 		RenderingRegistry.registerEntityRenderingHandler(EntityBouncyBall.class, new RenderSnowball(ChaosItems.ItemRuby));
-		
+		RenderingRegistry.registerEntityRenderingHandler(EntityCoralFish.class, new RenderCoralFish(new ModelCoralFish(), 0));
+
 		TileEntitySpecialRenderer render = new TileEntityBlockLobsterRenderer();
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBlockLobsterEntity.class, render);
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityEnergyReactor.class, new EnergyReactorRenderer());

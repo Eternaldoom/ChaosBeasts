@@ -1,7 +1,5 @@
 package com.chaosmodders.chaosbeasts.client.renderer.mob;
 
-import org.lwjgl.opengl.GL11;
-
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;
@@ -9,10 +7,9 @@ import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.ResourceLocation;
 
-import com.chaosmodders.chaosbeasts.client.model.ModelCoralFish;
-import com.chaosmodders.chaosbeasts.client.model.ModelDinosaur;
-import com.chaosmodders.chaosbeasts.entity.monster.EntityDinosaur;
-import com.chaosmodders.chaosbeasts.entity.monster.EntityGiantPigZombie;
+import org.lwjgl.opengl.GL11;
+
+import com.chaosmodders.chaosbeasts.entity.aquatic.EntityCoralFish;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -20,28 +17,11 @@ import cpw.mods.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class RenderCoralFish extends RenderLiving
 {
-    private static final ResourceLocation fishyTextures = new ResourceLocation("chaosbeasts:textures/entity/coralfish.png");
-    private float scale;
-    
-    public RenderCoralFish(ModelBase par1ModelBase, float par2, float par3)
-    {
-        super(new ModelCoralFish(), par2 * par3);
-        this.scale = par3;
-    }
+    private static final ResourceLocation fishTextures = new ResourceLocation("chaosbeasts:textures/entity/coralfish.png");
 
-    protected void preRenderCallback(EntityCoralFish par1EntityCoralFish, float par2)
+    public RenderCoralFish(ModelBase par1ModelBase, float par2)
     {
-        GL11.glScalef(this.scale, this.scale, this.scale);
-    }
-    
-    protected void preRenderCallback(EntityLivingBase par1EntityLivingBase, float par2)
-    {
-        this.preRenderCallback((EntityCoralFish)par1EntityLivingBase, par2);
-    }
-    
-    protected float getDeathMaxRotation(EntityCoralFish par1EntityCoralFish)
-    {
-        return 180.0F;
+        super(par1ModelBase, par2);
     }
 
     /**
@@ -58,17 +38,28 @@ public class RenderCoralFish extends RenderLiving
     /**
      * Returns the location of an entity's texture. Doesn't seem to be called unless you call Render.bindEntityTexture.
      */
-    protected ResourceLocation getEntityTexture(EntityDinosaur par1EntityDinosaur)
+    protected ResourceLocation getEntityTexture(EntityCoralFish par1EntityCoralFish)
     {
-        return fishyTextures;
+        return fishTextures;
+    }
+
+    protected void rotateCorpse(EntityCoralFish par1EntityCoralFish, float par2, float par3, float par4)
+    {
+        float f3 = par1EntityCoralFish.prevSquidPitch + (par1EntityCoralFish.squidPitch - par1EntityCoralFish.prevSquidPitch) * par4;
+        float f4 = par1EntityCoralFish.prevSquidYaw + (par1EntityCoralFish.squidYaw - par1EntityCoralFish.prevSquidYaw) * par4;
+        GL11.glTranslatef(0.0F, 0.5F, 0.0F);
+        GL11.glRotatef(180.0F - par3, 0.0F, 1.0F, 0.0F);
+        GL11.glRotatef(f3, 1.0F, 0.0F, 0.0F);
+        GL11.glRotatef(f4, 0.0F, 1.0F, 0.0F);
+        GL11.glTranslatef(0.0F, -1.2F, 0.0F);
     }
 
     /**
-     * Queries whether should render the specified pass or not.
+     * Defines what float the third param in setRotationAngles of ModelBase is
      */
-    protected int shouldRenderPass(EntityDinosaur par1EntityDinosaur, int par2, float par3)
+    protected float handleRotationFloat(EntityCoralFish par1EntityCoralFish, float par2)
     {
-        return -1;
+        return par1EntityCoralFish.lastTentacleAngle + (par1EntityCoralFish.tentacleAngle - par1EntityCoralFish.lastTentacleAngle) * par2;
     }
 
     /**
@@ -82,17 +73,17 @@ public class RenderCoralFish extends RenderLiving
         this.doRender((EntityCoralFish)par1EntityLiving, par2, par4, par6, par8, par9);
     }
 
-    protected float getDeathMaxRotation(EntityLivingBase par1EntityLivingBase)
+    /**
+     * Defines what float the third param in setRotationAngles of ModelBase is
+     */
+    protected float handleRotationFloat(EntityLivingBase par1EntityLivingBase, float par2)
     {
-        return this.getDeathMaxRotation((EntityCoralFish)par1EntityLivingBase);
+        return this.handleRotationFloat((EntityCoralFish)par1EntityLivingBase, par2);
     }
 
-    /**
-     * Queries whether should render the specified pass or not.
-     */
-    protected int shouldRenderPass(EntityLivingBase par1EntityLivingBase, int par2, float par3)
+    protected void rotateCorpse(EntityLivingBase par1EntityLivingBase, float par2, float par3, float par4)
     {
-        return this.shouldRenderPass((EntityCoralFish)par1EntityLivingBase, par2, par3);
+        this.rotateCorpse((EntityCoralFish)par1EntityLivingBase, par2, par3, par4);
     }
 
     /**

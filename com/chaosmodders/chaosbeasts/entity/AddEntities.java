@@ -5,6 +5,7 @@ import net.minecraft.world.biome.BiomeGenBase;
 
 import com.chaosmodders.chaosbeasts.blocks.TileEntityBlockLobsterEntity;
 import com.chaosmodders.chaosbeasts.blocks.TileEntityEnergyReactor;
+import com.chaosmodders.chaosbeasts.entity.aquatic.EntityCoralFish;
 import com.chaosmodders.chaosbeasts.entity.monster.EntityDemon;
 import com.chaosmodders.chaosbeasts.entity.monster.EntityDinosaur;
 import com.chaosmodders.chaosbeasts.entity.monster.EntityGiantPigZombie;
@@ -26,6 +27,7 @@ public class AddEntities
         EntityRegistry.registerGlobalEntityID(EntityHellLobster.class, "HellLobster", EntityRegistry.findGlobalUniqueEntityId(), 0xefb060, 0x593c1a);
         EntityRegistry.registerGlobalEntityID(EntityDemon.class, "Demon", EntityRegistry.findGlobalUniqueEntityId(), 0xefb060, 0x593c1a);
         EntityRegistry.registerGlobalEntityID(EntityDinosaur.class, "Dinosaur", EntityRegistry.findGlobalUniqueEntityId(), 0xefb060, 0x593c1a);
+        EntityRegistry.registerGlobalEntityID(EntityCoralFish.class, "CoralFish", EntityRegistry.findGlobalUniqueEntityId(), 0xefb060, 0x593c1a);
 
     	EntityRegistry.addSpawn(EntityGiantPigZombie.class, 6, 2, 2, EnumCreatureType.monster, BiomeGenBase.hell);
     	EntityRegistry.addSpawn(EntityLobster.class, 13, 4, 4, EnumCreatureType.monster, BiomeGenBase.plains, BiomeGenBase.beach, BiomeGenBase.desert, BiomeGenBase.desertHills, BiomeGenBase.forest, BiomeGenBase.forestHills);
