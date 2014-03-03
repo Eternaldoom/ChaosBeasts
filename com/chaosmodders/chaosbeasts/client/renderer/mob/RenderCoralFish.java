@@ -9,12 +9,7 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
-<<<<<<< HEAD
 import com.chaosmodders.chaosbeasts.entity.aquatic.EntityCoralFish;
-=======
-import com.chaosmodders.chaosbeasts.client.model.ModelCoralFish;
-import com.chaosmodders.chaosbeasts.entity.monster.EntityDinosaur;
->>>>>>> FETCH_HEAD
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
