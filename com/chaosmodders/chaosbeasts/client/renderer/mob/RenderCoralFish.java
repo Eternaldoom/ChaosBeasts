@@ -1,7 +1,5 @@
 package com.chaosmodders.chaosbeasts.client.renderer.mob;
 
-import org.lwjgl.opengl.GL11;
-
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;
@@ -9,10 +7,10 @@ import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.ResourceLocation;
 
+import org.lwjgl.opengl.GL11;
+
 import com.chaosmodders.chaosbeasts.client.model.ModelCoralFish;
-import com.chaosmodders.chaosbeasts.client.model.ModelDinosaur;
 import com.chaosmodders.chaosbeasts.entity.monster.EntityDinosaur;
-import com.chaosmodders.chaosbeasts.entity.monster.EntityGiantPigZombie;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
