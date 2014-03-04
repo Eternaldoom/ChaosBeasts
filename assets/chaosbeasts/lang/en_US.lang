@@ -113,3 +113,7 @@ death.attack.chaosbeasts.radiation=%1$s Disintegrated due to Radiation
 death.attack.chaosbeasts.radiation.player=%1$s Disintegrated due to Radiation
 item.ingotUranium.name=Uranium Ingot
 tile.xenonGas.name=Xenon Gas
+item.bouncyBall.name=Bouncy Ball
+item.aquaticShard.name=Aquatic Shard
+item.sapphire.name=Sapphire
+tile.waterCrystal.name=Water Crystal

@@ -85,6 +85,7 @@ public class ChaosItems
 	public static Item pickaxeDimensional;
 	public static Item ItemNetherShard;
 	public static Item ingotUranium;
+	public static Item ItemAquaticShard;
 
 	public static Item.ToolMaterial toolRuby;
 	public static Item.ToolMaterial toolDimensional;
@@ -136,6 +137,7 @@ public class ChaosItems
 	ItemRefinedXenon = new Item().setUnlocalizedName("xenonRefined").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:refined_xenon");
 	ItemNetherShard = new Item().setUnlocalizedName("netherShard").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:nether_shard");
 	ingotUranium = new Item().setUnlocalizedName("ingotUranium").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:uranium_ingot");
+	ItemAquaticShard = new Item().setUnlocalizedName("aquaticShard").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:aquatic_shard");
 
 	//food
 	crispyExoskeleton = new ChaosFood(4, 0.3F, true).setUnlocalizedName("crispyExoSkeleton").setTextureName("chaosbeasts:crispy_exoskeleton");
@@ -253,6 +255,7 @@ public class ChaosItems
 	GameRegistry.registerItem(pickaxeDimensional, "dimensional_pickaxe");
 	GameRegistry.registerItem(ItemNetherShard, "nether_shard");
 	GameRegistry.registerItem(ingotUranium, "uranium_ingot");
+	GameRegistry.registerItem(ItemAquaticShard, "aquatic_shard");
 
 	FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack("liquid_doom", FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(DoomBucket), new ItemStack(Items.bucket));
 	}
