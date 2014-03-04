@@ -1,19 +1,16 @@
 package com.chaosmodders.chaosbeasts.generic;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialLiquid;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
+import net.minecraft.command.CommandHandler;
+import net.minecraft.command.ServerCommandManager;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
-import net.minecraft.item.crafting.FurnaceRecipes;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.util.EnumHelper;
+import cpw.mods.fml.common.event.FMLServerStartingEvent;
 
 public class ChaosHelper
 {	

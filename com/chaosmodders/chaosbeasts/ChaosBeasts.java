@@ -1,5 +1,8 @@
 package com.chaosmodders.chaosbeasts;
 
+import net.minecraft.command.CommandHandler;
+import net.minecraft.command.ServerCommandManager;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.MinecraftForge;
@@ -16,6 +19,7 @@ import com.chaosmodders.chaosbeasts.event.ChaosBucketEvent;
 import com.chaosmodders.chaosbeasts.event.ChaosEventClass;
 import com.chaosmodders.chaosbeasts.generic.ChaosCrafting;
 import com.chaosmodders.chaosbeasts.generic.ChaosOreDict;
+import com.chaosmodders.chaosbeasts.generic.DimensionCommand;
 import com.chaosmodders.chaosbeasts.items.ChaosItems;
 import com.chaosmodders.chaosbeasts.worldgen.BiomeGenDark;
 import com.chaosmodders.chaosbeasts.worldgen.BiomeGenDoom;
@@ -35,6 +39,7 @@ import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -114,4 +119,11 @@ public class ChaosBeasts
     {
     	MinecraftForge.TERRAIN_GEN_BUS.register(new BiomeInitializer());
     }
+    
+    @EventHandler
+    public void serverStarting(FMLServerStartingEvent event){ 
+		if (MinecraftServer.getServer().getCommandManager() instanceof ServerCommandManager) {
+			((CommandHandler) MinecraftServer.getServer().getCommandManager()).registerCommand(new DimensionCommand());
+		}
+	}
 }

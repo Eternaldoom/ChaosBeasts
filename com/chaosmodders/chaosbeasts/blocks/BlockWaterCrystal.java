@@ -7,6 +7,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.IIcon;
@@ -35,6 +36,11 @@ public class BlockWaterCrystal extends Block
         float var1 = 0.4F;
         this.setBlockBounds(0.5F - var1, 0.0F, 0.5F - var1, 0.5F + var1, 0.8F, 0.5F + var1);
     }
+    
+    public TileEntity createNewTileEntity(World world, int var1)
+    {
+        return new WaterCrystalTE();
+        }
 
 
     /**
@@ -51,7 +57,7 @@ public class BlockWaterCrystal extends Block
      */
     public int getRenderType()
     {
-        return 1;
+        return -1;
     }
 
     /**

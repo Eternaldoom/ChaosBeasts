@@ -5,6 +5,7 @@ import net.minecraft.world.biome.BiomeGenBase;
 
 import com.chaosmodders.chaosbeasts.blocks.TileEntityBlockLobsterEntity;
 import com.chaosmodders.chaosbeasts.blocks.TileEntityEnergyReactor;
+import com.chaosmodders.chaosbeasts.blocks.WaterCrystalTE;
 import com.chaosmodders.chaosbeasts.entity.aquatic.EntityCoralFish;
 import com.chaosmodders.chaosbeasts.entity.monster.EntityDemon;
 import com.chaosmodders.chaosbeasts.entity.monster.EntityDinosaur;
@@ -21,6 +22,7 @@ public class AddEntities
 	{
 		GameRegistry.registerTileEntity(TileEntityBlockLobsterEntity.class, "tileEntityBlockLobster");
 		GameRegistry.registerTileEntity(TileEntityEnergyReactor.class, "tileEntityEnergyReactor");
+		GameRegistry.registerTileEntity(WaterCrystalTE.class, "tileEntityWaterCrystal");
 		
         EntityRegistry.registerGlobalEntityID(EntityGiantPigZombie.class, "GiantPigZombie", EntityRegistry.findGlobalUniqueEntityId(), 0xefb060, 0x593c1a);
         EntityRegistry.registerGlobalEntityID(EntityLobster.class, "Lobster", EntityRegistry.findGlobalUniqueEntityId(), 0xefb060, 0x593c1a);
