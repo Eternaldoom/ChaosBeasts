@@ -87,6 +87,7 @@ public class ChaosItems
 	public static Item ingotUranium;
 	public static Item ItemAquaticShard;
 	public static Item pickaxeAquatic;
+	public static Item swordAquatic;
 
 	public static Item.ToolMaterial toolRuby;
 	public static Item.ToolMaterial toolDimensional;
@@ -190,6 +191,7 @@ public class ChaosItems
 	ItemEnergyShard = new ItemSimpleFoiled().setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:energy_shard").setUnlocalizedName("shardEnergy");
 	pickaxeDimensional = new ChaosPick(toolDimensional).setUnlocalizedName("pickaxeDimensional").setTextureName("chaosbeasts:dimensional_pickaxe");
 	pickaxeAquatic = new ChaosPick(toolAquatic).setUnlocalizedName("pickaxeAquatic").setTextureName("chaosbeasts:aquatic_pickaxe");
+	swordAquatic = new ChaosSword(toolAquatic).setUnlocalizedName("swordAquatic").setTextureName("chaosbeasts:aquatic_sword");
 	
 	armorRuby.customCraftingMaterial = ItemRuby;
 	
@@ -261,6 +263,7 @@ public class ChaosItems
 	GameRegistry.registerItem(ingotUranium, "uranium_ingot");
 	GameRegistry.registerItem(ItemAquaticShard, "aquatic_shard");
 	GameRegistry.registerItem(pickaxeAquatic, "aquatic_pickaxe");
+	GameRegistry.registerItem(swordAquatic, "aquatic_sword");
 
 	FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack("liquid_doom", FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(DoomBucket), new ItemStack(Items.bucket));
 	}
