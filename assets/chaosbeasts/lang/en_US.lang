@@ -117,3 +117,6 @@ item.bouncyBall.name=Bouncy Ball
 item.aquaticShard.name=Aquatic Shard
 item.sapphire.name=Sapphire
 tile.waterCrystal.name=Water Crystal
+item.swordAquatic.name=Aquatic Sword
+item.spadeAquatic.name=Aquatic Spade
+item.pickaxeAquatic.name=Aquatic Pickaxe
