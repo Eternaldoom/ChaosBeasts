@@ -32,13 +32,21 @@ public class DimensionCommand extends CommandBase{
 
 			if (var2[0].equalsIgnoreCase("Overworld")) {
 				if (playerMP.dimension != 0) {
-					playerMP.mcServer.getConfigurationManager().transferPlayerToDimension(playerMP, 0);
+					playerMP.travelToDimension(0);
 				}
 			}
 			
 			if (var2[0].equalsIgnoreCase("Water")) {
 				if (playerMP.dimension != ChaosBeasts.WaterDimensionId) {
 					playerMP.mcServer.getConfigurationManager().transferPlayerToDimension(playerMP, ChaosBeasts.WaterDimensionId);
+				}
+			}
+			if (var2[0].equalsIgnoreCase("Doomed")) {
+				if (playerMP.dimension != ChaosBeasts.DoomDimensionId) {
+					for(int i = 0; i<2; i++)
+					{
+					playerMP.travelToDimension(ChaosBeasts.DoomDimensionId);
+					}
 				}
 			}
 		}
@@ -51,6 +59,6 @@ public class DimensionCommand extends CommandBase{
 
 	@Override
 	public List addTabCompletionOptions(ICommandSender par1ICommandSender, String[] par2) {
-		return par2.length == 1 ? getListOfStringsMatchingLastWord(par2, new String[] {"End", "Overworld", "Water"}) : null;
+		return par2.length == 1 ? getListOfStringsMatchingLastWord(par2, new String[] {"End", "Overworld", "Water", "Doomed"}) : null;
 	}
 }

@@ -86,6 +86,7 @@ public class ChaosItems
 	public static Item ItemNetherShard;
 	public static Item ingotUranium;
 	public static Item ItemAquaticShard;
+	public static Item pickaxeAquatic;
 
 	public static Item.ToolMaterial toolRuby;
 	public static Item.ToolMaterial toolDimensional;
@@ -97,20 +98,22 @@ public class ChaosItems
 	public static ArmorMaterial armorSapphire;
 	public static Item.ToolMaterial toolSapphire;
 	public static Item.ToolMaterial toolEnder;
+	public static Item.ToolMaterial toolAquatic;
 	
 	public static void addItems()
 	{
 	//tool and armor type declarations
 	toolRuby = EnumHelper.addToolMaterial("RUBY", 7, 999, 10.0F, 4.0F, 10);
 	armorRuby = ChaosHelper.addArmorMaterial("RUBY", 25, new int[]{5, 3, 3, 5}, 10);
-	toolangelic = EnumHelper.addToolMaterial("angelic", 30, 5000, 30.0F, 26.0F, 35);
-	armorangelic = ChaosHelper.addArmorMaterial("angelic", -1, new int[]{12, 17, 15, 12}, 35);
+	toolangelic = EnumHelper.addToolMaterial("ANGELIC", 30, 5000, 23.0F, 26.0F, 35);
+	armorangelic = ChaosHelper.addArmorMaterial("ANGELIC", -1, new int[]{12, 17, 15, 12}, 35);
 	toolEmerald = EnumHelper.addToolMaterial("REALEMERALD", 5, 3000, 7.0F, 2.0F, 99);
 	armorEmerald = ChaosHelper.addArmorMaterial("REALEMERALD", 66, new int[]{3, 4, 4, 3}, 99);
 	toolSapphire = EnumHelper.addToolMaterial("SAPPHIRE", 10, 3500, 10.0F, 5.0F, 50);
 	armorSapphire = ChaosHelper.addArmorMaterial("SAPPHIRE", 85, new int[]{4, 5, 5, 4}, 50);
 	toolEnder = EnumHelper.addToolMaterial("ENDER", 12, -1, 10.0F, 8.0F, 0);
 	toolDimensional = EnumHelper.addToolMaterial("DIMENSIONAL", 351, 10, 5000, 100, 0);
+	toolAquatic = EnumHelper.addToolMaterial("AQUATIC", 35, 5000, 35.0F, 45.0F, 20);
 	
 	//Fluid and bucket stuff
 	DoomBucket = new ItemDoomBucket(ChaosBlocks.LiquidDoomBlock).setUnlocalizedName("doomBucket").setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:liquiddoom_bucket");
@@ -186,6 +189,7 @@ public class ChaosItems
 	hoeEnder =  new ChaosHoe(toolEnder).setUnlocalizedName("hoeEnder").setTextureName("chaosbeasts:ender_hoe");
 	ItemEnergyShard = new ItemSimpleFoiled().setCreativeTab(ChaosTabs.tabChaosMaterials).setTextureName("chaosbeasts:energy_shard").setUnlocalizedName("shardEnergy");
 	pickaxeDimensional = new ChaosPick(toolDimensional).setUnlocalizedName("pickaxeDimensional").setTextureName("chaosbeasts:dimensional_pickaxe");
+	pickaxeAquatic = new ChaosPick(toolAquatic).setUnlocalizedName("pickaxeAquatic").setTextureName("chaosbeasts:aquatic_pickaxe");
 	
 	armorRuby.customCraftingMaterial = ItemRuby;
 	
@@ -256,6 +260,7 @@ public class ChaosItems
 	GameRegistry.registerItem(ItemNetherShard, "nether_shard");
 	GameRegistry.registerItem(ingotUranium, "uranium_ingot");
 	GameRegistry.registerItem(ItemAquaticShard, "aquatic_shard");
+	GameRegistry.registerItem(pickaxeAquatic, "aquatic_pickaxe");
 
 	FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack("liquid_doom", FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(DoomBucket), new ItemStack(Items.bucket));
 	}
