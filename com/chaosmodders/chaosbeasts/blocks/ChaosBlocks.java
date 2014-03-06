@@ -54,6 +54,7 @@ public class ChaosBlocks
    
     public static Block bedrockWritten;
     public static Block shatteredBedrock;
+    public static Block voidLamp;
     
     public static Block EnergyReactor;
     public static Block EnergyReactorOn;
@@ -125,6 +126,7 @@ public class ChaosBlocks
     	blockTrampoline = new BlockTrampoline();
 		bedrockWritten = new BlockCustom().setBlockName("bedrockWritten").setHardness(20.0F).setResistance(1000000.0F).setBlockTextureName("chaosbeasts:shattered_bedrock_written");
 		shatteredBedrock = new BlockCustom().setBlockName("bedrockShattered").setHardness(20.0F).setResistance(1000000.0F).setBlockTextureName("chaosbeasts:shattered_bedrock");
+		voidLamp = new BlockCustom().setBlockName("voidLamp").setBlockUnbreakable().setLightLevel(0.5F).setResistance(1000000.0F).setBlockTextureName("chaosbeasts:void_lamp");
 
     	LiquidDoomBlock = new LiquidDoomBlock().setBlockName("blockLiquidDoom").setBlockTextureName("chaosbeasts:liquiddoom_still");
     	FluidDarknessBlock = new FluidDarknessBlock().setBlockName("fluidDarkness").setBlockTextureName("chaosbeasts:fluid_darkness");
@@ -182,5 +184,6 @@ public class ChaosBlocks
     	GameRegistry.registerBlock(XenonGasBlock, "xenon_gas");
     	GameRegistry.registerBlock(bedrockWritten, "written_bedrock");
     	GameRegistry.registerBlock(shatteredBedrock, "shattered_bedrock");
+    	GameRegistry.registerBlock(voidLamp, "void_lamp");
 	}
 }
