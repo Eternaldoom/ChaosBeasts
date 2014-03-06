@@ -52,6 +52,9 @@ public class ChaosBlocks
     public static Block blockUranium;
     public static Block blockTrampoline;
    
+    public static Block bedrockWritten;
+    public static Block shatteredBedrock;
+    
     public static Block EnergyReactor;
     public static Block EnergyReactorOn;
         
@@ -120,6 +123,8 @@ public class ChaosBlocks
     	blockUraniumOre = new BlockCustom().setBlockName("oreUranium").setBlockTextureName("chaosbeasts:uranium_ore").setHardness(7.0F).setResistance(11.0F);
     	blockUranium = new BlockUranium();
     	blockTrampoline = new BlockTrampoline();
+		bedrockWritten = new BlockCustom().setBlockName("bedrockWritten").setHardness(20.0F).setResistance(1000000.0F).setBlockTextureName("chaosbeasts:shattered_bedrock_written");
+		shatteredBedrock = new BlockCustom().setBlockName("bedrockShattered").setHardness(20.0F).setResistance(1000000.0F).setBlockTextureName("chaosbeasts:shattered_bedrock");
 
     	LiquidDoomBlock = new LiquidDoomBlock().setBlockName("blockLiquidDoom").setBlockTextureName("chaosbeasts:liquiddoom_still");
     	FluidDarknessBlock = new FluidDarknessBlock().setBlockName("fluidDarkness").setBlockTextureName("chaosbeasts:fluid_darkness");
@@ -175,5 +180,7 @@ public class ChaosBlocks
     	GameRegistry.registerBlock(blockUranium, "uranium_block");
     	GameRegistry.registerBlock(blockTrampoline, "trampoline");
     	GameRegistry.registerBlock(XenonGasBlock, "xenon_gas");
+    	GameRegistry.registerBlock(bedrockWritten, "written_bedrock");
+    	GameRegistry.registerBlock(shatteredBedrock, "shattered_bedrock");
 	}
 }

@@ -37,6 +37,7 @@ public class ChaosCrafting
 		GameRegistry.addRecipe(new ItemStack(ChaosBlocks.EnergyReactor), new Object[]{"DGD", "GCG", "DGD", 'D', ChaosBlocks.blockDarknessStone, 'G', Blocks.stained_glass, 'C', ChaosBlocks.blockReactorCore});
 		GameRegistry.addShapelessRecipe(new ItemStack(ChaosItems.ItemNetherShard, 3), new ItemStack(Items.nether_star));
 		GameRegistry.addRecipe(new ItemStack(ChaosItems.ItemEnergyShard, 16), new Object[]{"CRC", "RRR", "CRC", 'R', ChaosItems.ItemNetherShard, 'C', Blocks.coal_block});
+		GameRegistry.addRecipe(new ItemStack(ChaosItems.orbAquatic), new Object[]{"SSS", "SSS", 'S', ChaosItems.ItemAquaticShard});
 
 		//armor
 		GameRegistry.addRecipe(new ItemStack(ChaosItems.helmetRuby), new Object[]{"RRR", "R R", "   ", 'R', ChaosItems.ItemRuby});
@@ -55,6 +56,10 @@ public class ChaosCrafting
 		GameRegistry.addRecipe(new ItemStack(ChaosItems.chestplateSapphire), new Object[]{"R R", "RRR", "RRR", 'R', ChaosItems.ItemSapphire});
 		GameRegistry.addRecipe(new ItemStack(ChaosItems.leggingsSapphire), new Object[]{"RRR", "R R", "R R", 'R', ChaosItems.ItemSapphire});
 		GameRegistry.addRecipe(new ItemStack(ChaosItems.bootsSapphire), new Object[]{"   ", "R R", "R R", 'R', ChaosItems.ItemSapphire});
+		GameRegistry.addRecipe(new ItemStack(ChaosItems.helmetAquatic), new Object[]{"RRR", "R R", "   ", 'R', ChaosItems.orbAquatic});
+		GameRegistry.addRecipe(new ItemStack(ChaosItems.chestplateAquatic), new Object[]{"R R", "RRR", "RRR", 'R', ChaosItems.orbAquatic});
+		GameRegistry.addRecipe(new ItemStack(ChaosItems.leggingsAquatic), new Object[]{"RRR", "R R", "R R", 'R', ChaosItems.orbAquatic});
+		GameRegistry.addRecipe(new ItemStack(ChaosItems.bootsAquatic), new Object[]{"   ", "R R", "R R", 'R', ChaosItems.orbAquatic});
 		
 		//tools
 		GameRegistry.addRecipe(new ItemStack(ChaosItems.swordRuby), new Object[]{" R ", " R ", " S ", 'R', ChaosItems.ItemRuby, 'S', Items.stick});
@@ -84,6 +89,11 @@ public class ChaosCrafting
 		GameRegistry.addRecipe(new ItemStack(ChaosItems.pickaxeEnder), new Object[]{"RER", " S ", " S ", 'R', Items.ender_pearl, 'E', Items.ender_eye, 'S', ChaosItems.rodEmerald});
 		GameRegistry.addRecipe(new ItemStack(ChaosItems.axeEnder), new Object[]{"ER ", "RS ", " S ", 'R', Items.ender_pearl, 'E', Items.ender_eye, 'S', ChaosItems.rodEmerald});
 		GameRegistry.addRecipe(new ItemStack(ChaosItems.hoeEnder), new Object[]{"RR ", " S ", " S ", 'R', Items.ender_pearl, 'S', ChaosItems.rodEmerald});
+		GameRegistry.addRecipe(new ItemStack(ChaosItems.swordAquatic), new Object[]{" R ", " R ", " S ", 'R', ChaosItems.orbAquatic, 'S', Items.stick});
+		GameRegistry.addRecipe(new ItemStack(ChaosItems.spadeAquatic), new Object[]{" R ", " S ", " S ", 'R', ChaosItems.orbAquatic, 'S', Items.stick});
+		GameRegistry.addRecipe(new ItemStack(ChaosItems.pickaxeAquatic), new Object[]{"RRR", " S ", " S ", 'R', ChaosItems.orbAquatic, 'S', Items.stick});
+		GameRegistry.addRecipe(new ItemStack(ChaosItems.axeAquatic), new Object[]{"RR ", "RS ", " S ", 'R', ChaosItems.orbAquatic, 'S', Items.stick});
+		GameRegistry.addRecipe(new ItemStack(ChaosItems.hoeAquatic), new Object[]{"RR ", " S ", " S ", 'R', ChaosItems.orbAquatic, 'S', Items.stick});
 		
 		//Guns
 		GameRegistry.addRecipe(new ItemStack(ChaosItems.ItemBullet, 5), new Object[]{" G ", "GLG", " C ", 'G', Items.gunpowder, 'L', ChaosItems.ingotLead, 'C', ChaosItems.ingotCopper});

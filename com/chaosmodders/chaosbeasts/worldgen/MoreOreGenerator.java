@@ -5,6 +5,7 @@ import java.util.Random;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.gen.feature.WorldGenDungeons;
 import net.minecraft.world.gen.feature.WorldGenFlowers;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 
@@ -121,6 +122,13 @@ public class MoreOreGenerator implements IWorldGenerator {
 			int randPosZ = chunkZ + random.nextInt(16);
 			(new WorldGenMinable(ChaosBlocks.blockUraniumOre, 4)).generate(
 					world, random, randPosX, randPosY, randPosZ);
+		}
+		
+		if(random.nextInt(32) == 0) {
+			int randPosX = chunkX + random.nextInt(16) + 8;
+			int randPosY = random.nextInt(16);
+			int randPosZ = chunkZ + random.nextInt(16) + 8;
+			(new WorldGenVoidTomb()).generate(world, random, randPosX, randPosY, randPosZ);
 		}
 	}
 }

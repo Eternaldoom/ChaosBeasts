@@ -83,6 +83,9 @@ public class ChaosItems
 	public static Item ItemStableXenon;
 	public static Item ItemRefinedXenon;
 	public static Item pickaxeDimensional;
+	public static Item swordDimensional;
+	public static Item axeDimensional;
+	
 	public static Item ItemNetherShard;
 	public static Item ingotUranium;
 	public static Item ItemAquaticShard;

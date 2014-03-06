@@ -6,13 +6,12 @@ import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.ai.EntityAIHurtByTarget;
 import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
-import net.minecraft.entity.passive.EntityWaterMob;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+
+import com.chaosmodders.chaosbeasts.items.ChaosItems;
 
 public class EntityCoralFish extends EntityWaterMonster
 {
@@ -117,12 +116,7 @@ public class EntityCoralFish extends EntityWaterMonster
      */
     protected void dropFewItems(boolean par1, int par2)
     {
-        int j = this.rand.nextInt(3 + par2) + 1;
-
-        for (int k = 0; k < j; ++k)
-        {
-            this.entityDropItem(new ItemStack(Items.dye, 1, 0), 0.0F);
-        }
+            this.entityDropItem(new ItemStack(ChaosItems.ItemAquaticShard, 1, 0), 0.0F);
     }
 
     /**
