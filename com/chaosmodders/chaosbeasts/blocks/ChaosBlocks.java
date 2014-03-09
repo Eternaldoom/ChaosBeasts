@@ -1,6 +1,8 @@
 package com.chaosmodders.chaosbeasts.blocks;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFence;
+import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 import net.minecraftforge.fluids.Fluid;
 
@@ -51,6 +53,7 @@ public class ChaosBlocks
     public static Block blockUraniumOre;
     public static Block blockUranium;
     public static Block blockTrampoline;
+    public static Block blockIronFence;
    
     public static Block bedrockWritten;
     public static Block shatteredBedrock;
@@ -129,6 +132,7 @@ public class ChaosBlocks
 		shatteredBedrock = new BlockCustom().setBlockName("bedrockShattered").setHardness(20.0F).setResistance(1000000.0F).setBlockTextureName("chaosbeasts:shattered_bedrock");
 		voidLamp = new BlockCustom().setBlockName("voidLamp").setBlockUnbreakable().setLightLevel(0.5F).setResistance(1000000.0F).setBlockTextureName("chaosbeasts:void_lamp");
 		demonVault = new BlockDemonVault();
+		blockIronFence = new BlockIronFence("iron_block", Material.iron).setBlockName("ironFence").setHardness(5.0F).setResistance(10.0F);
 		
     	LiquidDoomBlock = new LiquidDoomBlock().setBlockName("blockLiquidDoom").setBlockTextureName("chaosbeasts:liquiddoom_still");
     	FluidDarknessBlock = new FluidDarknessBlock().setBlockName("fluidDarkness").setBlockTextureName("chaosbeasts:fluid_darkness");
@@ -188,5 +192,6 @@ public class ChaosBlocks
     	GameRegistry.registerBlock(shatteredBedrock, "shattered_bedrock");
     	GameRegistry.registerBlock(voidLamp, "void_lamp");
     	GameRegistry.registerBlock(demonVault, "demon_vault");
+    	GameRegistry.registerBlock(blockIronFence, "iron_fence");
 	}
 }
