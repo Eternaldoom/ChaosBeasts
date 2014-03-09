@@ -450,7 +450,7 @@ public class WorldGenVoidTomb extends WorldGenerator
 		world.setBlock(i + 4, j + 0, k + 2, Blocks.stone);
 		world.setBlock(i + 4, j + 0, k + 3, Blocks.stone);
 		world.setBlock(i + 4, j + 0, k + 4, Blocks.bedrock);
-		world.setBlock(i + 4, j + 0, k + 5, Blocks.lapis_block);
+		world.setBlock(i + 4, j + 0, k + 5, ChaosBlocks.demonVault);
 		world.setBlock(i + 4, j + 0, k + 6, Blocks.stone);
 		world.setBlock(i + 4, j + 0, k + 7, Blocks.stone);
 		world.setBlock(i + 4, j + 0, k + 8, Blocks.stone);
