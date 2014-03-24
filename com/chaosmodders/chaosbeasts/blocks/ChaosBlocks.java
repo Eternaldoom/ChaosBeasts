@@ -1,12 +1,12 @@
 package com.chaosmodders.chaosbeasts.blocks;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockFence;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 import net.minecraftforge.fluids.Fluid;
 
 import com.chaosmodders.chaosbeasts.generic.BlockReplaceHelper;
+import com.chaosmodders.chaosbeasts.generic.ChaosHelper;
 import com.chaosmodders.chaosbeasts.generic.ChaosTabs;
 
 import cpw.mods.fml.common.registry.GameRegistry;
