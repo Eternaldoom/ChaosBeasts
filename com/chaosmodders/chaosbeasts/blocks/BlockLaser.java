@@ -14,7 +14,7 @@ public class BlockLaser extends Block {
 	public BlockLaser()
 	{
 		super(Material.iron);
-		this.setBlockTextureName("chaosbeasts:darkness_stone");
+		this.setBlockTextureName("chaosbeasts:laser_top");
 		this.setHardness(15.0F);
 		this.setResistance(0.1F);
 	    this.setBlockName("laserSource");
@@ -70,7 +70,7 @@ public class BlockLaser extends Block {
     public void updateLaser(World world, int x, int y, int z, boolean on) {
     	counter = 0;
     	if (on == true) {
-    	    while (counter < 30) {
+    	    while (counter < 1000) {
     		    counter++;
     		    if (world.getBlock(x + counter, y, z) == Blocks.air) {
     		    	world.setBlock(x + counter, y, z, ChaosBlocks.LaserBeam);
@@ -81,7 +81,7 @@ public class BlockLaser extends Block {
     	    }
         }
     	else {
-        	while (counter < 30) {
+        	while (counter < 1000) {
         		counter++;
         		if (world.getBlock(x + counter, y, z) == ChaosBlocks.LaserBeam) {
         			world.setBlock(x + counter, y, z, Blocks.air);
