@@ -10,23 +10,17 @@ import net.minecraft.world.World;
 import com.chaosmodders.chaosbeasts.generic.ChaosTabs;
 
 public class BlockLaser extends Block {
-	private final boolean field_150171_a;
 	private int counter;
-	public BlockLaser(boolean isOn)
+	public BlockLaser()
 	{
 		super(Material.iron);
 		this.setBlockTextureName("chaosbeasts:darkness_stone");
 		this.setHardness(15.0F);
 		this.setResistance(0.1F);
-		if(isOn == true) {
-			this.setBlockName("laserSourceOn");
-		}
-		else {
-			this.setBlockName("laserSource");
-		}
+	    this.setBlockName("laserSource");
+
 
 		this.setCreativeTab(ChaosTabs.tabChaosBlocks);
-		this.field_150171_a = isOn;
 	}
 	
 	public void onBlockAdded(World p_149726_1_, int i, int j, int k)

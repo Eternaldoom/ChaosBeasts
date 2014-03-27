@@ -64,7 +64,6 @@ public class ChaosBlocks
     public static Block EnergyReactorOn;
     
     public static Block LaserSource;
-    public static Block LaserSourceOn;
     public static Block LaserBeam;
         
     public static Block LiquidDoomBlock;
@@ -137,8 +136,7 @@ public class ChaosBlocks
 		voidLamp = new BlockCustom().setBlockName("voidLamp").setBlockUnbreakable().setLightLevel(0.5F).setResistance(1000000.0F).setBlockTextureName("chaosbeasts:void_lamp");
 		demonVault = new BlockDemonVault();
 		blockIronFence = new BlockIronFence("iron_block", Material.iron).setBlockName("ironFence").setHardness(5.0F).setResistance(10.0F);
-		LaserSourceOn = new BlockLaser(true);
-		LaserSource = new BlockLaser(false);
+		LaserSource = new BlockLaser();
 		LaserBeam = new BlockLaserBeam();
 		
     	LiquidDoomBlock = new LiquidDoomBlock().setBlockName("blockLiquidDoom").setBlockTextureName("chaosbeasts:liquiddoom_still");
@@ -200,8 +198,7 @@ public class ChaosBlocks
     	GameRegistry.registerBlock(voidLamp, "void_lamp");
     	GameRegistry.registerBlock(demonVault, "demon_vault");
     	GameRegistry.registerBlock(blockIronFence, "iron_fence");
-    	GameRegistry.registerBlock(LaserSource, "laser_source_off");
-    	GameRegistry.registerBlock(LaserSourceOn, "laser_source_on");
+    	GameRegistry.registerBlock(LaserSource, "laser_source");
     	GameRegistry.registerBlock(LaserBeam, "laser_beam");
 	}
 }
