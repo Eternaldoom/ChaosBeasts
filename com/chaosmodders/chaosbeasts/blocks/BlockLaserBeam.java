@@ -12,10 +12,11 @@ import net.minecraft.world.World;
 public class BlockLaserBeam extends Block {
 	public BlockLaserBeam()
 	{
-		super(Material.cactus);
+		super(Material.water);
 		this.setBlockTextureName("chaosbeasts:ruby_block");
 		this.setHardness(15.0F);
 		this.setResistance(0.1F);
+		this.setLightLevel(0.8F);
 		this.setBlockName("laserBeam");
 		this.setCreativeTab(ChaosTabs.tabChaosBlocks);
 	}
@@ -46,6 +47,8 @@ public class BlockLaserBeam extends Block {
         	p_149695_1_.scheduleBlockUpdate(p_149695_2_, p_149695_3_, p_149695_4_, this, 4);
         }
     }
+	
+	
 }
 
 
