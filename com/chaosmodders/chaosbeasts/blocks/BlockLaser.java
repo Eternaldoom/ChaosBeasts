@@ -11,28 +11,35 @@ import com.chaosmodders.chaosbeasts.generic.ChaosTabs;
 
 public class BlockLaser extends Block {
 	private final boolean field_150171_a;
+	private int counter;
 	public BlockLaser(boolean isOn)
 	{
 		super(Material.iron);
 		this.setBlockTextureName("chaosbeasts:darkness_stone");
 		this.setHardness(15.0F);
 		this.setResistance(0.1F);
-		this.setBlockName("laserSource");
+		if(isOn == true) {
+			this.setBlockName("laserSourceOn");
+		}
+		else {
+			this.setBlockName("laserSource");
+		}
+
 		this.setCreativeTab(ChaosTabs.tabChaosBlocks);
 		this.field_150171_a = isOn;
 	}
 	
-	public void onBlockAdded(World p_149726_1_, int p_149726_2_, int p_149726_3_, int p_149726_4_)
+	public void onBlockAdded(World p_149726_1_, int i, int j, int k)
     {
         if (!p_149726_1_.isRemote)
         {
-            if (this.field_150171_a && !p_149726_1_.isBlockIndirectlyGettingPowered(p_149726_2_, p_149726_3_, p_149726_4_))
+            if (!p_149726_1_.isBlockIndirectlyGettingPowered(i, j, k))
             {
-                p_149726_1_.scheduleBlockUpdate(p_149726_2_, p_149726_3_, p_149726_4_, this, 4);
+                p_149726_1_.scheduleBlockUpdate(i, j, k, this, 4);
             }
-            else if (!this.field_150171_a && p_149726_1_.isBlockIndirectlyGettingPowered(p_149726_2_, p_149726_3_, p_149726_4_))
+            else if (p_149726_1_.isBlockIndirectlyGettingPowered(i, j, k))
             {
-                p_149726_1_.setBlock(p_149726_2_, p_149726_3_, p_149726_4_, Blocks.lit_redstone_lamp, 0, 2);
+                this.updateLaser(p_149726_1_, i, j, k, true);
             }
         }
     }
@@ -45,13 +52,13 @@ public class BlockLaser extends Block {
     {
         if (!p_149695_1_.isRemote)
         {
-            if (this.field_150171_a && !p_149695_1_.isBlockIndirectlyGettingPowered(p_149695_2_, p_149695_3_, p_149695_4_))
+            if (!p_149695_1_.isBlockIndirectlyGettingPowered(p_149695_2_, p_149695_3_, p_149695_4_))
             {
                 p_149695_1_.scheduleBlockUpdate(p_149695_2_, p_149695_3_, p_149695_4_, this, 4);
             }
-            else if (!this.field_150171_a && p_149695_1_.isBlockIndirectlyGettingPowered(p_149695_2_, p_149695_3_, p_149695_4_))
+            else if (p_149695_1_.isBlockIndirectlyGettingPowered(p_149695_2_, p_149695_3_, p_149695_4_))
             {
-                p_149695_1_.setBlock(p_149695_2_, p_149695_3_, p_149695_4_, Blocks.lit_redstone_lamp, 0, 2);
+                this.updateLaser(p_149695_1_, p_149695_2_, p_149695_3_, p_149695_4_, true);
             }
         }
     }
@@ -59,11 +66,36 @@ public class BlockLaser extends Block {
     /**
      * Ticks the block if it's been scheduled
      */
-    public void updateTick(World p_149674_1_, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
+    public void updateTick(World par1world, int p_149674_2_, int p_149674_3_, int p_149674_4_, Random p_149674_5_)
     {
-        if (!p_149674_1_.isRemote && this.field_150171_a && !p_149674_1_.isBlockIndirectlyGettingPowered(p_149674_2_, p_149674_3_, p_149674_4_))
+        if (!par1world.isRemote && !par1world.isBlockIndirectlyGettingPowered(p_149674_2_, p_149674_3_, p_149674_4_))
         {
-            p_149674_1_.setBlock(p_149674_2_, p_149674_3_, p_149674_4_, Blocks.redstone_lamp, 0, 2);
+            this.updateLaser(par1world, p_149674_2_, p_149674_3_, p_149674_4_, false);
         }
+    }
+    public void updateLaser(World world, int x, int y, int z, boolean on) {
+    	counter = 0;
+    	if (on == true) {
+    	    while (counter < 30) {
+    		    counter++;
+    		    if (world.getBlock(x + counter, y, z) == Blocks.air) {
+    		    	world.setBlock(x + counter, y, z, ChaosBlocks.LaserBeam);
+    		    }
+    		    else {
+    		    	break;
+    		    }
+    	    }
+        }
+    	else {
+        	while (counter < 30) {
+        		counter++;
+        		if (world.getBlock(x + counter, y, z) == ChaosBlocks.LaserBeam) {
+        			world.setBlock(x + counter, y, z, Blocks.air);
+        		}
+        		else {
+        			break;
+        		}
+        	}
+    	}
     }
 }
