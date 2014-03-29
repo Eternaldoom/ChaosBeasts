@@ -55,7 +55,7 @@ public class BlockLaser extends Block {
             }
         }
     }
-	
+	/*
 	public void onBlockPlacedBy(World world, int i, int j, int k, EntityLiving entityliving)
 	{
 	int l = MathHelper.floor_double((double)((entityliving.rotationYaw * 4F) / 360F) + 0.5D) & 3;
@@ -79,7 +79,7 @@ public class BlockLaser extends Block {
 	break;
 	}
 	}
-
+    */
     /**
      * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are
      * their own) Args: x, y, z, neighbor Block
