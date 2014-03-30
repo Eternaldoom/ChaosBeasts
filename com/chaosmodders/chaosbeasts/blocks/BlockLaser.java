@@ -1,18 +1,33 @@
 package com.chaosmodders.chaosbeasts.blocks;
 
+import java.util.List;
 import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemDye;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 import com.chaosmodders.chaosbeasts.generic.ChaosTabs;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
 public class BlockLaser extends Block {
 	private int counter;
+	
+    public static final String[] orientations = new String[] {"up", "down", "north", "south", "east", "west"};
+	
+	@SideOnly(Side.CLIENT)
+	private IIcon[] fancyHashtag;
 	
 	/*
 	 * Note that when setting this, the following is true:
@@ -39,6 +54,7 @@ public class BlockLaser extends Block {
 		this.setCreativeTab(ChaosTabs.tabChaosBlocks);
 	}
 	
+	@Override
 	public void onBlockAdded(World p_149726_1_, int i, int j, int k)
     {
 		
@@ -84,6 +100,7 @@ public class BlockLaser extends Block {
      * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are
      * their own) Args: x, y, z, neighbor Block
      */
+	@Override
     public void onNeighborBlockChange(World p_149695_1_, int p_149695_2_, int p_149695_3_, int p_149695_4_, Block p_149695_5_)
     {
         if (!p_149695_1_.isRemote)
@@ -98,7 +115,50 @@ public class BlockLaser extends Block {
             }
         }
     }
+	
+	@Override
+	public int damageDropped(int Idunno)
+    {
+        return Idunno;
+    }
+	
+	public static int func_150032_b(int p_150032_0_)
+    {
+        return func_150031_c(p_150032_0_);
+    }
 
+    public static int func_150031_c(int p_150031_0_)
+    {
+        return ~p_150031_0_ & 5;
+    }
+
+	@SideOnly(Side.CLIENT)
+	@Override
+    public void getSubBlocks(Item par1Item, CreativeTabs par2CreativeTab, List par3List)
+    {
+        for (int i = 0; i < 6; ++i)
+        {
+            par3List.add(new ItemStack(par1Item, 1, i));
+        }
+    }
+	
+	@SideOnly(Side.CLIENT)
+    public IIcon getIcon(int p_149691_1_, int p_149691_2_)
+    {
+        return this.fancyHashtag[p_149691_2_ % this.fancyHashtag.length];
+    }
+	
+	@SideOnly(Side.CLIENT)
+    public void registerBlockIcons(IIconRegister icon)
+    {
+        this.fancyHashtag = new IIcon[6];
+
+        for (int i = 0; i < this.fancyHashtag.length; ++i)
+        {
+            this.fancyHashtag[i] = icon.registerIcon(this.getTextureName() + "_" + this.orientations[func_150031_c(i)]);
+        }
+    }
+	
     /**
      * Ticks the block if it's been scheduled
      */

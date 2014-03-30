@@ -115,7 +115,7 @@ public class ChaosBeasts
     }
     
     @EventHandler
-    public void postInt(FMLPostInitializationEvent event)
+    public void postInit(FMLPostInitializationEvent event)
     {
     	MinecraftForge.TERRAIN_GEN_BUS.register(new BiomeInitializer());
     }
