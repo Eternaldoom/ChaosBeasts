@@ -3,7 +3,7 @@ ChaosBeasts
 
 The official GitHub repository for the ChaosBeasts mod for Minecraft.
 
-If you wish to use any of this code for your mod then please reference this repository. If you wish to contribute to the mod, contact us over GitHub.
+If you wish to use any of this code for your mod then please reference this repository. If you wish to contribute to the mod, contact us over GitHub. If you wish to know how to use the mod in game, go to our wikia page: chaosbeasts.wikia.com. Go to our GitHub wiki for help modding.
 
 Authors:
 
