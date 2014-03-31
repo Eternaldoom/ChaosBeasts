@@ -15,6 +15,7 @@ import net.minecraft.world.World;
 
 public class BlockLaserBeam extends Block {
 	private int counter;
+	private int shouldCounter;
 	public BlockLaserBeam()
 	{
 		super(ChaosHelper.gas);
@@ -70,8 +71,13 @@ public class BlockLaserBeam extends Block {
         	}
         }
         else if (par1world.getBlock(x + 1, y, z) == Blocks.air) {
-        	counter = 0;
-        	while (par1world.getBlock(x + counter, y, z) == Blocks.air) {
+        	counter = 1;
+        	while (par1world.getBlock(x - counter, y, z) != ChaosBlocks.LaserSource) {
+        		counter++;
+        	}
+        	shouldCounter = counter;
+        	counter = 1;
+        	while (par1world.getBlock(x + counter, y, z) == Blocks.air && counter < shouldCounter) {
                 par1world.setBlock(x + counter, y, z, ChaosBlocks.LaserBeam);
                 counter++;
         	}
