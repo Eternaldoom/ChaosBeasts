@@ -40,7 +40,7 @@ public class BlockLaser extends Block {
 	 * 
 	 * Based on this metadata value, we can make the block point in different directions.
 	 */
-	private char facing;
+	//private char facing;
 	
 	public BlockLaser()
 	{

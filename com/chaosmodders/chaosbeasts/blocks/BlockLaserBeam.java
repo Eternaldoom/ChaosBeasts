@@ -14,6 +14,7 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.World;
 
 public class BlockLaserBeam extends Block {
+	private int counter;
 	public BlockLaserBeam()
 	{
 		super(ChaosHelper.gas);
@@ -62,7 +63,18 @@ public class BlockLaserBeam extends Block {
     {
         if (par1world.getBlock(x - 1, y, z) != ChaosBlocks.LaserBeam && par1world.getBlock(x - 1, y, z) != ChaosBlocks.LaserSource)
         {
-            par1world.setBlock(x, y, z, Blocks.air);
+        	counter = 0;
+        	while (par1world.getBlock(x + counter, y, z) == ChaosBlocks.LaserBeam) {
+                par1world.setBlock(x + counter, y, z, Blocks.air);
+                counter++;
+        	}
+        }
+        else if (par1world.getBlock(x + 1, y, z) == Blocks.air) {
+        	counter = 0;
+        	while (par1world.getBlock(x + counter, y, z) == Blocks.air) {
+                par1world.setBlock(x + counter, y, z, ChaosBlocks.LaserBeam);
+                counter++;
+        	}
         }
     }
 	
