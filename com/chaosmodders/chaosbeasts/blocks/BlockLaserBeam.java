@@ -2,16 +2,14 @@ package com.chaosmodders.chaosbeasts.blocks;
 
 import java.util.Random;
 
-import com.chaosmodders.chaosbeasts.generic.ChaosTabs;
-import com.chaosmodders.chaosbeasts.generic.ChaosHelper;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
+import net.minecraft.entity.Entity;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.World;
+
+import com.chaosmodders.chaosbeasts.generic.ChaosHelper;
+import com.chaosmodders.chaosbeasts.generic.ChaosTabs;
 
 public class BlockLaserBeam extends Block {
 	private int counter;
@@ -47,7 +45,7 @@ public class BlockLaserBeam extends Block {
 	@Override
 	public AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_)
     {
-        return null;
+		return null;
     }
 	
 	@Override
@@ -93,5 +91,11 @@ public class BlockLaserBeam extends Block {
         }
     }
 	
-	
+	@Override
+	public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity par5Entity)
+	{
+		par5Entity.setVelocity(-3.0D * par5Entity.motionX, -10.0D * (par5Entity.motionY + 2.0D), -3.0D * par5Entity.motionZ);
+		par5Entity.setFire(30);
+		par5Entity.attackEntityFrom(ChaosHelper.radiation, 4.0F);
+	}
 }
