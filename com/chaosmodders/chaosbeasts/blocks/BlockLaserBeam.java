@@ -94,7 +94,7 @@ public class BlockLaserBeam extends Block {
 	@Override
 	public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity par5Entity)
 	{
-		par5Entity.setVelocity(-3.0D * par5Entity.motionX, -10.0D * (par5Entity.motionY + 2.0D), -3.0D * par5Entity.motionZ);
+		par5Entity.setVelocity(-1.5D * par5Entity.motionX, -1.5D * (par5Entity.motionY + 1.0D), -1.5D * par5Entity.motionZ);
 		par5Entity.setFire(30);
 		par5Entity.attackEntityFrom(ChaosHelper.radiation, 4.0F);
 	}
