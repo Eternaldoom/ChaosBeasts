@@ -20,4 +20,3 @@ TODO:
 3. Add more mobs.
 4. Texture everything
 5. Better mob AI
-6. Universal banlist for those who misuse the mod
