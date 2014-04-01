@@ -74,6 +74,10 @@ public class ChaosArmor extends ItemArmor implements ISpecialArmor
 			list.add("Infinite Uses");
 		
 		}
+		if (item.getItem() == ChaosItems.leggingsEnder || item.getItem() == ChaosItems.bootsEnder || item.getItem() == ChaosItems.chestplateEnder || item.getItem() == ChaosItems.helmetEnder)
+		{
+			list.add("Full Set: Disables Fall Damage");
+		}
 	}
 
 	@Override

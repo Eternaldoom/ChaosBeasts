@@ -15,9 +15,11 @@ import com.chaosmodders.chaosbeasts.entity.projectile.EntityBasicGrenade;
 import com.chaosmodders.chaosbeasts.entity.projectile.EntityBouncyBall;
 import com.chaosmodders.chaosbeasts.entity.projectile.EntityHandgunBullet;
 import com.chaosmodders.chaosbeasts.entity.projectile.EntityThrowingStar;
+import com.chaosmodders.chaosbeasts.event.ChaosArmorEvent;
 import com.chaosmodders.chaosbeasts.event.ChaosBucketEvent;
 import com.chaosmodders.chaosbeasts.event.ChaosEventClass;
 import com.chaosmodders.chaosbeasts.generic.ChaosCrafting;
+import com.chaosmodders.chaosbeasts.generic.ChaosHelper;
 import com.chaosmodders.chaosbeasts.generic.ChaosOreDict;
 import com.chaosmodders.chaosbeasts.generic.DimensionCommand;
 import com.chaosmodders.chaosbeasts.items.ChaosItems;
@@ -110,8 +112,10 @@ public class ChaosBeasts
     public void init(FMLInitializationEvent event)
     {
     	EntityRegistry.registerModEntity(EntityDoomTNT.class, "DoomTNTPrimed", 552, this, 64, 1, true);
-        if(FMLCommonHandler.instance().getSide().isClient())
+        if(FMLCommonHandler.instance().getSide().isClient()){
             AddRendering.addRendering();
+        }
+        ChaosHelper.addArmorEvents(new ChaosArmorEvent());
     }
     
     @EventHandler
