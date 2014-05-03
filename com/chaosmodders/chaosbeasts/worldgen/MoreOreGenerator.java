@@ -5,10 +5,10 @@ import java.util.Random;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraft.world.gen.feature.WorldGenDungeons;
 import net.minecraft.world.gen.feature.WorldGenFlowers;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 
+import com.chaosmodders.chaosbeasts.ChaosBeasts;
 import com.chaosmodders.chaosbeasts.blocks.ChaosBlocks;
 
 import cpw.mods.fml.common.IWorldGenerator;
@@ -19,9 +19,9 @@ public class MoreOreGenerator implements IWorldGenerator {
 		switch (world.provider.dimensionId) {
 		case 0:
 			generateSurface(world, random, chunkX * 16, chunkZ * 16);
-		case 14:
+		case 51:
 			generateDoom(world, random, chunkX * 16, chunkZ * 16);
-		case 15:
+		case 52:
 			generateDark(world, random, chunkX * 16, chunkZ * 16);
 		}
 	}

@@ -54,10 +54,10 @@ public class ChaosBeasts
     @Instance(MODID)
 	public static ChaosBeasts instance;
   
-    public static int DoomDimensionId = 14;
-    public static int DarkDimensionId = 15;
-    public static int LightDimensionId = 16;
-    public static int WaterDimensionId = 17;
+    public static int DoomDimensionId = 51;
+    public static int DarkDimensionId = 52;
+    public static int LightDimensionId = 53;
+    public static int WaterDimensionId = 54;
     
     public static BiomeGenBase reddesert;
     public static BiomeGenBase doomedland;
