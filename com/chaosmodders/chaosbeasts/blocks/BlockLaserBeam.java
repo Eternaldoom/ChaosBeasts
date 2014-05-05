@@ -17,7 +17,7 @@ public class BlockLaserBeam extends Block {
 	public BlockLaserBeam()
 	{
 		super(ChaosHelper.gas);
-		this.setBlockTextureName("chaosbeasts:ruby_block");
+		this.setBlockTextureName("chaosbeasts:laser_beam");
 		this.setHardness(15.0F);
 		this.setResistance(0.1F);
 		this.setLightLevel(0.8F);

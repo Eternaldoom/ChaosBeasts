@@ -129,14 +129,14 @@ public class BlockLaser extends Block {
 
     public static int func_150031_c(int p_150031_0_)
     {
-        return ~p_150031_0_ & 5;
+        return ~p_150031_0_ & 15;
     }
 
 	@SideOnly(Side.CLIENT)
 	@Override
     public void getSubBlocks(Item par1Item, CreativeTabs par2CreativeTab, List par3List)
     {
-        for (int i = 0; i < 6; ++i)
+        for (int i = 0; i < 16; ++i)
         {
             par3List.add(new ItemStack(par1Item, 1, i));
         }
@@ -151,11 +151,11 @@ public class BlockLaser extends Block {
 	@SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister icon)
     {
-        this.fancyHashtag = new IIcon[6];
+        this.fancyHashtag = new IIcon[16];
 
         for (int i = 0; i < this.fancyHashtag.length; ++i)
         {
-            this.fancyHashtag[i] = icon.registerIcon(this.getTextureName() + "_" + this.orientations[func_150031_c(i)]);
+            this.fancyHashtag[i] = icon.registerIcon(this.getTextureName());
         }
     }
 	
