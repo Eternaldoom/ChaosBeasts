@@ -23,6 +23,7 @@ public class ChaosHelper
 	
 	public static DamageSource chaossword = new DamageSource("chaosbeasts.sword");
 	public static DamageSource radiation = new DamageSource("chaosbeasts.radiation");
+	public static DamageSource laser = new DamageSource("chaosbeasts.laser");
 	
 	public static final ResourceLocation energyReactor	= new ResourceLocation("chaosbeasts:textures/gui/energy_reactor.png");
 	

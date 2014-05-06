@@ -64,7 +64,10 @@ public class ChaosBlocks
     public static Block EnergyReactorOn;
     
     public static Block LaserSource;
-    public static Block LaserBeam;
+    public static Block LaserBeamPlusX;
+    public static Block LaserBeamMinusX;
+    public static Block LaserBeamPlusZ;
+    public static Block LaserBeamMinusZ;
         
     public static Block LiquidDoomBlock;
     public static Fluid LiquidDoomFluid;
@@ -137,7 +140,10 @@ public class ChaosBlocks
 		demonVault = new BlockDemonVault();
 		blockIronFence = new BlockIronFence("iron_block", Material.iron).setBlockName("ironFence").setHardness(5.0F).setResistance(10.0F);
 		LaserSource = new BlockLaser();
-		LaserBeam = new BlockLaserBeam();
+		LaserBeamPlusX = new BlockLaserBeam(5);
+		LaserBeamMinusX = new BlockLaserBeam(4);
+		LaserBeamPlusZ = new BlockLaserBeam(3);
+		LaserBeamMinusZ = new BlockLaserBeam(2);
 		
     	LiquidDoomBlock = new LiquidDoomBlock().setBlockName("blockLiquidDoom").setBlockTextureName("chaosbeasts:liquiddoom_still");
     	FluidDarknessBlock = new FluidDarknessBlock().setBlockName("fluidDarkness").setBlockTextureName("chaosbeasts:fluid_darkness");
@@ -199,6 +205,9 @@ public class ChaosBlocks
     	GameRegistry.registerBlock(demonVault, "demon_vault");
     	GameRegistry.registerBlock(blockIronFence, "iron_fence");
     	GameRegistry.registerBlock(LaserSource, "laser_source");
-    	GameRegistry.registerBlock(LaserBeam, "laser_beam");
+    	GameRegistry.registerBlock(LaserBeamPlusX, "laser_beam_1");
+    	GameRegistry.registerBlock(LaserBeamMinusX, "laser_beam_2");
+    	GameRegistry.registerBlock(LaserBeamPlusZ, "laser_beam_3");
+    	GameRegistry.registerBlock(LaserBeamMinusZ, "laser_beam_4");
 	}
 }
