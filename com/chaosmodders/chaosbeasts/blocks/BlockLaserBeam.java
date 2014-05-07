@@ -26,7 +26,7 @@ public class BlockLaserBeam extends Block {
 		this.setResistance(0.1F);
 		this.setLightLevel(0.8F);
 		this.setBlockName("laserBeam");
-		this.setCreativeTab(ChaosTabs.tabChaosBlocks);
+		this.setCreativeTab(null);
 		
 		if(theDirection == 4 || theDirection == 5){
         this.setBlockBounds(0.0F, 0.3F, 0.3F, 1.0F, 0.6F, 0.6F);
@@ -42,6 +42,14 @@ public class BlockLaserBeam extends Block {
     /**
      * If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)
      */
+	
+	@Override
+	@SideOnly(Side.CLIENT)
+    public int getRenderBlockPass()
+    {
+        return 1;
+    }
+	
 	@Override
     public boolean renderAsNormalBlock()
     {
