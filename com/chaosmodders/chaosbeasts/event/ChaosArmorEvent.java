@@ -1,11 +1,15 @@
 package com.chaosmodders.chaosbeasts.event;
 
+import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.stats.StatList;
+import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 import com.chaosmodders.chaosbeasts.items.ChaosItems;
 
+import cpw.mods.fml.common.ObfuscationReflectionHelper;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.PlayerTickEvent;
 
@@ -18,6 +22,8 @@ public class ChaosArmorEvent
 
 	private ChaosItems C;
 	private World world;
+	
+	public static final String[] inWater = new String[] {"qn","field_70171_ac", "inWater"};
 	
 	@SubscribeEvent
 	public void onTickEvent(PlayerTickEvent ev) {
@@ -49,6 +55,9 @@ public class ChaosArmorEvent
 
 		if (boots == C.bootsEnder && body == C.chestplateEnder && leggings == C.leggingsEnder && helmet == C.helmetEnder){
 			ev.player.fallDistance = 0.0F;
+		}
+		
+		if (boots == C.bootsAquatic && body == C.chestplateAquatic && leggings == C.leggingsAquatic && helmet == C.helmetAquatic){
 		}
 		}
 }
