@@ -30,9 +30,10 @@ public class BlockLaserBeam extends Block {
 		
 		if(theDirection == 4 || theDirection == 5){
         this.setBlockBounds(0.0F, 0.3F, 0.3F, 1.0F, 0.6F, 0.6F);
-		}
-		else if(theDirection == 2 || theDirection == 3){
+		} else if (theDirection == 2 || theDirection == 3){
 	        this.setBlockBounds(0.3F, 0.3F, 0.0F, 0.6F, 0.6F, 1.0F);
+			} else if (theDirection == 6 || theDirection == 7){
+				this.setBlockBounds(0.3F, 0.0F, 0.3F, 0.6F, 1.0F, 0.6F);
 			}
         
         direction = theDirection;
@@ -57,13 +58,6 @@ public class BlockLaserBeam extends Block {
 	public AxisAlignedBB getCollisionBoundingBoxFromPool(World p_149668_1_, int p_149668_2_, int p_149668_3_, int p_149668_4_)
     {
 		return null;
-    }
-	
-	@Override
-	@SideOnly(Side.CLIENT)
-    public AxisAlignedBB getSelectedBoundingBoxFromPool(World p_149633_1_, int p_149633_2_, int p_149633_3_, int p_149633_4_)
-    {
-        return null;
     }
 	
 	@Override
@@ -167,6 +161,52 @@ public class BlockLaserBeam extends Block {
 			        	counter = 1;
 			        	while (par1world.getBlock(x, y, z - counter) == Blocks.air && counter < shouldCounter) {
 			                par1world.setBlock(x, y, z - counter, ChaosBlocks.LaserBeamMinusZ);
+			                counter++;
+			        	}
+			        }
+					}
+		//Up
+				if(direction == 6){
+			        if (par1world.getBlock(x, y - 1, z) != ChaosBlocks.LaserBeamUp && par1world.getBlock(x, y - 1, z) != ChaosBlocks.LaserSource)
+			        {
+			        	counter = 0;
+			        	while (par1world.getBlock(x, y + counter, z) == ChaosBlocks.LaserBeamUp) {
+			                par1world.setBlock(x, y + counter, z, Blocks.air);
+			                counter++;
+			        	}
+			        }
+			        else if (par1world.getBlock(x, y + 1, z) == Blocks.air) {
+			        	counter = 1;
+			        	while (par1world.getBlock(x, y - counter, z) != ChaosBlocks.LaserSource) {
+			        		counter++;
+			        	}
+			        	shouldCounter = counter;
+			        	counter = 1;
+			        	while (par1world.getBlock(x, y + counter, z) == Blocks.air && counter < shouldCounter) {
+			                par1world.setBlock(x, y + counter, z, ChaosBlocks.LaserBeamUp);
+			                counter++;
+			        	}
+			        }
+					}
+		//Down
+				if(direction == 7){
+			        if (par1world.getBlock(x, y + 1, z) != ChaosBlocks.LaserBeamDown && par1world.getBlock(x, y + 1, z) != ChaosBlocks.LaserSource)
+			        {
+			        	counter = 0;
+			        	while (par1world.getBlock(x, y - counter, z) == ChaosBlocks.LaserBeamDown) {
+			                par1world.setBlock(x, y - counter, z, Blocks.air);
+			                counter++;
+			        	}
+			        }
+			        else if (par1world.getBlock(x, y - 1, z) == Blocks.air) {
+			        	counter = 1;
+			        	while (par1world.getBlock(x, y + counter, z) != ChaosBlocks.LaserSource) {
+			        		counter++;
+			        	}
+			        	shouldCounter = counter;
+			        	counter = 1;
+			        	while (par1world.getBlock(x, y - counter, z) == Blocks.air && counter < shouldCounter) {
+			                par1world.setBlock(x, y - counter, z, ChaosBlocks.LaserBeamDown);
 			                counter++;
 			        	}
 			        }

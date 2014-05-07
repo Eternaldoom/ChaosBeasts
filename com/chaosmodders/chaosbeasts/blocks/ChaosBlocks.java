@@ -68,6 +68,8 @@ public class ChaosBlocks
     public static Block LaserBeamMinusX;
     public static Block LaserBeamPlusZ;
     public static Block LaserBeamMinusZ;
+    public static Block LaserBeamUp;
+    public static Block LaserBeamDown;
         
     public static Block LiquidDoomBlock;
     public static Fluid LiquidDoomFluid;
@@ -144,6 +146,8 @@ public class ChaosBlocks
 		LaserBeamMinusX = new BlockLaserBeam(4);
 		LaserBeamPlusZ = new BlockLaserBeam(3);
 		LaserBeamMinusZ = new BlockLaserBeam(2);
+		LaserBeamUp = new BlockLaserBeam(6);
+		LaserBeamDown = new BlockLaserBeam(7);
 		
     	LiquidDoomBlock = new LiquidDoomBlock().setBlockName("blockLiquidDoom").setBlockTextureName("chaosbeasts:liquiddoom_still");
     	FluidDarknessBlock = new FluidDarknessBlock().setBlockName("fluidDarkness").setBlockTextureName("chaosbeasts:fluid_darkness");
@@ -209,5 +213,7 @@ public class ChaosBlocks
     	GameRegistry.registerBlock(LaserBeamMinusX, "laser_beam_2");
     	GameRegistry.registerBlock(LaserBeamPlusZ, "laser_beam_3");
     	GameRegistry.registerBlock(LaserBeamMinusZ, "laser_beam_4");
+    	GameRegistry.registerBlock(LaserBeamUp, "laser_beam_5");
+    	GameRegistry.registerBlock(LaserBeamDown, "laser_beam_6");
 	}
 }

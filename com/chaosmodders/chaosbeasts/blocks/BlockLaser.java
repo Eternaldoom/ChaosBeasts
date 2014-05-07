@@ -76,28 +76,40 @@ public class BlockLaser extends Block {
     }
 	
 	@Override
-	public void onBlockPlacedBy(World p_149689_1_, int p_149689_2_, int p_149689_3_, int p_149689_4_, EntityLivingBase p_149689_5_, ItemStack p_149689_6_)
+	public void onBlockPlacedBy(World par1world, int i, int j, int k, EntityLivingBase par5entity, ItemStack par6ItemStack)
     {
-        int l = MathHelper.floor_double((double)(p_149689_5_.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
+        int l = MathHelper.floor_double((double)(par5entity.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
+        int posX = (int) Math.round(par5entity.posX);
+        int posZ = (int) Math.round(par5entity.posZ);
 
         if (l == 0)
         {
-            p_149689_1_.setBlockMetadataWithNotify(p_149689_2_, p_149689_3_, p_149689_4_, 2, 2);
+        	par1world.setBlockMetadataWithNotify(i, j, k, 2, 2);
         }
 
         if (l == 1)
         {
-            p_149689_1_.setBlockMetadataWithNotify(p_149689_2_, p_149689_3_, p_149689_4_, 5, 2);
+        	par1world.setBlockMetadataWithNotify(i, j, k, 5, 2);
         }
 
         if (l == 2)
         {
-            p_149689_1_.setBlockMetadataWithNotify(p_149689_2_, p_149689_3_, p_149689_4_, 3, 2);
+        	par1world.setBlockMetadataWithNotify(i, j, k, 3, 2);
         }
 
         if (l == 3)
         {
-            p_149689_1_.setBlockMetadataWithNotify(p_149689_2_, p_149689_3_, p_149689_4_, 4, 2);
+        	par1world.setBlockMetadataWithNotify(i, j, k, 4, 2);
+        }
+        
+        if (posX == i && posZ == k && par5entity.posY > j)
+        {
+        	par1world.setBlockMetadataWithNotify(i, j, k, 6, 2);
+        }
+        
+        if (posX == i && posZ == k && par5entity.posY < j)
+        {
+        	par1world.setBlockMetadataWithNotify(i, j, k, 7, 2);
         }
 
     }
@@ -195,9 +207,18 @@ public class BlockLaser extends Block {
      		    	world.setBlock(x, y, z - counter, ChaosBlocks.LaserBeamMinusZ);
      		       }
      		    }
-    		       //else {
-    		     	//break;
-    		       //}
+    		    //Up
+    		    if(world.getBlockMetadata(x, y, z) == 6){
+      		       if (world.getBlock(x, y + counter, z) == Blocks.air) {
+      		    	world.setBlock(x, y + counter, z, ChaosBlocks.LaserBeamUp);
+      		       }
+      		    }
+    		    //Down
+    		    if(world.getBlockMetadata(x, y, z) == 7){
+      		       if (world.getBlock(x, y - counter, z) == Blocks.air) {
+      		    	world.setBlock(x, y - counter, z, ChaosBlocks.LaserBeamDown);
+      		       }
+      		    }
     	    }
         }
     	else {
@@ -225,6 +246,18 @@ public class BlockLaser extends Block {
 		    if(world.getBlockMetadata(x, y, z) == 2){
  		       if (world.getBlock(x, y, z - counter) == ChaosBlocks.LaserBeamMinusZ) {
  		    	world.setBlock(x, y, z - counter, Blocks.air);
+ 		       }
+ 		    }
+		    //Up
+		    if(world.getBlockMetadata(x, y, z) == 6){
+ 		       if (world.getBlock(x, y + counter, z) == ChaosBlocks.LaserBeamUp) {
+ 		    	world.setBlock(x, y + counter, z, Blocks.air);
+ 		       }
+ 		    }
+		    //Up
+		    if(world.getBlockMetadata(x, y, z) == 7){
+ 		       if (world.getBlock(x, y - counter, z) == ChaosBlocks.LaserBeamDown) {
+ 		    	world.setBlock(x, y - counter, z, Blocks.air);
  		       }
  		    }
 		       else {
