@@ -54,6 +54,7 @@ public class ChaosBlocks
     public static Block blockUranium;
     public static Block blockTrampoline;
     public static Block blockIronFence;
+    public static Block blockGoldChest;
    
     public static Block bedrockWritten;
     public static Block shatteredBedrock;
@@ -148,6 +149,7 @@ public class ChaosBlocks
 		LaserBeamMinusZ = new BlockLaserBeam(2);
 		LaserBeamUp = new BlockLaserBeam(6);
 		LaserBeamDown = new BlockLaserBeam(7);
+		blockGoldChest = new BlockGoldChest(1).setCreativeTab(ChaosTabs.tabChaosBlocks);
 		
     	LiquidDoomBlock = new LiquidDoomBlock().setBlockName("blockLiquidDoom").setBlockTextureName("chaosbeasts:liquiddoom_still");
     	FluidDarknessBlock = new FluidDarknessBlock().setBlockName("fluidDarkness").setBlockTextureName("chaosbeasts:fluid_darkness");
@@ -215,5 +217,6 @@ public class ChaosBlocks
     	GameRegistry.registerBlock(LaserBeamMinusZ, "laser_beam_4");
     	GameRegistry.registerBlock(LaserBeamUp, "laser_beam_5");
     	GameRegistry.registerBlock(LaserBeamDown, "laser_beam_6");
+    	GameRegistry.registerBlock(blockGoldChest, "gold_chest");
 	}
 }

@@ -57,8 +57,13 @@ public class ChaosArmorEvent
 			ev.player.fallDistance = 0.0F;
 		}
 		
-		if (boots == C.bootsAquatic && body == C.chestplateAquatic && leggings == C.leggingsAquatic && helmet == C.helmetAquatic){
+		if (boots == C.bootsDimensional && body == C.chestplateDimensional && leggings == C.leggingsDimensional && helmet == C.helmetDimensional){
 			ev.player.noClip = true;
+			ev.player.capabilities.isFlying = true;
+			}else{ev.player.noClip = false;
+				if(!ev.player.capabilities.isCreativeMode){
+					ev.player.capabilities.isFlying = false;
+			}
 			}
 		}
 }
