@@ -58,6 +58,7 @@ public class ChaosArmorEvent
 		}
 		
 		if (boots == C.bootsAquatic && body == C.chestplateAquatic && leggings == C.leggingsAquatic && helmet == C.helmetAquatic){
-		}
+			ev.player.noClip = true;
+			}
 		}
 }
