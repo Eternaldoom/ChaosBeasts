@@ -155,7 +155,7 @@ public class ChaosBlocks
     	ArgonGasBlock = new ArgonFluidBlock().setBlockName("argonGas");
     	XenonGasBlock = new XenonFluidBlock().setBlockName("xenonGas");
     	
-    	BlockReplaceHelper.replaceBlock(Blocks.bedrock, BlockChaosBedrock.class);
+    	//BlockReplaceHelper.replaceBlock(Blocks.bedrock, BlockChaosBedrock.class);
 
     	GameRegistry.registerBlock(blockEnergyShard, "energy_shard_block");
     	GameRegistry.registerBlock(blockRubyOre, "ruby_ore");
