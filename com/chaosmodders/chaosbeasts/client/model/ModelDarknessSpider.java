@@ -7,124 +7,144 @@ import net.minecraft.util.MathHelper;
 
 public class ModelDarknessSpider extends ModelBase
 {
-	public ModelRenderer leg1;
-	public ModelRenderer leg1lower;
-	public ModelRenderer leg2;
-	public ModelRenderer leg2lower;
-	public ModelRenderer leg3;
-	public ModelRenderer leg3lower;
-	public ModelRenderer leg4;
-	public ModelRenderer leg4lower;
-	public ModelRenderer lowerBody;
-	public ModelRenderer mainBody;
-	public ModelRenderer orbit1;
-	public ModelRenderer orbit2;
-	public ModelRenderer upperBody1;
-	public ModelRenderer upperBody2;
-	
-	public ModelDarknessSpider()
-	  {
-	    textureWidth = 256;
-	    textureHeight = 128;
-	    
-	    leg1 = new ModelRenderer(this, 0, 0);
-	    leg1.addBox(0F, -8F, 0F, 1, 8, 1);
-	    leg1.setRotationPoint(2F, 15F, -3F);
-	    leg1.rotateAngleX = 6.003932626860494F;
-	    leg1.rotateAngleZ = 6.003932626860494F;
+  //fields
+    ModelRenderer Leg2;
+    ModelRenderer Leg3;
+    ModelRenderer Leg4;
+    ModelRenderer Leg1;
+    ModelRenderer lowerBody;
+    ModelRenderer body1;
+    ModelRenderer body2;
+    ModelRenderer top;
+    ModelRenderer Leg1top;
+    ModelRenderer Leg2top;
+    ModelRenderer Leg3top;
+    ModelRenderer Leg4top;
+    ModelRenderer orbit1;
+    ModelRenderer Shape1;
+  
+  public ModelDarknessSpider()
+  {
+    textureWidth = 128;
+    textureHeight = 64;
+    
+      Leg2 = new ModelRenderer(this, 0, 0);
+      Leg2.addBox(0F, 0F, 0F, 1, 16, 1);
+      Leg2.setRotationPoint(-5F, 9F, 4F);
+      Leg2.setTextureSize(64, 32);
+      Leg2.mirror = true;
+      setRotation(Leg2, 0.2792527F, 0F, 0.2792527F);
+      Leg3 = new ModelRenderer(this, 0, 0);
+      Leg3.addBox(0F, 0F, 0F, 1, 16, 1);
+      Leg3.setRotationPoint(4F, 9F, 4F);
+      Leg3.setTextureSize(64, 32);
+      Leg3.mirror = true;
+      setRotation(Leg3, 0.2792527F, 0F, 6.003932F);
+      Leg4 = new ModelRenderer(this, 0, 0);
+      Leg4.addBox(0F, 0F, 0F, 1, 16, 1);
+      Leg4.setRotationPoint(4F, 9F, -5F);
+      Leg4.setTextureSize(64, 32);
+      Leg4.mirror = true;
+      setRotation(Leg4, 6.003932F, 0F, 6.003932F);
+      Leg1 = new ModelRenderer(this, 0, 0);
+      Leg1.addBox(0F, 0F, 0F, 1, 16, 1);
+      Leg1.setRotationPoint(-5F, 9F, -5F);
+      Leg1.setTextureSize(64, 32);
+      Leg1.mirror = true;
+      setRotation(Leg1, 6.003932F, 0F, 0.2792527F);
+      lowerBody = new ModelRenderer(this, 4, 0);
+      lowerBody.addBox(0F, 0F, 0F, 12, 2, 12);
+      lowerBody.setRotationPoint(-6F, 7F, -6F);
+      lowerBody.setTextureSize(64, 32);
+      lowerBody.mirror = true;
+      setRotation(lowerBody, 0F, 0F, 0F);
+      body1 = new ModelRenderer(this, 0, 14);
+      body1.addBox(0F, 0F, 0F, 10, 6, 10);
+      body1.setRotationPoint(-5F, 1F, -5F);
+      body1.setTextureSize(64, 32);
+      body1.mirror = true;
+      setRotation(body1, 0F, 0F, 0F);
+      body2 = new ModelRenderer(this, 0, 30);
+      body2.addBox(0F, 0F, 0F, 8, 8, 8);
+      body2.setRotationPoint(-4F, -7F, -4F);
+      body2.setTextureSize(64, 32);
+      body2.mirror = true;
+      setRotation(body2, 0F, 0F, 0F);
+      top = new ModelRenderer(this, 0, 46);
+      top.addBox(0F, 0F, 0F, 4, 8, 4);
+      top.setRotationPoint(-2F, -15F, -2F);
+      top.setTextureSize(128, 64);
+      top.mirror = true;
+      setRotation(top, 0F, 0F, 0F);
+      Leg1top = new ModelRenderer(this, 52, 0);
+      Leg1top.addBox(0F, 0F, 0F, 4, 3, 4);
+      Leg1top.setRotationPoint(-7F, 9F, -7F);
+      Leg1top.setTextureSize(128, 64);
+      Leg1top.mirror = true;
+      setRotation(Leg1top, 0F, 0F, 0F);
+      Leg2top = new ModelRenderer(this, 52, 0);
+      Leg2top.addBox(0F, 0F, 0F, 4, 3, 4);
+      Leg2top.setRotationPoint(-7F, 9F, 3F);
+      Leg2top.setTextureSize(128, 64);
+      Leg2top.mirror = true;
+      setRotation(Leg2top, 0F, 0F, 0F);
+      Leg3top = new ModelRenderer(this, 52, 0);
+      Leg3top.addBox(0F, 0F, 0F, 4, 3, 4);
+      Leg3top.setRotationPoint(3F, 9F, 3F);
+      Leg3top.setTextureSize(128, 64);
+      Leg3top.mirror = true;
+      setRotation(Leg3top, 0F, 0F, 0F);
+      Leg4top = new ModelRenderer(this, 52, 0);
+      Leg4top.addBox(0F, 0F, 0F, 4, 3, 4);
+      Leg4top.setRotationPoint(3F, 9F, -7F);
+      Leg4top.setTextureSize(128, 64);
+      Leg4top.mirror = true;
+      setRotation(Leg4top, 0F, 0F, 0F);
+      orbit1 = new ModelRenderer(this, 0, 0);
+      orbit1.addBox(0F, 0F, -12F, 1, 1, 1);
+      orbit1.setRotationPoint(0F, -3F, 0F);
+      orbit1.setTextureSize(128, 64);
+      orbit1.mirror = true;
+      setRotation(orbit1, 0F, 0F, 0F);
+      Shape1 = new ModelRenderer(this, 0, 0);
+      Shape1.addBox(0F, 0F, 12F, 1, 1, 1);
+      Shape1.setRotationPoint(0F, -3F, 0F);
+      Shape1.setTextureSize(128, 64);
+      Shape1.mirror = true;
+      setRotation(Shape1, 0F, 0F, 0F);
+  }
+  
+  public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
+  {
+    super.render(entity, f, f1, f2, f3, f4, f5);
+    setRotationAngles(f, f1, f2, f3, f4, f5, entity);
+    Leg2.render(f5);
+    Leg3.render(f5);
+    Leg4.render(f5);
+    Leg1.render(f5);
+    lowerBody.render(f5);
+    body1.render(f5);
+    body2.render(f5);
+    top.render(f5);
+    Leg1top.render(f5);
+    Leg2top.render(f5);
+    Leg3top.render(f5);
+    Leg4top.render(f5);
+    orbit1.render(f5);
+    Shape1.render(f5);
+  }
+  
+  private void setRotation(ModelRenderer model, float x, float y, float z)
+  {
+    model.rotateAngleX = x;
+    model.rotateAngleY = y;
+    model.rotateAngleZ = z;
+  }
+  
+  public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, Entity entity)
+  {
+    super.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
+    
+  }
 
-	    leg1lower = new ModelRenderer(this, 0, 0);
-	    leg1lower.addBox(0F, -8F, 0F, 1, 8, 1);
-	    leg1lower.setRotationPoint(4F, 8F, -5F);
-
-	    leg2 = new ModelRenderer(this, 0, 0);
-	    leg2.addBox(0F, -8F, 0F, 1, 8, 1);
-	    leg2.setRotationPoint(-3F, 15F, -3F);
-	    leg2.rotateAngleX = 6.003932626860494F;
-	    leg2.rotateAngleZ = 0.2792526803190927F;
-
-	    leg2lower = new ModelRenderer(this, 0, 0);
-	    leg2lower.addBox(0F, -8F, 0F, 1, 8, 1);
-	    leg2lower.setRotationPoint(-5F, 8F, -5F);
-
-	    leg3 = new ModelRenderer(this, 0, 0);
-	    leg3.addBox(0F, -8F, 0F, 1, 8, 1);
-	    leg3.setRotationPoint(-3F, 15F, 2F);
-	    leg3.rotateAngleX = 0.2792526803190927F;
-	    leg3.rotateAngleZ = 0.2792526803190927F;
-
-	    leg3lower = new ModelRenderer(this, 0, 0);
-	    leg3lower.addBox(0F, -8F, 0F, 1, 8, 1);
-	    leg3lower.setRotationPoint(-5F, 8F, 4F);
-
-	    leg4 = new ModelRenderer(this, 0, 0);
-	    leg4.addBox(0F, -8F, 0F, 1, 8, 1);
-	    leg4.setRotationPoint(2F, 15F, 2F);
-	    leg4.rotateAngleX = 0.2792526803190927F;
-	    leg4.rotateAngleZ = 6.003932626860494F;
-
-	    leg4lower = new ModelRenderer(this, 0, 0);
-	    leg4lower.addBox(0F, -8F, 0F, 1, 8, 1);
-	    leg4lower.setRotationPoint(4F, 8F, 4F);
-
-	    lowerBody = new ModelRenderer(this, 24, 6);
-	    lowerBody.addBox(0F, 0F, 0F, 10, 2, 10);
-	    lowerBody.setRotationPoint(-5F, 15F, -5F);
-
-	    mainBody = new ModelRenderer(this, 0, 18);
-	    mainBody.addBox(0F, 0F, 0F, 8, 6, 8);
-	    mainBody.setRotationPoint(-4F, 17F, -4F);
-
-	    orbit1 = new ModelRenderer(this, 0, 0);
-	    orbit1.addBox(0F, 0F, -12F, 1, 1, 1);
-	    orbit1.setRotationPoint(0F, 26F, 0F);
-
-	    orbit2 = new ModelRenderer(this, 0, 0);
-	    orbit2.addBox(0F, 0F, 12F, 1, 1, 1);
-	    orbit2.setRotationPoint(0F, 26F, 0F);
-
-	    upperBody1 = new ModelRenderer(this, 40, 20);
-	    upperBody1.addBox(0F, 0F, 0F, 6, 6, 6);
-	    upperBody1.setRotationPoint(-3F, 23F, -3F);
-
-	    upperBody2 = new ModelRenderer(this, 8, 8);
-	    upperBody2.addBox(0F, 0F, 0F, 4, 6, 4);
-	    upperBody2.setRotationPoint(-2F, 29F, -2F);
-
-	    
-	  }
-	  
-	  public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
-	  {
-	    super.render(entity, f, f1, f2, f3, f4, f5);
-	    setRotationAngles(f, f1, f2, f3, f4, f5, entity);
-	    
-	    leg1.render(f5);
-	    leg1lower.render(f5);
-	    leg2.render(f5);
-	    leg2lower.render(f5);
-	    leg3.render(f5);
-	    leg3lower.render(f5);
-	    leg4.render(f5);
-	    leg4lower.render(f5);
-	    lowerBody.render(f5);
-	    mainBody.render(f5);
-	    orbit1.render(f5);
-	    orbit2.render(f5);
-	    upperBody1.render(f5);
-	    upperBody2.render(f5);
-	  }
-	  
-	  private void setRotation(ModelRenderer model, float x, float y, float z)
-	  {
-	    model.rotateAngleX = x;
-	    model.rotateAngleY = y;
-	    model.rotateAngleZ = z;
-	  }
-	  
-	  public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, Entity entity)
-	  {
-	    super.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
-	    
-	  }
 }

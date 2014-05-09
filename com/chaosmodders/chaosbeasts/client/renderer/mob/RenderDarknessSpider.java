@@ -35,7 +35,6 @@ public class RenderDarknessSpider extends RenderLiving
      */
     public void doRender(EntityDarknessSpider par1EntityDarknessSpider, double par2, double par4, double par6, float par8, float par9)
     {
-    	
         super.doRender((EntityLiving)par1EntityDarknessSpider, par2, par4, par6, par8, par9);
     }
 
