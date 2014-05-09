@@ -14,6 +14,7 @@ import com.chaosmodders.chaosbeasts.blocks.WaterCrystalTE;
 import com.chaosmodders.chaosbeasts.client.model.ModelCoralFish;
 import com.chaosmodders.chaosbeasts.client.model.ModelDinosaur;
 import com.chaosmodders.chaosbeasts.client.renderer.mob.RenderCoralFish;
+import com.chaosmodders.chaosbeasts.client.renderer.mob.RenderDarknessSpider;
 import com.chaosmodders.chaosbeasts.client.renderer.mob.RenderDemon;
 import com.chaosmodders.chaosbeasts.client.renderer.mob.RenderDinosaur;
 import com.chaosmodders.chaosbeasts.client.renderer.mob.RenderGiantPigZombie;
@@ -24,6 +25,7 @@ import com.chaosmodders.chaosbeasts.client.renderer.tileentity.EnergyReactorRend
 import com.chaosmodders.chaosbeasts.client.renderer.tileentity.TileEntityBlockLobsterRenderer;
 import com.chaosmodders.chaosbeasts.client.renderer.tileentity.WaterCrystalRenderer;
 import com.chaosmodders.chaosbeasts.entity.aquatic.EntityCoralFish;
+import com.chaosmodders.chaosbeasts.entity.monster.EntityDarknessSpider;
 import com.chaosmodders.chaosbeasts.entity.monster.EntityDemon;
 import com.chaosmodders.chaosbeasts.entity.monster.EntityDinosaur;
 import com.chaosmodders.chaosbeasts.entity.monster.EntityGiantPigZombie;
@@ -32,15 +34,12 @@ import com.chaosmodders.chaosbeasts.entity.monster.EntityLobster;
 import com.chaosmodders.chaosbeasts.entity.projectile.EntityBouncyBall;
 import com.chaosmodders.chaosbeasts.entity.projectile.EntityHandgunBullet;
 import com.chaosmodders.chaosbeasts.entity.projectile.EntityThrowingStar;
-import com.chaosmodders.chaosbeasts.generic.ChaosGUIHandler;
 import com.chaosmodders.chaosbeasts.items.ChaosItems;
-import com.chaosmodders.chaosbeasts.items.rendering.ItemRendererBouncyBall;
 import com.chaosmodders.chaosbeasts.items.rendering.ItemRendererLobsterStatue;
 import com.jadarstudios.developercapes.DevCapes;
 
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
-import cpw.mods.fml.common.network.NetworkRegistry;
 
 public class AddRendering
 {	
@@ -55,6 +54,7 @@ public class AddRendering
 		RenderingRegistry.registerEntityRenderingHandler(EntityHandgunBullet.class, new RenderSnowball(ChaosItems.ItemBullet));
 		RenderingRegistry.registerEntityRenderingHandler(EntityBouncyBall.class, new RenderSnowball(ChaosItems.ItemBouncyBall));
 		RenderingRegistry.registerEntityRenderingHandler(EntityCoralFish.class, new RenderCoralFish(new ModelCoralFish(), 0));
+		RenderingRegistry.registerEntityRenderingHandler(EntityDarknessSpider.class, new RenderDarknessSpider());
 
 		TileEntitySpecialRenderer render = new TileEntityBlockLobsterRenderer();
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBlockLobsterEntity.class, render);

@@ -149,7 +149,7 @@ public class ChaosBlocks
 		LaserBeamMinusZ = new BlockLaserBeam(2);
 		LaserBeamUp = new BlockLaserBeam(6);
 		LaserBeamDown = new BlockLaserBeam(7);
-		blockGoldChest = new BlockGoldChest(1).setCreativeTab(ChaosTabs.tabChaosBlocks);
+		blockGoldChest = new BlockGoldChest(1);
 		
     	LiquidDoomBlock = new LiquidDoomBlock().setBlockName("blockLiquidDoom").setBlockTextureName("chaosbeasts:liquiddoom_still");
     	FluidDarknessBlock = new FluidDarknessBlock().setBlockName("fluidDarkness").setBlockTextureName("chaosbeasts:fluid_darkness");
