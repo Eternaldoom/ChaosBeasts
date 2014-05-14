@@ -20,13 +20,21 @@ public class ModelDarknessSpider extends ModelBase
     ModelRenderer Leg2top;
     ModelRenderer Leg3top;
     ModelRenderer Leg4top;
-    ModelRenderer orbit1;
-    ModelRenderer Shape1;
+    
+    ModelRenderer[] orbit = new ModelRenderer[6];
   
   public ModelDarknessSpider()
   {
     textureWidth = 128;
     textureHeight = 64;
+    
+    for (int i = 0; i < this.orbit.length; ++i)
+    {
+        this.orbit[i] = new ModelRenderer(this, 0, 16);
+        this.orbit[i].addBox(0.0F, 0.0F, 0.0F, 1, 1, 1);
+        this.orbit[i].setTextureSize(128, 64);
+        this.orbit[i].mirror = true;
+    }
     
       Leg2 = new ModelRenderer(this, 0, 0);
       Leg2.addBox(0F, 0F, 0F, 1, 16, 1);
@@ -100,18 +108,11 @@ public class ModelDarknessSpider extends ModelBase
       Leg4top.setTextureSize(128, 64);
       Leg4top.mirror = true;
       setRotation(Leg4top, 0F, 0F, 0F);
-      orbit1 = new ModelRenderer(this, 0, 0);
-      orbit1.addBox(0F, 0F, -12F, 1, 1, 1);
-      orbit1.setRotationPoint(0F, -3F, 0F);
-      orbit1.setTextureSize(128, 64);
-      orbit1.mirror = true;
-      setRotation(orbit1, 0F, 0F, 0F);
-      Shape1 = new ModelRenderer(this, 0, 0);
-      Shape1.addBox(0F, 0F, 12F, 1, 1, 1);
-      Shape1.setRotationPoint(0F, -3F, 0F);
-      Shape1.setTextureSize(128, 64);
-      Shape1.mirror = true;
-      setRotation(Shape1, 0F, 0F, 0F);
+  }
+  
+  public int func_78104_a()
+  {
+      return 8;
   }
   
   public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
@@ -130,8 +131,11 @@ public class ModelDarknessSpider extends ModelBase
     Leg2top.render(f5);
     Leg3top.render(f5);
     Leg4top.render(f5);
-    orbit1.render(f5);
-    Shape1.render(f5);
+    
+    for (int i = 0; i < this.orbit.length; ++i)
+    {
+        this.orbit[i].render(f5);
+    }
   }
   
   private void setRotation(ModelRenderer model, float x, float y, float z)
@@ -144,6 +148,19 @@ public class ModelDarknessSpider extends ModelBase
   public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, Entity entity)
   {
     super.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
+    
+    float f6 = f2 * (float)Math.PI * -0.1F;
+    int i;
+
+    for (i = 0; i < 2; ++i)
+    {
+        this.orbit[i].rotationPointY = -2.0F + MathHelper.cos(((float)(i * 2) + f2) * 0.25F);
+        this.orbit[i].rotationPointX = MathHelper.cos(f6) * 9.0F;
+        this.orbit[i].rotationPointZ = MathHelper.sin(f6) * 9.0F;
+        ++f6;
+    }
+
+    
     
   }
 
