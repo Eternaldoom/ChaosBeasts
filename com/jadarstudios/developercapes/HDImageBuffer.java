@@ -38,4 +38,10 @@ public class HDImageBuffer implements IImageBuffer
         
         return capeImage;
     }
+
+	@Override
+	public void func_152634_a() {
+		// TODO Auto-generated method stub
+		
+	}
 }

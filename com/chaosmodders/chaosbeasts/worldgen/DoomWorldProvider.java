@@ -164,6 +164,6 @@ float f5 = (i & 0xFF) / 255.0F;
 f3 *= (f2 * 0.0F + 0.15F);
 f4 *= (f2 * 0.0F + 0.15F);
 f5 *= (f2 * 0.0F + 0.15F);
-return this.worldObj.getWorldVec3Pool().getVecFromPool(f3, f4, f5);
+return Vec3.createVectorHelper((double)f3, (double)f4, (double)f5);
 }
 }
