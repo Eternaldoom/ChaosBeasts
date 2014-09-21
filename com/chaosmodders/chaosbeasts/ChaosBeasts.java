@@ -119,7 +119,7 @@ public class ChaosBeasts
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-    	EntityRegistry.registerModEntity(EntityDoomTNT.class, "DoomTNTPrimed", 552, this, 64, 1, true);
+    	EntityRegistry.registerModEntity(EntityDoomTNT.class, "DoomTNTPrimed", 554, this, 64, 1, true);
         if(FMLCommonHandler.instance().getSide().isClient()){
             AddRendering.addRendering();
         }
